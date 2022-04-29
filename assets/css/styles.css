@@ -1,7 +1,29 @@
+:root {
+  /* --variable-name: variableValue */
+  --purple: #7400b8ff;
+  --french-violet: #6930c3ff;
+  --slate-blue: #5e60ceff;
+  --united-nations-blue: #5390d9ff;
+  --carolina-blue: #4ea8deff;
+  --cyan-process: #48bfe3ff;
+  --sky-blue-crayola: #56cfe1ff;
+  --medium-turquoise: #64dfdfff;
+  --turquoise: #72efddff;
+  --aquamarine: #80ffdbff;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  font-family: "Dancing Script", cursive;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Smokum", cursive;
+  font-family: "Source Sans Pro", sans-serif;
 }
