@@ -1,0 +1,21 @@
+:root {
+  /* --variable-name: variableValue */
+  /* background-color: var(--oxford-blue)*/
+
+  --black: #000000ff;
+  --oxford-blue: #14213dff;
+  --orange-web: #fca311ff;
+  --platinum: #e5e5e5ff;
+  --white: #ffffffff;
+  --imperial-red: #ef233cff;
+  --amaranth-red: #d90429ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
