@@ -1,6 +1,6 @@
 :root {
-  /* --variable-name: variableValue */
-  /* background-color: var(--oxford-blue)*/
+  /* --variable-name: variableValue; */
+  /* background-color: var(--oxford-blue) */
 
   --black: #000000ff;
   --oxford-blue: #14213dff;
@@ -18,4 +18,88 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  background-color: var(--black);
 }
+
+.wrapper-main {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+main {
+  background-color: var(--black);
+  height: 100vh;
+}
+
+/* navbar style - start here */
+
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)),
+    url(../images/photo-1536440136628-849c177e76a1.jpg);
+  max-width: 100%;
+  height: auto;
+  background-position: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 8%;
+  padding-right: 10%;
+  padding-bottom: 20px;
+}
+
+.logo {
+  color: var(--platinum);
+  font-size: 28px;
+}
+
+span {
+  color: var(--amaranth-red);
+}
+
+.home-link {
+  font-size: 24px;
+}
+
+li {
+  margin: 5px;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  color: var(--platinum);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+a:hover {
+  color: var(--amaranth-red);
+  transition: 0.3s;
+}
+
+/* navbar style - end here */
+
+/* movie searching section - start here */
+.movie-searching-section {
+  border: 1px solid var(--amaranth-red);
+  height: 500px;
+  margin-top: 50px;
+}
+/* movie searching section - end here */
+
+/* recent movies section - start here */
+.recent-movie-section {
+  border: 1px solid var(--amaranth-red);
+  height: 500px;
+  margin-top: 50px;
+}
+/* recent movies section - end here */
