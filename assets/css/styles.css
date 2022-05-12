@@ -21,10 +21,10 @@ body {
   background-color: var(--black);
 }
 
-.wrapper-main {
+/*.wrapper-main {
   margin: 0 auto;
   width: 1200px;
-}
+}*/
 
 main {
   background-color: var(--black);
@@ -41,24 +41,45 @@ main {
   background-position: center;
 }
 
-.navbar-item,
-.navbar-link {
-  color: #ffffffff;
-}
-
-.navbar-transparent {
-  background-color: transparent;
-  color: #ffffffff;
-}
-
-nav {
+.navbar {
   display: flex;
-  align-items: center;
+  position: relative;
   justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)),
+    url(../images/photo-1536440136628-849c177e76a1.jpg);
+  color: var(--platinum);
   padding-top: 20px;
   padding-left: 8%;
   padding-right: 10%;
   padding-bottom: 20px;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  flex-wrap: wrap;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: var(--platinum);
+  margin: 5px;
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.navbar-links a:hover {
+  color: var(--amaranth-red);
+  transition: 0.3s;
 }
 
 .logo {
@@ -70,30 +91,22 @@ span {
   color: var(--amaranth-red);
 }
 
-.home-link {
-  font-size: 24px;
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
 }
 
-li {
-  margin: 5px;
-}
-
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 10px 20px;
-}
-
-nav ul li a {
-  color: var(--platinum);
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 18px;
-}
-
-a:hover {
-  color: var(--amaranth-red);
-  transition: 0.3s;
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--platinum);
+  border-radius: 10px;
 }
 
 /* navbar style - end here */
@@ -113,3 +126,37 @@ a:hover {
   margin-top: 50px;
 }
 /* recent movies section - end here */
+
+/* responsive navbar - screen width 576px */
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
