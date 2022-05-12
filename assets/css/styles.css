@@ -41,6 +41,16 @@ main {
   background-position: center;
 }
 
+.navbar-item,
+.navbar-link {
+  color: #ffffffff;
+}
+
+.navbar-transparent {
+  background-color: transparent;
+  color: #ffffffff;
+}
+
 nav {
   display: flex;
   align-items: center;
