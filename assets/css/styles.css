@@ -54,7 +54,7 @@ main {
 }
 a.navbar-item:hover {
   background-color: transparent;
-  color: var(--platinum);
+  color: var(--amaranth-red);
 }
 .logo {
   color: var(--platinum);
