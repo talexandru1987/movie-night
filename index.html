@@ -4,62 +4,158 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- bulma framework -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <!-- link to google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
       rel="stylesheet"
     />
-    <!-- link to the css file -->
+    <!-- link to the author css file -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Movie Planner</title>
+    <title>Movie Planner | Home</title>
   </head>
   <body>
     <header class="header">
-      <!-- navbar banner -->
-      <div class="banner">
-        <nav>
-          <!-- navbar logo -->
-          <h2 class="logo">Movie<span> Night</span></h2>
-          <ul>
-            <!-- link to home page -->
-            <li><a href="./index.html" class="home-link">Home</a></li>
-            <li><a href="#" class="">Movie</a></li>
-            <li><a href="#" class="">Calendar</a></li>
-            <li><a href="#" class="">Invite Friends</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <!-- <img
+              src="https://bulma.io/images/bulma-logo.png"
+              width="112"
+              height="28"
+            /> -->
+            <div class="logo">Movie<span> Night</span></div>
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item"> Home </a>
+            <a class="navbar-item"> Movies </a>
+            <a class="navbar-item"> Calendar </a>
+            <a class="navbar-item"> Invite Friends </a>
+            <a class="navbar-item"> Booking </a>
+          </div>
+        </div>
+      </nav>
     </header>
     <main class="main">
-      <div class="wrapper-main">
-        <!-- movie searching section -->
-        <section class="movie-searching-section"></section>
-        <!-- recent movies section -->
-        <section class="recent-movie-section"></section>
-      </div>
+      <!-- Movie Search results section - Can be removed once this is being rendered in JavaScript - but leave for now until styling is finalised -->
+      <div class="top">
+        <div class="columns">
+          <div class="column is-full featured_wrapper p-0">
+            <!-- <img src="https://image.tmdb.org/t/p/original/jHq5wxRwAhHiRfLH0yadNRU3jCQ.jpg" class="featured"> -->
+            <!-- <img src="https://image.tmdb.org/t/p/original/pLR2O3dmA9xkCiPA26U7ErCUYSi.jpg" class="featured"> -->
+            <!-- <img src="https://image.tmdb.org/t/p/original/ai2FicMUxLCurVkjtYdSvVDWRmS.jpg" class="featured"> -->
+            <img
+              src="https://image.tmdb.org/t/p/original/eete5ZAaagldSXxDetN62V3WXcg.jpg"
+              class="featured"
+            />
+            <div class="title_wrapper">
+              <!-- <span class="has-text-white">MOVIE NIGHT</span> -->
+              <h1 class="title is-1 has-text-white">MOVIE NIGHT</h1>
+              <h1 class="title is-1 has-text-white">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem,
+                dignissimos!
+              </h1>
 
-      <!--Start Test PAge DELETE after-->
-      <p>Select your size:</p>
-      <div>
-        <input type="radio" name="size" value="XS" id="title-radio" checked="checked" />
-        <label for="xs">title</label>
-      </div>
-      <div>
-        <input type="radio" name="size" value="S" id="year-radio" />
-        <label for="s">year</label>
-      </div>
-      <input type="text" id="search-field" name="fname" /><br /><br />
+              <div>
+                <input
+                  type="radio"
+                  name="size"
+                  value="XS"
+                  id="title-radio"
+                  checked="checked"
+                />
+                <label for="xs">title</label>
+              </div>
+              <div>
+                <input type="radio" name="size" value="S" id="year-radio" />
+                <label for="s">year</label>
+              </div>
+              <input type="text" id="search-field" name="fname" /><br /><br />
 
-      <p>
-        <button id="search-button">Show Selected Value</button>
-      </p>
-      <!--END Test PAge DELETE after-->
+              <p>
+                <button id="search-button">Show Selected Value</button>
+              </p>
+
+              <button class="button is-medium">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="columns is-multiline p-0 pt-6 last">
+          <div class="column is-full">
+            <p class="has-text-white">
+              Search Results option 1 (Latest Action Movies
+            </p>
+          </div>
+          <div class="column is-one-quarter">
+            <img
+              src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg"
+            />
+          </div>
+          <div class="column is-one-quarter">
+            <img
+              src="https://www.themoviedb.org/t/p/w1280/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg"
+            />
+          </div>
+          <div class="column is-one-quarter">
+            <img
+              src="https://www.themoviedb.org/t/p/w1280/eosjzGm6cIBCMsUGo28szuYtmyP.jpg"
+            />
+          </div>
+          <div class="column is-one-quarter">
+            <img
+              src="https://www.themoviedb.org/t/p/w1280/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+            />
+          </div>
+        </div>
+        <div class="columns is-multiline p-0 pt-6 last">
+          <div class="column is-full">
+            <p class="has-text-white">Search Results option 2</p>
+          </div>
+          <div class="column is-one-quarter">
+            <img
+              src="https://occ-0-934-1167.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWvIX-nrOarZbCPLXAFNYvLbqloBQ9_TN3ZO6HfcJ-nX-zvcf_bT2CdSK4KhOB_rF8cOi72ae9c2QOFOsLjudpxH4MBc2VKBVFI.jpg?r=317"
+            />
+          </div>
+          <div class="column is-one-quarter">
+            <img
+              src="https://occ-0-934-1167.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWvIX-nrOarZbCPLXAFNYvLbqloBQ9_TN3ZO6HfcJ-nX-zvcf_bT2CdSK4KhOB_rF8cOi72ae9c2QOFOsLjudpxH4MBc2VKBVFI.jpg?r=317"
+            />
+          </div>
+          <div class="column is-one-quarter">
+            <img
+              src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img7.PNG"
+            />
+          </div>
+          <div class="column is-one-quarter">
+            <img
+              src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img8.PNG"
+            />
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- link to jquery library-->
