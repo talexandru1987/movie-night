@@ -91,7 +91,16 @@ const onReady = () => {
   generateEventListener("#search-button", processMovieSearch);
 };
 
-$("#form").submit(processMovieSearch);
+const handleFormSubmit = async (event) => {
+  event.preventDefault();
+
+  const formInput = $("#search-input").val();
+  if (formInput) {
+    processMovieSearch();
+  }
+};
+
+$("#form").submit(handleFormSubmit);
 
 //check if document is ready
 // $(document).ready(onReady);
