@@ -46,17 +46,21 @@ main {
   padding-right: 40px;
   padding-bottom: 40px;
 }
+
 .navbar-menu {
   background-color: var(--black);
 }
+
 .navbar-menu .navbar-item {
   color: var(--platinum);
   font-size: 24px;
 }
+
 a.navbar-item:hover {
   background-color: transparent;
   color: var(--platinum);
 }
+
 .logo {
   color: var(--platinum);
   font-size: 28px;
@@ -82,27 +86,33 @@ html {
 	font-family: "Montserrat", sans-serif;
 	width: 100%;
 }
+
 .container {
 	padding-bottom: 3rem;
 }
-img {
+
+.movie-card-image {
 	-webkit-box-reflect: below 5px
 		linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
 	-webkit-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
+
 .container img:hover {
 	-webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	transform: scale(1.1);
 }
+
 .last {
 	margin-top: 6.5rem;
 }
+
 .featured_wrapper {
 	position: relative;
 }
+
 .featured_wrapper img {
 	width: 100%;
 	width: 100%;
@@ -112,6 +122,7 @@ img {
 	-o-object-position: top;
 	object-position: top;
 }
+
 .title_wrapper {
 	position: absolute;
 	width: 100%;
@@ -121,9 +132,11 @@ img {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 .title_wrapper h1 {
 	width: 70%;
 }
+
 button {
 	background: #f40612 !important;
 	color: #fff !important;
@@ -132,6 +145,7 @@ button {
 	outline: none;
 	border: 0 !important;
 }
+
 @media (max-width: 768px) {
 	.title_wrapper {
 		text-align: center;
@@ -145,6 +159,7 @@ button {
 		padding: 20px;
 	}
 }
+
 @media (max-width: 480px) {
 	.column.is-one-quarter img {
 		width: 100%;
