@@ -1,7 +1,8 @@
 //variable to store the API key
 const apiKey = "638741ded1msh07bc6f796714e78p1d32e2jsnea59f0e47a93";
 //basic search url
-let url;
+const url =
+  "https://ott-details.p.rapidapi.com/advancedsearch?start_year=2010&end_year=2010&min_imdb=6&max_imdb=7.8&type=movie&sort=latest&page=1";
 
 //create an empty object
 const options = {
@@ -47,10 +48,7 @@ const movieRadioButtons = () => {
   }
 };
 
-fetch(
-  "https://ott-details.p.rapidapi.com/advancedsearch?start_year=2010&end_year=2010&min_imdb=6&max_imdb=7.8&type=movie&sort=latest&page=1",
-  options
-)
+fetch(url, options)
   .then((response) => response.json())
   .then((response) => console.log(response))
   .catch((err) => console.error(err));
@@ -92,6 +90,8 @@ const generateEventListener = (varID, triggerFunction) => {
 const onReady = () => {
   generateEventListener("#search-button", processMovieSearch);
 };
+
+$("#form").submit(processMovieSearch);
 
 //check if document is ready
 // $(document).ready(onReady);
