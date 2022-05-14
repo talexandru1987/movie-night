@@ -1,8 +1,10 @@
 //variable to store the API key
-const apiKey = "638741ded1msh07bc6f796714e78p1d32e2jsnea59f0e47a93";
+const apiKey = "b7166079e1mshf482422d9a32c25p1d1b0djsn3ea8fbf64317";
 //basic search url
-const url =
-  "https://ott-details.p.rapidapi.com/advancedsearch?start_year=2010&end_year=2010&min_imdb=6&max_imdb=7.8&type=movie&sort=latest&page=1";
+const baseURL = "https://ott-details.p.rapidapi.com/";
+const searchButton = $("#search-button");
+
+let mockData = true;
 
 //create an empty object
 const options = {
@@ -16,69 +18,78 @@ const options = {
 //the function for the api call
 const fetchData = async (url, options = {}) => {
   try {
-    const response = await fetch(url, options);
-
-    if (response.ok) {
+    if (mockData) {
+      const response = await fetch(
+        "/assets/data/dataReponseYear.json",
+        options
+      );
       const data = await response.json();
-      console.log(data);
       return data;
     } else {
-      throw new Error("Failed to fetch data");
+      const response = await fetch(url, options);
+
+      if (response.ok) {
+        const data = await response.json();
+
+        return data;
+      } else {
+        throw new Error("Failed to fetch data");
+      }
     }
   } catch (error) {
     throw new Error(error.message);
   }
 };
 
-//function to check the movie radio buttons
-const movieRadioButtons = () => {
-  //target the title radio button
-  const defaultTitle = $("#title-radio");
-
-  // target the year radio button
-  const yearButton = $("#year-radio");
-
-  //check witch button is selected
-  if (defaultTitle.is(":checked")) {
-    console.log("Title  radio selected");
-    return "title";
-  } else {
-    console.log("Year radio selected");
-    return "year";
-  }
-};
-
-fetch(url, options)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
-
 //function triggered by search click
-const processMovieSearch = () => {
+const processMovieSearch = async (event) => {
+  event.preventDefault();
+  console.log("process movie");
   //target the search field
-  const searchFieldValue = $("#search-field").value;
-
+  const searchFieldValue = $("#search-field").val();
+  const defaultTitle = $('input[name="answer"]:checked').val();
+  console.log(defaultTitle, searchFieldValue);
+  let url;
   //which radio button was selected
-  const radioButtonValue = movieRadioButtons();
+  // const radioButtonValue = movieRadioButtons();
+  // if the search is empty otr not
 
-  if (radioButtonValue === "title") {
+  if (defaultTitle === "title") {
     //make and API call for tile
     //construct api
-    url = `https://ott-details.p.rapidapi.com/search?title=${searchFieldValue}&page=1`;
-
-    //call the api
-    fetchData(url, options);
+    url = `${baseURL}search?title=${searchFieldValue}&page=1`;
   } else {
     //make an API call for year
     //construct api
-    url = `https://ott-details.p.rapidapi.com/advancedsearch?start_year=${searchFieldValue}&end_year=${searchFieldValue}&min_imdb=6&max_imdb=7.8&type=movie&sort=latest&page=1`;
+    url = `${baseURL}advancedsearch?start_year=${searchFieldValue}&end_year=${searchFieldValue}&min_imdb=6&max_imdb=7.8&type=movie&sort=latest&page=1`;
 
     //call the api
-    fetchData(url, options);
   }
+
+  //call the api
+  const movies = await fetchData(url, options);
+  console.log(movies);
 };
 
-//will create an event listener for a search bu
+const handleNavBarToggle = () => {
+  const navBurgerBtn = $(".navbar-burger");
+
+  const toggleNavBar = () => {
+    // get the nav container id (the div to show and hide)
+    const navContainerId = navBurgerBtn.attr("data-target");
+    const navContainer = $(`#${navContainerId}`);
+
+    // toggle the class for hamburger button to show/hide
+    navBurgerBtn.toggleClass("is-active");
+
+    // toggle the class for nav container to show/hide
+    navContainer.toggleClass("is-active");
+  };
+
+  navBurgerBtn.click(toggleNavBar);
+};
+
+//will create an event listener for a search button
 const generateEventListener = (varID, triggerFunction) => {
   //target the search
   const searchButton = $(`${varID}`);
@@ -88,39 +99,13 @@ const generateEventListener = (varID, triggerFunction) => {
 
 //code to execute when ready
 const onReady = () => {
-  generateEventListener("#search-button", processMovieSearch);
+  // generateEventListener("#search-button", processMovieSearch);
+  searchButton.on("click", processMovieSearch);
+  handleNavBarToggle();
 };
-
-const handleFormSubmit = async (event) => {
-  event.preventDefault();
-
-  const formInput = $("#search-input").val();
-  if (formInput) {
-    processMovieSearch();
-  }
-};
-
-$("#form").submit(handleFormSubmit);
 
 //check if document is ready
-// $(document).ready(onReady);
-// const handleNavBarToggle = () => {
-//   const navBurgerBtn = $(".navbar-burger");
-
-//   const toggleNavBar = () => {
-//     // get the nav container id (the div to show and hide)
-//     const navContainerId = navBurgerBtn.attr("data-target");
-//     const navContainer = $(`#${navContainerId}`);
-
-//     // toggle the class for hamburger button to show/hide
-//     navBurgerBtn.toggleClass("is-active");
-
-//     // toggle the class for nav container to show/hide
-//     navContainer.toggleClass("is-active");
-//   };
-
-//   navBurgerBtn.click(toggleNavBar);
-// };
+$(document).ready(onReady);
 
 // $(document).ready(() => {
 //   handleNavBarToggle();
