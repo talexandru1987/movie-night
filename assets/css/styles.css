@@ -24,6 +24,7 @@ body {
 main {
   background-color: var(--black);
   height: 100vh;
+  padding: 100px;
 }
 
 /* navbar style - start here */
@@ -84,6 +85,7 @@ html {
 }
 .container {
 	padding-bottom: 3rem;
+  width:80%;
 }
 img {
 	-webkit-box-reflect: below 5px
@@ -134,6 +136,18 @@ button {
 }
 
 /* Start of styling for movie detail page */
+
+#movie-title{
+  padding-left: 0.5rem;
+  padding-bottom: 3rem;
+}
+
+#movie-synopsis{
+  padding-left: 0.5rem;
+}
+
+
+/* Start of styling for movie detail page (will probably be deleted once i'm done testing layouts - Faisal
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
@@ -313,7 +327,7 @@ a:hover {
 fieldset, label { margin: 0; padding: 0; }
 
 /****** Style Star Rating Widget *****/
-
+/* 
 .rating { 
   border: none;
   float: left;
@@ -337,20 +351,20 @@ fieldset, label { margin: 0; padding: 0; }
 .rating > label { 
   color: #ddd; 
  float: right; 
-}
+} */
 
 /***** CSS Magic to Highlight Stars on Hover *****/
-
+/***** 
 .rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+/* .rating:not(:checked) > label:hover, hover current star */
+/* .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } hover previous stars in list */
 
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+/* .rating > input:checked + label:hover, hover current star when changing rating */
+/* .rating > input:checked ~ label:hover, */
+/* .rating > label:hover ~ input:checked ~ label, lighten current selection */
+/* .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }  */
 
-//tooltip stuff via: https://codepen.io/peiche/pen/JaftA
+/* //tooltip stuff via: https://codepen.io/peiche/pen/JaftA
 
 a[data-tooltip] {
   position: relative;
@@ -361,21 +375,21 @@ a[data-tooltip]::after {
   display: none;
   opacity: 0.85;
 }
-a[data-tooltip]::before {
+a[data-tooltip]::before { */
   /*
    * using data-tooltip instead of title so we 
    * don't have the real tooltip overlapping
    */
-  content: attr(data-tooltip);
+  /* content: attr(data-tooltip);
   background: #000;
   color: #fff;
   font-size: 13px;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 5px; */
   /* we don't want the text to wrap */
-  white-space: nowrap;
-  text-decoration: none;
-}
+  /* white-space: nowrap;
+  text-decoration: none; */
+/* }
 a[data-tooltip]::after {
   width: 0;
   height: 0;
@@ -386,13 +400,13 @@ a[data-tooltip]::after {
 a[data-tooltip]:hover::before,
 a[data-tooltip]:hover::after {
   display: block;
-}
+} */
 
 /** positioning **/
 
 /* top tooltip */
-a[data-tooltip][data-placement="top"]::before {
-  bottom: 100%;
+/* a[data-tooltip][data-placement="top"]::before { */
+  /* bottom: 100%;
   left: 0;
   margin-bottom: 40px;
 }
@@ -402,9 +416,9 @@ a[data-tooltip][data-placement="top"]::after {
   bottom: 50px;
   left: 20px;
   margin-bottom: 4px;
-}
+} */ 
 /*  */
-
+*****/
 
 @media (max-width: 768px) {
 	.title_wrapper {
@@ -426,3 +440,11 @@ a[data-tooltip][data-placement="top"]::after {
 	}
 }
 
+
+color: #fff;
+font-size: 16px;
+font-family: Montserrat,sans-serif;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+gap: 3rem;
