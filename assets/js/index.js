@@ -1,8 +1,7 @@
 //variable to store the API key
-const apiKey = "638741ded1msh07bc6f796714e78p1d32e2jsnea59f0e47a93";
+const apiKey = "b7166079e1mshf482422d9a32c25p1d1b0djsn3ea8fbf64317";
 //basic search url
-const url =
-  "https://ott-details.p.rapidapi.com/advancedsearch?start_year=2010&end_year=2010&min_imdb=6&max_imdb=7.8&type=movie&sort=latest&page=1";
+let url;
 
 //create an empty object
 const options = {
@@ -20,7 +19,7 @@ const fetchData = async (url, options = {}) => {
 
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
+
       return data;
     } else {
       throw new Error("Failed to fetch data");
@@ -48,15 +47,12 @@ const movieRadioButtons = () => {
   }
 };
 
-fetch(url, options)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
-
 //function triggered by search click
-const processMovieSearch = () => {
+const processMovieSearch = (event) => {
+  event.preventDefault();
+  console.log("process movie");
   //target the search field
-  const searchFieldValue = $("#search-field").value;
+  const searchFieldValue = $("#search-field").val();
 
   //which radio button was selected
   const radioButtonValue = movieRadioButtons();
@@ -78,7 +74,7 @@ const processMovieSearch = () => {
   }
 };
 
-//will create an event listener for a search bu
+//will create an event listener for a search button
 const generateEventListener = (varID, triggerFunction) => {
   //target the search
   const searchButton = $(`${varID}`);
@@ -91,19 +87,20 @@ const onReady = () => {
   generateEventListener("#search-button", processMovieSearch);
 };
 
-const handleFormSubmit = async (event) => {
-  event.preventDefault();
+// const handleFormSubmit = async (event) => {
+//   event.preventDefault();
 
-  const formInput = $("#search-input").val();
-  if (formInput) {
-    processMovieSearch();
-  }
-};
+//   // const formInput = $("#search-input").val();
+//   // if (formInput) {
+//   //   processMovieSearch();
+//   // }
+// };
 
-$("#form").submit(handleFormSubmit);
+// $("#form").submit(handleFormSubmit);
 
 //check if document is ready
-// $(document).ready(onReady);
+$(document).ready(onReady);
+
 // const handleNavBarToggle = () => {
 //   const navBurgerBtn = $(".navbar-burger");
 
