@@ -118,28 +118,58 @@
               Search Results:
             </p>
           </div>
-          <div class="column is-one-quarter is-clickable">
-            <img class="movie-card-image"
+
+          <!-- Movie card 1 -->
+          <div class="column is-one-quarter is-clickable project">
+            <img class="movie-card-image project__image"
               src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg"
             />
+
+            <div class="project__detail">
+              <h3 class="project__title">Spiderman: Far From Home (2021)</h3>
+              <h4 class="project__category">2h 45m</h4>
+            </div>
           </div>
-          <div class="column is-one-quarter is-clickable">
-            <img class="movie-card-image"
+
+          <!-- Movie card 2 -->
+          <div class="column is-one-quarter is-clickable project">
+            <img class="movie-card-image project__image"
               src="https://www.themoviedb.org/t/p/w1280/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg"
             />
+
+            <div class="project__detail">
+              <h3 class="project__title">The Bad Guys (2022)</h3>
+              <h4 class="project__category">2h 45m</h4>
+            </div>
           </div>
-          <div class="column is-one-quarter is-clickable">
-            <img class="movie-card-image"
+
+          <!-- Movie card 3 -->
+          <div class="column is-one-quarter is-clickable project">
+            <img class="movie-card-image project__image"
               src="https://www.themoviedb.org/t/p/w1280/eosjzGm6cIBCMsUGo28szuYtmyP.jpg"
             />
+
+            <div class="project__detail">
+              <h3 class="project__title">The unbearable weight of massive talent (2022)</h3>
+              <h4 class="project__category">2h 45m</h4>
+            </div>
           </div>
-          <div class="column is-one-quarter is-clickable">
-            <img class="movie-card-image"
+
+          <!-- Movie card 4 -->
+          <div class="column is-one-quarter is-clickable project">
+            <img class="movie-card-image project__image"
               src="https://www.themoviedb.org/t/p/w1280/74xTEgt7R36Fpooo50r9T25onhq.jpg"
             />
+         
+          <div class="project__detail">
+            <h3 class="project__title">Batman (2022)</h3>
+            <h4 class="project__category">2h 45m</h4>
           </div>
         </div>
-        <div class="columns is-multiline p-0 pt-6 last">
+
+        <!-- netflix ui style alternate movie card design is below - uncomment to see if you need to  -->
+
+        <!-- <div class="columns is-multiline p-0 pt-6 last">
           <div class="column is-full">
             <p class="has-text-white">Search Results option 2</p>
           </div>
@@ -164,7 +194,7 @@
             />
           </div>
         </div>
-      </div>
+      </div> -->
     </main>
 
     <!-- link to jquery library-->
@@ -174,6 +204,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- the below jQuery script is returning a 404, which is a massive shame. Overlay effect seems to be woprking fine without it -->
+    <!-- link to jQuery Hover3d script for movie card overlays -->
+    <!-- <script src="jquery.hover3d.min.js"></script>
+
+    <script>$(".project").hover3d({
+      selector: ".project__card"
+    });</script> -->
+
     <!-- link to the js file-->
     <script src="./assets/js/index.js"></script>
   </body>
