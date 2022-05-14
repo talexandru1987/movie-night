@@ -75,22 +75,6 @@
                   <input class="input" type="text" placeholder="Enter movie" id="search-field" />
                 </div>
                 <div class="control">
-                  <label class="radio">
-                    <input
-                      type="radio"
-                      name="answer"
-                      checked="checked"
-                      id="title-radio"
-                      value="title"
-                    />
-                    Title
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="answer" id="year-radio" value="year" />
-                    Year
-                  </label>
-                </div>
-                <div class="control">
                   <button id="search-button" class="button is-medium" type="submit">Search</button>
                 </div>
               </form>
@@ -99,14 +83,15 @@
         </div>
       </div>
       <div class="container">
-        <div class="columns is-multiline p-0 pt-6 last">
+        <div id="search-results-container" class="columns is-multiline p-0 pt-6 last">
           <div class="column is-full">
             <p class="title is-1 has-text-white">Search Results:</p>
           </div>
 
           <!-- Movie card 1 -->
-          <div class="column is-one-quarter is-clickable project">
-            <img class="movie-card-image project__image"
+          <!-- <div class="column is-one-quarter is-clickable project">
+            <img
+              class="movie-card-image project__image"
               src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg"
             />
 
@@ -114,11 +99,12 @@
               <h3 class="project__title">Spiderman: Far From Home (2021)</h3>
               <h4 class="project__category">2h 45m</h4>
             </div>
-          </div>
+          </div> -->
 
           <!-- Movie card 2 -->
-          <div class="column is-one-quarter is-clickable project">
-            <img class="movie-card-image project__image"
+          <!-- <div class="column is-one-quarter is-clickable project">
+            <img
+              class="movie-card-image project__image"
               src="https://www.themoviedb.org/t/p/w1280/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg"
             />
 
@@ -126,64 +112,9 @@
               <h3 class="project__title">The Bad Guys (2022)</h3>
               <h4 class="project__category">2h 45m</h4>
             </div>
-          </div>
-
-          <!-- Movie card 3 -->
-          <div class="column is-one-quarter is-clickable project">
-            <img class="movie-card-image project__image"
-              src="https://www.themoviedb.org/t/p/w1280/eosjzGm6cIBCMsUGo28szuYtmyP.jpg"
-            />
-
-            <div class="project__detail">
-              <h3 class="project__title">The unbearable weight of massive talent (2022)</h3>
-              <h4 class="project__category">2h 45m</h4>
-            </div>
-          </div>
-
-          <!-- Movie card 4 -->
-          <div class="column is-one-quarter is-clickable project">
-            <img class="movie-card-image project__image"
-              src="https://www.themoviedb.org/t/p/w1280/74xTEgt7R36Fpooo50r9T25onhq.jpg"
-            />
-         
-          <div class="project__detail">
-            <h3 class="project__title">Batman (2022)</h3>
-            <h4 class="project__category">2h 45m</h4>
-          </div>
+          </div> -->
         </div>
-
-        <!-- netflix ui style alternate movie card design is below - uncomment to see if you need to  -->
-
-        <!-- <div class="columns is-multiline p-0 pt-6 last">
-          <div class="column is-full">
-            <p class="has-text-white">Search Results option 2</p>
-          </div>
-          <div class="column is-one-quarter is-clickable">
-            <img
-              class="movie-card-image"
-              src="https://occ-0-934-1167.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWvIX-nrOarZbCPLXAFNYvLbqloBQ9_TN3ZO6HfcJ-nX-zvcf_bT2CdSK4KhOB_rF8cOi72ae9c2QOFOsLjudpxH4MBc2VKBVFI.jpg?r=317"
-            />
-          </div>
-          <div class="column is-one-quarter is-clickable">
-            <img
-              class="movie-card-image"
-              src="https://occ-0-934-1167.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWvIX-nrOarZbCPLXAFNYvLbqloBQ9_TN3ZO6HfcJ-nX-zvcf_bT2CdSK4KhOB_rF8cOi72ae9c2QOFOsLjudpxH4MBc2VKBVFI.jpg?r=317"
-            />
-          </div>
-          <div class="column is-one-quarter is-clickable">
-            <img
-              class="movie-card-image"
-              src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img7.PNG"
-            />
-          </div>
-          <div class="column is-one-quarter is-clickable">
-            <img
-              class="movie-card-image"
-              src="https://raw.githubusercontent.com/brixiobodino/coffeholic/main/img8.PNG"
-            />
-          </div>
-        </div>
-      </div> -->
+      </div>
     </main>
 
     <!-- link to jquery library-->
@@ -193,15 +124,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
-    <!-- the below jQuery script is returning a 404, which is a massive shame. Overlay effect seems to be woprking fine without it -->
-    <!-- link to jQuery Hover3d script for movie card overlays -->
-    <!-- <script src="jquery.hover3d.min.js"></script>
-
-    <script>$(".project").hover3d({
-      selector: ".project__card"
-    });</script> -->
-
     <!-- link to the js file-->
     <script src="./assets/js/index.js"></script>
   </body>

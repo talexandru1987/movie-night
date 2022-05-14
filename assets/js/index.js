@@ -1,7 +1,7 @@
 //variable to store the API key
-const apiKey = "b7166079e1mshf482422d9a32c25p1d1b0djsn3ea8fbf64317";
+const apiKey = "638741ded1msh07bc6f796714e78p1d32e2jsnea59f0e47a93";
 //basic search url
-const baseURL = "https://ott-details.p.rapidapi.com/";
+const baseURL = "https://online-movie-database.p.rapidapi.com/title/find?q=";
 const searchButton = $("#search-button");
 
 let mockData = true;
@@ -10,7 +10,7 @@ let mockData = true;
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Host": "ott-details.p.rapidapi.com",
+    "X-RapidAPI-Host": "online-movie-database.p.rapidapi.com",
     "X-RapidAPI-Key": apiKey,
   },
 };
@@ -19,10 +19,7 @@ const options = {
 const fetchData = async (url, options = {}) => {
   try {
     if (mockData) {
-      const response = await fetch(
-        "/assets/data/dataReponseYear.json",
-        options
-      );
+      const response = await fetch("./assets/data/dataReponseYear.json", options);
       const data = await response.json();
       return data;
     } else {
@@ -44,31 +41,39 @@ const fetchData = async (url, options = {}) => {
 //function triggered by search click
 const processMovieSearch = async (event) => {
   event.preventDefault();
-  console.log("process movie");
   //target the search field
   const searchFieldValue = $("#search-field").val();
-  const defaultTitle = $('input[name="answer"]:checked').val();
-  console.log(defaultTitle, searchFieldValue);
-  let url;
-  //which radio button was selected
-  // const radioButtonValue = movieRadioButtons();
-  // if the search is empty otr not
 
-  if (defaultTitle === "title") {
-    //make and API call for tile
-    //construct api
-    url = `${baseURL}search?title=${searchFieldValue}&page=1`;
-  } else {
-    //make an API call for year
-    //construct api
-    url = `${baseURL}advancedsearch?start_year=${searchFieldValue}&end_year=${searchFieldValue}&min_imdb=6&max_imdb=7.8&type=movie&sort=latest&page=1`;
-
-    //call the api
-  }
+  let url = `${baseURL}${searchFieldValue}`;
 
   //call the api
   const movies = await fetchData(url, options);
-  console.log(movies);
+
+  renderMovieCards(movies.results);
+};
+
+const renderMovieCards = (movies) => {
+  const movieCards = movies
+    .slice(0, 5)
+    .map((movie, i) => {
+      console.log(i);
+      const movieCard = `<div class="column is-one-quarter is-clickable project">
+        <img class="movie-card-image project__image"
+          src="${movie[i].image.url}" alt="${movie[i].title}
+        />
+        <div class="project__detail">
+          <h3 class="project__title">${movie[i].title} (${movie[i].year})</h3>
+          <h4 class="project__category">${movie[i].runningTimeInMinutes}</h4>
+        </div>
+      </div>`;
+
+      return movieCard;
+    })
+    .join("");
+
+  $("#search-results-container").empty();
+
+  $("#search-results-container").append(movieCards);
 };
 
 const handleNavBarToggle = () => {
@@ -90,16 +95,15 @@ const handleNavBarToggle = () => {
 };
 
 //will create an event listener for a search button
-const generateEventListener = (varID, triggerFunction) => {
-  //target the search
-  const searchButton = $(`${varID}`);
-  // add the event listener
-  searchButton.on("click", triggerFunction);
-};
+// const generateEventListener = (varID, triggerFunction) => {
+//   //target the search
+//   const searchButton = $(`${varID}`);
+//   // add the event listener
+//   searchButton.on("click", triggerFunction);
+// };
 
 //code to execute when ready
 const onReady = () => {
-  // generateEventListener("#search-button", processMovieSearch);
   searchButton.on("click", processMovieSearch);
   handleNavBarToggle();
 };
