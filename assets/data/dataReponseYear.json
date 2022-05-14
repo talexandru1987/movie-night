@@ -1,0 +1,1747 @@
+{
+  "@meta": {
+    "operation": "Search",
+    "requestId": "04d9b06c-d718-416a-b4a2-b9ef73052aaf",
+    "serviceTimeMs": 72.990023
+  },
+  "@type": "imdb.api.find.response",
+  "query": "batman",
+  "results": [
+    {
+      "id": "/title/tt1877830/",
+      "image": {
+        "height": 2048,
+        "id": "/title/tt1877830/images/rm2474894849",
+        "url": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_.jpg",
+        "width": 1382
+      },
+      "runningTimeInMinutes": 176,
+      "title": "The Batman",
+      "titleType": "movie",
+      "year": 2022,
+      "principals": [
+        {
+          "id": "/name/nm1500155/",
+          "legacyNameText": "Pattinson, Robert",
+          "name": "Robert Pattinson",
+          "billing": 1,
+          "category": "actor",
+          "characters": ["Bruce Wayne", "The Batman"],
+          "roles": [
+            {
+              "character": "Bruce Wayne",
+              "characterId": "/character/ch0188699/"
+            },
+            {
+              "character": "The Batman"
+            }
+          ]
+        },
+        {
+          "id": "/name/nm2368789/",
+          "legacyNameText": "Kravitz, Zoë",
+          "name": "Zoë Kravitz",
+          "billing": 2,
+          "category": "actress",
+          "characters": ["Selina Kyle", "Catwoman"],
+          "roles": [
+            {
+              "character": "Selina Kyle"
+            },
+            {
+              "character": "Catwoman"
+            }
+          ]
+        },
+        {
+          "disambiguation": "I",
+          "id": "/name/nm0942482/",
+          "legacyNameText": "Wright, Jeffrey (I)",
+          "name": "Jeffrey Wright",
+          "billing": 3,
+          "category": "actor",
+          "characters": ["Lt. James Gordon"],
+          "roles": [
+            {
+              "character": "Lt. James Gordon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "/title/tt0096895/",
+      "image": {
+        "height": 1018,
+        "id": "/title/tt0096895/images/rm377474817",
+        "url": "https://m.media-amazon.com/images/M/MV5BZTM2NmZlOTEtYTI5NS00N2JjLWJkNzItMmZkNDBlYmQzNDA2XkEyXkFqcGdeQXVyMTAxODYyODI@._V1_.jpg",
+        "width": 682
+      },
+      "runningTimeInMinutes": 126,
+      "title": "Batman",
+      "titleType": "movie",
+      "year": 1989,
+      "principals": [
+        {
+          "disambiguation": "I",
+          "id": "/name/nm0000474/",
+          "legacyNameText": "Keaton, Michael (I)",
+          "name": "Michael Keaton",
+          "billing": 1,
+          "category": "actor",
+          "characters": ["Batman", "Bruce Wayne"],
+          "roles": [
+            {
+              "character": "Batman",
+              "characterId": "/character/ch0000177/"
+            },
+            {
+              "character": "Bruce Wayne",
+              "characterId": "/character/ch0188699/"
+            }
+          ]
+        },
+        {
+          "disambiguation": "I",
+          "id": "/name/nm0000197/",
+          "legacyNameText": "Nicholson, Jack (I)",
+          "name": "Jack Nicholson",
+          "billing": 2,
+          "category": "actor",
+          "characters": ["Joker", "Jack Napier"],
+          "roles": [
+            {
+              "character": "Joker",
+              "characterId": "/character/ch0000180/"
+            },
+            {
+              "character": "Jack Napier",
+              "characterId": "/character/ch0526616/"
+            }
+          ]
+        },
+        {
+          "id": "/name/nm0000107/",
+          "legacyNameText": "Basinger, Kim",
+          "name": "Kim Basinger",
+          "billing": 3,
+          "category": "actress",
+          "characters": ["Vicki Vale"],
+          "roles": [
+            {
+              "character": "Vicki Vale",
+              "characterId": "/character/ch0000213/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "/title/tt0103359/",
+      "image": {
+        "height": 1170,
+        "id": "/title/tt0103359/images/rm3096602624",
+        "url": "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_.jpg",
+        "width": 780
+      },
+      "runningTimeInMinutes": 23,
+      "nextEpisode": "/title/tt0519626/",
+      "numberOfEpisodes": 85,
+      "seriesEndYear": 1995,
+      "seriesStartYear": 1992,
+      "title": "Batman: The Animated Series",
+      "titleType": "tvSeries",
+      "year": 1992,
+      "principals": [
+        {
+          "disambiguation": "I",
+          "id": "/name/nm0175834/",
+          "legacyNameText": "Conroy, Kevin (I)",
+          "name": "Kevin Conroy",
+          "category": "actor",
+          "characters": ["Batman", "Bruce Wayne", "Thomas Wayne"],
+          "endYear": 1995,
+          "episodeCount": 85,
+          "roles": [
+            {
+              "character": "Batman",
+              "characterId": "/character/ch0000177/"
+            },
+            {
+              "character": "Bruce Wayne",
+              "characterId": "/character/ch0188699/"
+            },
+            {
+              "character": "Thomas Wayne",
+              "characterId": "/character/ch0000246/"
+            }
+          ],
+          "startYear": 1992
+        },
+        {
+          "id": "/name/nm0504489/",
+          "legacyNameText": "Lester, Loren",
+          "name": "Loren Lester",
+          "category": "actor",
+          "characters": ["Robin", "Dick Grayson", "Henchman"],
+          "endYear": 1995,
+          "episodeCount": 30,
+          "roles": [
+            {
+              "character": "Robin",
+              "characterId": "/character/ch0057785/"
+            },
+            {
+              "character": "Dick Grayson",
+              "characterId": "/character/ch0000216/"
+            },
+            {
+              "character": "Henchman"
+            }
+          ],
+          "startYear": 1992
+        },
+        {
+          "id": "/name/nm0956544/",
+          "legacyNameText": "Zimbalist Jr., Efrem",
+          "name": "Efrem Zimbalist Jr.",
+          "category": "actor",
+          "characters": ["Alfred Pennyworth", "Cop", "Antoine"],
+          "endYear": 1995,
+          "episodeCount": 54,
+          "roles": [
+            {
+              "character": "Alfred Pennyworth",
+              "characterId": "/character/ch0000204/"
+            },
+            {
+              "character": "Cop"
+            },
+            {
+              "character": "Antoine"
+            }
+          ],
+          "startYear": 1992
+        }
+      ]
+    },
+    {
+      "akas": ["Leslie & Alisande", "Batman", "Leslie Neilsen", "Leslie Nielson"],
+      "disambiguation": "I",
+      "id": "/name/nm0000558/",
+      "image": {
+        "height": 400,
+        "id": "/name/nm0000558/images/rm2194643712",
+        "url": "https://m.media-amazon.com/images/M/MV5BMTI3MTE1NjM4N15BMl5BanBnXkFtZTYwNzI3MTI0._V1_.jpg",
+        "width": 267
+      },
+      "legacyNameText": "Nielsen, Leslie (I)",
+      "name": "Leslie Nielsen",
+      "knownFor": [
+        {
+          "cast": [
+            {
+              "billing": 6,
+              "category": "actor",
+              "characters": ["Dr. Rumack"],
+              "roles": [
+                {
+                  "character": "Dr. Rumack",
+                  "characterId": "/character/ch0006133/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Dr. Rumack"],
+            "displayYear": "1980"
+          },
+          "id": "/title/tt0080339/",
+          "title": "Airplane!",
+          "titleType": "movie",
+          "year": 1980
+        },
+        {
+          "cast": [
+            {
+              "billing": 1,
+              "category": "actor",
+              "characters": ["Lt. Frank Drebin"],
+              "roles": [
+                {
+                  "character": "Lt. Frank Drebin",
+                  "characterId": "/character/ch0005556/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Lt. Frank Drebin"],
+            "displayYear": "1991"
+          },
+          "id": "/title/tt0102510/",
+          "title": "The Naked Gun 2½: The Smell of Fear",
+          "titleType": "movie",
+          "year": 1991
+        },
+        {
+          "cast": [
+            {
+              "billing": 1,
+              "category": "actor",
+              "characters": ["Frank Drebin"],
+              "roles": [
+                {
+                  "character": "Frank Drebin",
+                  "characterId": "/character/ch0005556/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Frank Drebin"],
+            "displayYear": "1988"
+          },
+          "id": "/title/tt0095705/",
+          "title": "The Naked Gun: From the Files of Police Squad!",
+          "titleType": "movie",
+          "year": 1988
+        },
+        {
+          "cast": [
+            {
+              "billing": 1,
+              "category": "actor",
+              "characters": ["Ryan Harrison"],
+              "roles": [
+                {
+                  "character": "Ryan Harrison",
+                  "characterId": "/character/ch0020877/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Ryan Harrison"],
+            "displayYear": "1998"
+          },
+          "id": "/title/tt0120901/",
+          "title": "Wrongfully Accused",
+          "titleType": "movie",
+          "year": 1998
+        }
+      ]
+    },
+    {
+      "akas": ["Marques 'Batman' Houston", "Marques B. Houston"],
+      "id": "/name/nm0396867/",
+      "image": {
+        "height": 400,
+        "id": "/name/nm0396867/images/rm4216101376",
+        "url": "https://m.media-amazon.com/images/M/MV5BOTc0Nzk4NjcwMF5BMl5BanBnXkFtZTYwMjIwMjQz._V1_.jpg",
+        "width": 267
+      },
+      "legacyNameText": "Houston, Marques",
+      "name": "Marques Houston",
+      "knownFor": [
+        {
+          "cast": [
+            {
+              "billing": 2,
+              "category": "actor",
+              "characters": ["Elgin"],
+              "roles": [
+                {
+                  "character": "Elgin",
+                  "characterId": "/character/ch0014605/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Elgin"],
+            "displayYear": "2004"
+          },
+          "id": "/title/tt0365957/",
+          "title": "You Got Served",
+          "titleType": "movie",
+          "year": 2004
+        },
+        {
+          "cast": [
+            {
+              "as": "Marques B. Houston",
+              "billing": 6,
+              "category": "actor",
+              "characters": ["Dumb Donald"],
+              "roles": [
+                {
+                  "character": "Dumb Donald",
+                  "characterId": "/character/ch0025195/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Dumb Donald"],
+            "displayYear": "2004"
+          },
+          "id": "/title/tt0396592/",
+          "title": "Fat Albert",
+          "titleType": "movie",
+          "year": 2004
+        },
+        {
+          "cast": [
+            {
+              "category": "actor",
+              "characters": ["Roger Evans", "Immature a.k.a. Batman"],
+              "endYear": 1999,
+              "episodeCount": 98,
+              "roles": [
+                {
+                  "character": "Roger Evans",
+                  "characterId": "/character/ch0139967/"
+                },
+                {
+                  "character": "Immature a.k.a. Batman"
+                }
+              ],
+              "startYear": 1994
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Roger Evans", "Immature a.k.a. Batman"],
+            "displayYear": "1994-1999"
+          },
+          "id": "/title/tt0108927/",
+          "title": "Sister, Sister",
+          "titleType": "tvSeries",
+          "year": 1994
+        },
+        {
+          "summary": {
+            "category": "soundtrack",
+            "displayYear": "2003"
+          },
+          "id": "/title/tt0329101/",
+          "title": "Freddy vs. Jason",
+          "titleType": "movie",
+          "year": 2003
+        }
+      ]
+    },
+    {
+      "akas": ["Big Time Rush"],
+      "disambiguation": "II",
+      "id": "/name/nm3666718/",
+      "image": {
+        "height": 1136,
+        "id": "/name/nm3666718/images/rm3771196672",
+        "url": "https://m.media-amazon.com/images/M/MV5BMjAxMzY1MTY5N15BMl5BanBnXkFtZTgwMDA0ODE5NzE@._V1_.jpg",
+        "width": 640
+      },
+      "legacyNameText": "Henderson, Logan (II)",
+      "name": "Logan Henderson",
+      "knownFor": [
+        {
+          "cast": [
+            {
+              "category": "actor",
+              "characters": ["Logan Mitchell", "Self"],
+              "endYear": 2013,
+              "episodeCount": 73,
+              "roles": [
+                {
+                  "character": "Logan Mitchell",
+                  "characterId": "/character/ch0192675/"
+                },
+                {
+                  "character": "Self"
+                }
+              ],
+              "startYear": 2009
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Logan Mitchell", "Self"],
+            "displayYear": "2009-2013"
+          },
+          "id": "/title/tt1131746/",
+          "title": "Big Time Rush",
+          "titleType": "tvSeries",
+          "year": 2009
+        },
+        {
+          "cast": [
+            {
+              "billing": 4,
+              "category": "actor",
+              "characters": ["Logan Mitchell"],
+              "roles": [
+                {
+                  "character": "Logan Mitchell",
+                  "characterId": "/character/ch0192675/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Logan Mitchell"],
+            "displayYear": "2012"
+          },
+          "id": "/title/tt2163203/",
+          "title": "Big Time Movie",
+          "titleType": "tvMovie",
+          "year": 2012
+        },
+        {
+          "crew": [
+            {
+              "category": "director",
+              "endYear": 2013,
+              "episodeCount": 1,
+              "startYear": 2013
+            }
+          ],
+          "summary": {
+            "category": "director",
+            "displayYear": "2013"
+          },
+          "id": "/title/tt1615925/",
+          "title": "Supah Ninjas",
+          "titleType": "tvSeries",
+          "year": 2011
+        },
+        {
+          "cast": [
+            {
+              "category": "actor",
+              "characters": ["Jake"],
+              "roles": [
+                {
+                  "character": "Jake"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Jake"]
+          },
+          "id": "/title/tt1733298/",
+          "title": "Hurricane Kid",
+          "titleType": "movie"
+        }
+      ]
+    },
+    {
+      "id": "/title/tt0468569/",
+      "image": {
+        "height": 2048,
+        "id": "/title/tt0468569/images/rm4023877632",
+        "url": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+        "width": 1383
+      },
+      "runningTimeInMinutes": 152,
+      "title": "The Dark Knight",
+      "titleType": "movie",
+      "year": 2008,
+      "principals": [
+        {
+          "id": "/name/nm0000288/",
+          "legacyNameText": "Bale, Christian",
+          "name": "Christian Bale",
+          "billing": 1,
+          "category": "actor",
+          "characters": ["Bruce Wayne"],
+          "roles": [
+            {
+              "character": "Bruce Wayne",
+              "characterId": "/character/ch0188699/"
+            }
+          ]
+        },
+        {
+          "id": "/name/nm0005132/",
+          "legacyNameText": "Ledger, Heath",
+          "name": "Heath Ledger",
+          "billing": 2,
+          "category": "actor",
+          "characters": ["Joker"],
+          "roles": [
+            {
+              "character": "Joker",
+              "characterId": "/character/ch0000180/"
+            }
+          ]
+        },
+        {
+          "id": "/name/nm0001173/",
+          "legacyNameText": "Eckhart, Aaron",
+          "name": "Aaron Eckhart",
+          "billing": 3,
+          "category": "actor",
+          "characters": ["Harvey Dent"],
+          "roles": [
+            {
+              "character": "Harvey Dent",
+              "characterId": "/character/ch0593591/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "/title/tt0372784/",
+      "image": {
+        "height": 3833,
+        "id": "/title/tt0372784/images/rm2827249920",
+        "url": "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+        "width": 2590
+      },
+      "runningTimeInMinutes": 140,
+      "title": "Batman Begins",
+      "titleType": "movie",
+      "year": 2005,
+      "principals": [
+        {
+          "id": "/name/nm0000288/",
+          "legacyNameText": "Bale, Christian",
+          "name": "Christian Bale",
+          "billing": 1,
+          "category": "actor",
+          "characters": ["Bruce Wayne", "Batman"],
+          "roles": [
+            {
+              "character": "Bruce Wayne",
+              "characterId": "/character/ch0188699/"
+            },
+            {
+              "character": "Batman",
+              "characterId": "/character/ch0000177/"
+            }
+          ]
+        },
+        {
+          "disambiguation": "I",
+          "id": "/name/nm0000323/",
+          "legacyNameText": "Caine, Michael (I)",
+          "name": "Michael Caine",
+          "billing": 2,
+          "category": "actor",
+          "characters": ["Alfred"],
+          "roles": [
+            {
+              "character": "Alfred",
+              "characterId": "/character/ch0000204/"
+            }
+          ]
+        },
+        {
+          "disambiguation": "I",
+          "id": "/name/nm0913822/",
+          "legacyNameText": "Watanabe, Ken (I)",
+          "name": "Ken Watanabe",
+          "billing": 9,
+          "category": "actor",
+          "characters": ["Ra's Al Ghul"],
+          "roles": [
+            {
+              "character": "Ra's Al Ghul",
+              "characterId": "/character/ch0000199/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "/title/tt1345836/",
+      "image": {
+        "height": 720,
+        "id": "/title/tt1345836/images/rm834516224",
+        "url": "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_.jpg",
+        "width": 486
+      },
+      "runningTimeInMinutes": 164,
+      "title": "The Dark Knight Rises",
+      "titleType": "movie",
+      "year": 2012,
+      "principals": [
+        {
+          "id": "/name/nm0000288/",
+          "legacyNameText": "Bale, Christian",
+          "name": "Christian Bale",
+          "billing": 1,
+          "category": "actor",
+          "characters": ["Bruce Wayne"],
+          "roles": [
+            {
+              "character": "Bruce Wayne",
+              "characterId": "/character/ch0188699/"
+            }
+          ]
+        },
+        {
+          "disambiguation": "I",
+          "id": "/name/nm0362766/",
+          "legacyNameText": "Hardy, Tom (I)",
+          "name": "Tom Hardy",
+          "billing": 3,
+          "category": "actor",
+          "characters": ["Bane"],
+          "roles": [
+            {
+              "character": "Bane",
+              "characterId": "/character/ch0000208/"
+            }
+          ]
+        },
+        {
+          "id": "/name/nm0004266/",
+          "legacyNameText": "Hathaway, Anne",
+          "name": "Anne Hathaway",
+          "billing": 5,
+          "category": "actress",
+          "characters": ["Selina"],
+          "roles": [
+            {
+              "character": "Selina",
+              "characterId": "/character/ch0593202/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "/title/tt18689424/",
+      "image": {
+        "height": 1500,
+        "id": "/title/tt18689424/images/rm35723265",
+        "url": "https://m.media-amazon.com/images/M/MV5BYzgyMTMzZjUtNGNjMy00NTJjLWIzNDYtMTc2YzQwOGE5MGM4XkEyXkFqcGdeQXVyMTUwODYzMjcw._V1_.jpg",
+        "width": 1000
+      },
+      "runningTimeInMinutes": 182,
+      "title": "Batman v Superman: Dawn of Justice Ultimate Edition",
+      "titleType": "movie",
+      "year": 2016,
+      "principals": [
+        {
+          "disambiguation": "III",
+          "id": "/name/nm0010736/",
+          "legacyNameText": "Adams, Amy (III)",
+          "name": "Amy Adams",
+          "category": "actress",
+          "characters": ["Lois Lane"],
+          "roles": [
+            {
+              "character": "Lois Lane"
+            }
+          ]
+        },
+        {
+          "id": "/name/nm0000255/",
+          "legacyNameText": "Affleck, Ben",
+          "name": "Ben Affleck",
+          "category": "actor",
+          "characters": ["Bruce Wayne", "Batman"],
+          "roles": [
+            {
+              "character": "Bruce Wayne"
+            },
+            {
+              "character": "Batman"
+            }
+          ]
+        },
+        {
+          "id": "/name/nm0147147/",
+          "legacyNameText": "Cavill, Henry",
+          "name": "Henry Cavill",
+          "category": "actor",
+          "characters": ["Clark Kent", "Superman"],
+          "roles": [
+            {
+              "character": "Clark Kent"
+            },
+            {
+              "character": "Superman"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "/title/tt0118688/",
+      "image": {
+        "height": 2029,
+        "id": "/title/tt0118688/images/rm398858240",
+        "url": "https://m.media-amazon.com/images/M/MV5BMGQ5YTM1NmMtYmIxYy00N2VmLWJhZTYtN2EwYTY3MWFhOTczXkEyXkFqcGdeQXVyNTA2NTI0MTY@._V1_.jpg",
+        "width": 1363
+      },
+      "runningTimeInMinutes": 125,
+      "title": "Batman & Robin",
+      "titleType": "movie",
+      "year": 1997,
+      "principals": [
+        {
+          "id": "/name/nm0000216/",
+          "legacyNameText": "Schwarzenegger, Arnold",
+          "name": "Arnold Schwarzenegger",
+          "billing": 1,
+          "category": "actor",
+          "characters": ["Mr. Freeze", "Dr. Victor Fries"],
+          "roles": [
+            {
+              "character": "Mr. Freeze",
+              "characterId": "/character/ch0000185/"
+            },
+            {
+              "character": "Dr. Victor Fries",
+              "characterId": "/character/ch0593588/"
+            }
+          ]
+        },
+        {
+          "id": "/name/nm0000123/",
+          "legacyNameText": "Clooney, George",
+          "name": "George Clooney",
+          "billing": 2,
+          "category": "actor",
+          "characters": ["Batman", "Bruce Wayne"],
+          "roles": [
+            {
+              "character": "Batman",
+              "characterId": "/character/ch0000177/"
+            },
+            {
+              "character": "Bruce Wayne",
+              "characterId": "/character/ch0188699/"
+            }
+          ]
+        },
+        {
+          "disambiguation": "I",
+          "id": "/name/nm0000563/",
+          "legacyNameText": "O'Donnell, Chris (I)",
+          "name": "Chris O'Donnell",
+          "billing": 3,
+          "category": "actor",
+          "characters": ["Robin", "Dick Grayson"],
+          "roles": [
+            {
+              "character": "Robin",
+              "characterId": "/character/ch0057785/"
+            },
+            {
+              "character": "Dick Grayson",
+              "characterId": "/character/ch0000216/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "/title/tt0059968/",
+      "image": {
+        "height": 2024,
+        "id": "/title/tt0059968/images/rm4039165440",
+        "url": "https://m.media-amazon.com/images/M/MV5BMTkzNDY5NTg5MF5BMl5BanBnXkFtZTgwNzI4NzM1MjE@._V1_.jpg",
+        "width": 1572
+      },
+      "runningTimeInMinutes": 25,
+      "nextEpisode": "/title/tt0519475/",
+      "numberOfEpisodes": 120,
+      "seriesEndYear": 1968,
+      "seriesStartYear": 1966,
+      "title": "Batman",
+      "titleType": "tvSeries",
+      "year": 1966,
+      "principals": [
+        {
+          "disambiguation": "I",
+          "id": "/name/nm0001842/",
+          "legacyNameText": "West, Adam (I)",
+          "name": "Adam West",
+          "category": "actor",
+          "characters": ["Batman", "Bruce Wayne"],
+          "endYear": 1968,
+          "episodeCount": 120,
+          "roles": [
+            {
+              "character": "Batman",
+              "characterId": "/character/ch0000177/"
+            },
+            {
+              "character": "Bruce Wayne",
+              "characterId": "/character/ch0188699/"
+            }
+          ],
+          "startYear": 1966
+        },
+        {
+          "id": "/name/nm0911431/",
+          "legacyNameText": "Ward, Burt",
+          "name": "Burt Ward",
+          "category": "actor",
+          "characters": ["Robin", "Dick Grayson"],
+          "endYear": 1968,
+          "episodeCount": 120,
+          "roles": [
+            {
+              "character": "Robin",
+              "characterId": "/character/ch0057785/"
+            },
+            {
+              "character": "Dick Grayson",
+              "characterId": "/character/ch0000216/"
+            }
+          ],
+          "startYear": 1966
+        },
+        {
+          "disambiguation": "I",
+          "id": "/name/nm0621002/",
+          "legacyNameText": "Napier, Alan (I)",
+          "name": "Alan Napier",
+          "category": "actor",
+          "characters": ["Alfred", "Egbert"],
+          "endYear": 1968,
+          "episodeCount": 120,
+          "roles": [
+            {
+              "character": "Alfred",
+              "characterId": "/character/ch0000204/"
+            },
+            {
+              "character": "Egbert",
+              "characterId": "/character/ch0272181/"
+            }
+          ],
+          "startYear": 1966
+        }
+      ]
+    },
+    {
+      "id": "/title/tt0060153/",
+      "image": {
+        "height": 960,
+        "id": "/title/tt0060153/images/rm2251950336",
+        "url": "https://m.media-amazon.com/images/M/MV5BODVjNjdlYTQtMWIwYy00MWIyLWI2ZmMtZWFhMTdjNjAzNGVlXkEyXkFqcGdeQXVyNTAyNDQ2NjI@._V1_.jpg",
+        "width": 651
+      },
+      "runningTimeInMinutes": 105,
+      "title": "Batman",
+      "titleType": "movie",
+      "year": 1966,
+      "principals": [
+        {
+          "disambiguation": "I",
+          "id": "/name/nm0001842/",
+          "legacyNameText": "West, Adam (I)",
+          "name": "Adam West",
+          "billing": 1,
+          "category": "actor",
+          "characters": ["Batman", "Bruce Wayne"],
+          "roles": [
+            {
+              "character": "Batman",
+              "characterId": "/character/ch0000177/"
+            },
+            {
+              "character": "Bruce Wayne",
+              "characterId": "/character/ch0188699/"
+            }
+          ]
+        },
+        {
+          "id": "/name/nm0911431/",
+          "legacyNameText": "Ward, Burt",
+          "name": "Burt Ward",
+          "billing": 2,
+          "category": "actor",
+          "characters": ["Robin", "Dick Grayson"],
+          "roles": [
+            {
+              "character": "Robin",
+              "characterId": "/character/ch0057785/"
+            },
+            {
+              "character": "Dick Grayson",
+              "characterId": "/character/ch0000216/"
+            }
+          ]
+        },
+        {
+          "id": "/name/nm0580886/",
+          "legacyNameText": "Meriwether, Lee",
+          "name": "Lee Meriwether",
+          "billing": 3,
+          "category": "actress",
+          "characters": ["The Catwoman", "Kitka"],
+          "roles": [
+            {
+              "character": "The Catwoman",
+              "characterId": "/character/ch0000184/"
+            },
+            {
+              "character": "Kitka",
+              "characterId": "/character/ch0581808/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "/name/nm2610231/",
+      "image": {
+        "height": 1194,
+        "id": "/name/nm2610231/images/rm791429632",
+        "url": "https://m.media-amazon.com/images/M/MV5BZjY2NDAwMzctOTA0My00OTk5LTkxNzAtYjQ0NGZjNTU3NTViXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg",
+        "width": 852
+      },
+      "legacyNameText": "Batmanglij, Zal",
+      "name": "Zal Batmanglij",
+      "knownFor": [
+        {
+          "crew": [
+            {
+              "category": "director"
+            },
+            {
+              "category": "writer",
+              "job": "written by",
+              "writerCategoryBilling": 1,
+              "writerTeamBilling": 1
+            }
+          ],
+          "summary": {
+            "category": "writer",
+            "displayYear": "2013"
+          },
+          "id": "/title/tt1869716/",
+          "title": "The East",
+          "titleType": "movie",
+          "year": 2013
+        },
+        {
+          "crew": [
+            {
+              "category": "director"
+            },
+            {
+              "category": "writer",
+              "job": "written by"
+            }
+          ],
+          "summary": {
+            "category": "writer",
+            "displayYear": "2011"
+          },
+          "id": "/title/tt1748207/",
+          "title": "Sound of My Voice",
+          "titleType": "movie",
+          "year": 2011
+        },
+        {
+          "crew": [
+            {
+              "category": "director",
+              "endYear": 2019,
+              "episodeCount": 13,
+              "startYear": 2016
+            },
+            {
+              "attr": ["creator"],
+              "category": "writer",
+              "endYear": 2019,
+              "episodeCount": 16,
+              "job": "created by",
+              "startYear": 2016
+            },
+            {
+              "attr": ["creator"],
+              "category": "writer",
+              "endYear": 2019,
+              "episodeCount": 16,
+              "job": "written by",
+              "startYear": 2016
+            },
+            {
+              "category": "producer",
+              "endYear": 2019,
+              "episodeCount": 16,
+              "job": "executive producer",
+              "startYear": 2016
+            }
+          ],
+          "summary": {
+            "category": "writer",
+            "displayYear": "2016-2019"
+          },
+          "id": "/title/tt4635282/",
+          "title": "The OA",
+          "titleType": "tvSeries",
+          "year": 2016
+        },
+        {
+          "crew": [
+            {
+              "category": "director"
+            },
+            {
+              "category": "writer",
+              "job": "written by"
+            }
+          ],
+          "summary": {
+            "category": "writer",
+            "displayYear": "2007"
+          },
+          "id": "/title/tt1003288/",
+          "title": "The Recordist",
+          "titleType": "short",
+          "year": 2007
+        }
+      ]
+    },
+    {
+      "akas": [
+        "'Scat Man' Crothers",
+        "'Scatman' Crothers",
+        "Benjamin 'Scatman' Crothers",
+        "Benjamin Crothers",
+        "Scat Man Crothers",
+        "Scat-Man Crothers",
+        "Sherman 'Scat Man' Crothers",
+        "Sherman Crothers"
+      ],
+      "id": "/name/nm0001079/",
+      "image": {
+        "height": 1407,
+        "id": "/name/nm0001079/images/rm2620172800",
+        "url": "https://m.media-amazon.com/images/M/MV5BMjEzNDY4OTU5N15BMl5BanBnXkFtZTcwNDU0MjYwOA@@._V1_.jpg",
+        "width": 945
+      },
+      "legacyNameText": "Crothers, Scatman",
+      "name": "Scatman Crothers",
+      "knownFor": [
+        {
+          "cast": [
+            {
+              "billing": 4,
+              "category": "actor",
+              "characters": ["Dick Hallorann"],
+              "roles": [
+                {
+                  "character": "Dick Hallorann",
+                  "characterId": "/character/ch0003323/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Dick Hallorann"],
+            "displayYear": "1980"
+          },
+          "id": "/title/tt0081505/",
+          "title": "The Shining",
+          "titleType": "movie",
+          "year": 1980
+        },
+        {
+          "cast": [
+            {
+              "billing": 5,
+              "category": "actor",
+              "characters": ["Turkle"],
+              "roles": [
+                {
+                  "character": "Turkle",
+                  "characterId": "/character/ch0186351/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Turkle"],
+            "displayYear": "1975"
+          },
+          "id": "/title/tt0073486/",
+          "title": "One Flew Over the Cuckoo's Nest",
+          "titleType": "movie",
+          "year": 1975
+        },
+        {
+          "cast": [
+            {
+              "billing": 23,
+              "category": "actor",
+              "characters": ["Mr. Bloom (segment \"Kick the Can\")"],
+              "roles": [
+                {
+                  "character": "Mr. Bloom (segment \"Kick the Can\")",
+                  "characterId": "/character/ch0233025/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Mr. Bloom (segment \"Kick the Can\")"],
+            "displayYear": "1983"
+          },
+          "id": "/title/tt0086491/",
+          "title": "Twilight Zone: The Movie",
+          "titleType": "movie",
+          "year": 1983
+        },
+        {
+          "cast": [
+            {
+              "attr": ["voice"],
+              "billing": 4,
+              "category": "actor",
+              "characters": ["Scat Cat"],
+              "roles": [
+                {
+                  "character": "Scat Cat",
+                  "characterId": "/character/ch0044896/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Scat Cat"],
+            "displayYear": "1970"
+          },
+          "id": "/title/tt0065421/",
+          "title": "The Aristocats",
+          "titleType": "movie",
+          "year": 1970
+        }
+      ]
+    },
+    {
+      "akas": ["The Batmen"],
+      "disambiguation": "II",
+      "id": "/name/nm7100125/",
+      "legacyNameText": "Batman (II)",
+      "name": "Batman",
+      "knownFor": [
+        {
+          "cast": [
+            {
+              "as": "The Batmen",
+              "category": "actor",
+              "characters": ["Batman"],
+              "roles": [
+                {
+                  "character": "Batman"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Batman"],
+            "displayYear": "2018"
+          },
+          "id": "/title/tt10378660/",
+          "title": "The Dark Knight: The Ballad of the N Word",
+          "titleType": "movie",
+          "year": 2018
+        },
+        {
+          "cast": [
+            {
+              "category": "self",
+              "characters": ["Self"],
+              "endYear": 2015,
+              "episodeCount": 1,
+              "roles": [
+                {
+                  "character": "Self"
+                }
+              ],
+              "startYear": 2015
+            }
+          ],
+          "summary": {
+            "category": "self",
+            "characters": ["Self"],
+            "displayYear": "2015"
+          },
+          "id": "/title/tt2514438/",
+          "title": "High Maintenance",
+          "titleType": "tvSeries",
+          "year": 2012
+        }
+      ]
+    },
+    {
+      "akas": ["Jo Lala", "Lala", "Lala Zappa"],
+      "id": "/name/nm0806080/",
+      "image": {
+        "height": 2048,
+        "id": "/name/nm0806080/images/rm2936638976",
+        "url": "https://m.media-amazon.com/images/M/MV5BMzkzNDEzNzU0OF5BMl5BanBnXkFtZTcwMzQ1MDkwMw@@._V1_.jpg",
+        "width": 1475
+      },
+      "legacyNameText": "Sloatman, Lala",
+      "name": "Lala Sloatman",
+      "knownFor": [
+        {
+          "cast": [
+            {
+              "billing": 36,
+              "category": "actress",
+              "characters": ["Sherry Schnell"],
+              "roles": [
+                {
+                  "character": "Sherry Schnell"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actress",
+            "characters": ["Sherry Schnell"],
+            "displayYear": "1993"
+          },
+          "id": "/title/tt0106770/",
+          "title": "Dragon: The Bruce Lee Story",
+          "titleType": "movie",
+          "year": 1993
+        },
+        {
+          "cast": [
+            {
+              "as": "Lala",
+              "billing": 13,
+              "category": "actress",
+              "characters": ["Sin Sister #2"],
+              "roles": [
+                {
+                  "character": "Sin Sister #2"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actress",
+            "characters": ["Sin Sister #2"],
+            "displayYear": "1988"
+          },
+          "id": "/title/tt0096244/",
+          "title": "Tequila Sunrise",
+          "titleType": "movie",
+          "year": 1988
+        },
+        {
+          "cast": [
+            {
+              "as": "Lala",
+              "billing": 51,
+              "category": "actress",
+              "characters": ["Sorority Girl"],
+              "roles": [
+                {
+                  "character": "Sorority Girl",
+                  "characterId": "/character/ch0315068/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actress",
+            "characters": ["Sorority Girl"],
+            "displayYear": "1990"
+          },
+          "id": "/title/tt0098987/",
+          "title": "The Adventures of Ford Fairlane",
+          "titleType": "movie",
+          "year": 1990
+        },
+        {
+          "cast": [
+            {
+              "as": "Lala",
+              "billing": 25,
+              "category": "actress",
+              "characters": ["Waitress"],
+              "roles": [
+                {
+                  "character": "Waitress"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actress",
+            "characters": ["Waitress"],
+            "displayYear": "1990"
+          },
+          "id": "/title/tt0099892/",
+          "title": "Joe Versus the Volcano",
+          "titleType": "movie",
+          "year": 1990
+        }
+      ]
+    },
+    {
+      "akas": ["Michael P. Boatman", "Michael Patrick Boatman"],
+      "id": "/name/nm0090225/",
+      "image": {
+        "height": 651,
+        "id": "/name/nm0090225/images/rm901288448",
+        "url": "https://m.media-amazon.com/images/M/MV5BNTg1NzgzNDA3NV5BMl5BanBnXkFtZTcwODk1OTIzMQ@@._V1_.jpg",
+        "width": 441
+      },
+      "legacyNameText": "Boatman, Michael",
+      "name": "Michael Boatman",
+      "knownFor": [
+        {
+          "cast": [
+            {
+              "as": "Michael Patrick Boatman",
+              "billing": 2,
+              "category": "actor",
+              "characters": ["Pvt. Ray Motown"],
+              "roles": [
+                {
+                  "character": "Pvt. Ray Motown",
+                  "characterId": "/character/ch0214111/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Pvt. Ray Motown"],
+            "displayYear": "1987"
+          },
+          "id": "/title/tt0093137/",
+          "title": "Hamburger Hill",
+          "titleType": "movie",
+          "year": 1987
+        },
+        {
+          "cast": [
+            {
+              "category": "actor",
+              "characters": ["Carter Heywood", "Carter Haywood"],
+              "endYear": 2002,
+              "episodeCount": 145,
+              "roles": [
+                {
+                  "character": "Carter Heywood",
+                  "characterId": "/character/ch0026130/"
+                },
+                {
+                  "character": "Carter Haywood",
+                  "characterId": "/character/ch0449019/"
+                }
+              ],
+              "startYear": 1996
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Carter Heywood", "Carter Haywood"],
+            "displayYear": "1996-2002"
+          },
+          "id": "/title/tt0115369/",
+          "title": "Spin City",
+          "titleType": "tvSeries",
+          "year": 1996
+        },
+        {
+          "cast": [
+            {
+              "category": "actor",
+              "characters": ["Stanley Babson"],
+              "endYear": 2002,
+              "episodeCount": 57,
+              "roles": [
+                {
+                  "character": "Stanley Babson",
+                  "characterId": "/character/ch0237262/"
+                }
+              ],
+              "startYear": 1996
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Stanley Babson"],
+            "displayYear": "1996-2002"
+          },
+          "id": "/title/tt0115101/",
+          "title": "Arli$$",
+          "titleType": "tvSeries",
+          "year": 1996
+        },
+        {
+          "cast": [
+            {
+              "billing": 11,
+              "category": "actor",
+              "characters": ["CPN Beach"],
+              "roles": [
+                {
+                  "character": "CPN Beach"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["CPN Beach"],
+            "displayYear": "1997"
+          },
+          "id": "/title/tt0119874/",
+          "title": "The Peacemaker",
+          "titleType": "movie",
+          "year": 1997
+        }
+      ]
+    },
+    {
+      "id": "/name/nm0090226/",
+      "legacyNameText": "Boatman, Ross",
+      "name": "Ross Boatman",
+      "knownFor": [
+        {
+          "cast": [
+            {
+              "billing": 39,
+              "category": "actor",
+              "characters": ["Detective"],
+              "roles": [
+                {
+                  "character": "Detective"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Detective"],
+            "displayYear": "2007"
+          },
+          "id": "/title/tt0795493/",
+          "title": "Cassandra's Dream",
+          "titleType": "movie",
+          "year": 2007
+        },
+        {
+          "cast": [
+            {
+              "billing": 21,
+              "category": "actor",
+              "characters": ["Cheery Dealer"],
+              "roles": [
+                {
+                  "character": "Cheery Dealer"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Cheery Dealer"],
+            "displayYear": "2006"
+          },
+          "id": "/title/tt0472160/",
+          "title": "Penelope",
+          "titleType": "movie",
+          "year": 2006
+        },
+        {
+          "cast": [
+            {
+              "billing": 29,
+              "category": "actor",
+              "characters": ["Trader"],
+              "roles": [
+                {
+                  "character": "Trader"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Trader"],
+            "displayYear": "2014"
+          },
+          "id": "/title/tt1109624/",
+          "title": "Paddington",
+          "titleType": "movie",
+          "year": 2014
+        },
+        {
+          "cast": [
+            {
+              "category": "actor",
+              "characters": ["Rock Star"],
+              "roles": [
+                {
+                  "character": "Rock Star",
+                  "characterId": "/character/ch0448235/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Rock Star"],
+            "displayYear": "1997"
+          },
+          "id": "/title/tt0118778/",
+          "title": "Bring Me the Head of Mavis Davis",
+          "titleType": "movie",
+          "year": 1997
+        }
+      ]
+    },
+    {
+      "akas": ["Homemade Theatre Company"],
+      "disambiguation": "I",
+      "id": "/name/nm0281284/",
+      "image": {
+        "height": 356,
+        "id": "/name/nm0281284/images/rm2909969664",
+        "url": "https://m.media-amazon.com/images/M/MV5BMTY1MTMyNjA0MV5BMl5BanBnXkFtZTcwNTM0MDkyMQ@@._V1_.jpg",
+        "width": 450
+      },
+      "legacyNameText": "Flatman, Barry (I)",
+      "name": "Barry Flatman",
+      "knownFor": [
+        {
+          "cast": [
+            {
+              "billing": 11,
+              "category": "actor",
+              "characters": ["Mr. Palamino"],
+              "roles": [
+                {
+                  "character": "Mr. Palamino",
+                  "characterId": "/character/ch0073854/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Mr. Palamino"],
+            "displayYear": "2005"
+          },
+          "disambiguation": "I",
+          "id": "/title/tt0433400/",
+          "title": "Just Friends",
+          "titleType": "movie",
+          "year": 2005
+        },
+        {
+          "cast": [
+            {
+              "billing": 9,
+              "category": "actor",
+              "characters": ["Judge Halden"],
+              "roles": [
+                {
+                  "character": "Judge Halden",
+                  "characterId": "/character/ch0002610/"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Judge Halden"],
+            "displayYear": "2006"
+          },
+          "id": "/title/tt0489270/",
+          "title": "Saw III",
+          "titleType": "movie",
+          "year": 2006
+        },
+        {
+          "cast": [
+            {
+              "category": "actor",
+              "characters": [
+                "Presidant Daniel Thompson",
+                "Dr. Barrow",
+                "President Daniel Thompson"
+              ],
+              "endYear": 2000,
+              "episodeCount": 10,
+              "roles": [
+                {
+                  "character": "Presidant Daniel Thompson",
+                  "characterId": "/character/ch0152274/"
+                },
+                {
+                  "character": "Dr. Barrow"
+                },
+                {
+                  "character": "President Daniel Thompson",
+                  "characterId": "/character/ch0152274/"
+                }
+              ],
+              "startYear": 1998
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Presidant Daniel Thompson", "Dr. Barrow", "President Daniel Thompson"],
+            "displayYear": "1998-2000"
+          },
+          "id": "/title/tt0123816/",
+          "title": "Earth: Final Conflict",
+          "titleType": "tvSeries",
+          "year": 1997
+        },
+        {
+          "cast": [
+            {
+              "billing": 16,
+              "category": "actor",
+              "characters": ["Walt"],
+              "roles": [
+                {
+                  "character": "Walt"
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "category": "actor",
+            "characters": ["Walt"],
+            "displayYear": "1983"
+          },
+          "id": "/title/tt0085407/",
+          "title": "The Dead Zone",
+          "titleType": "movie",
+          "year": 1983
+        }
+      ]
+    }
+  ],
+  "types": ["title", "name"]
+}
