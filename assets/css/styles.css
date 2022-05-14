@@ -26,7 +26,7 @@ main {
   height: 100vh;
 }
 
-/* navbar style - starts here */
+/* navbar style - start here */
 
 .banner {
   background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)),
@@ -147,6 +147,31 @@ button {
   outline: none;
   border: 0 !important;
 }
+
+/* DO NOT DELETE THE COMMENTED OUT CODE BELOW - Breaks the card layout - not sure why, will debug later - Faisal */
+/* .movie-card-image:hover {
+  cursor: pointer;
+   /* look into easein-out-in instead to fix the animation */
+/* transform: scale(1.2); */
+/* look into the syntax for scaling animations */
+/* animation: grow 0.5s ease-out; */
+/* } */
+
+/* .movie-card-image:hover .movie-info {
+  display: block;
+  animation: fadeOut 0.5s ease; */
+/* } */
+
+/* end of movie card hover - overlay rules attempt 1 */
+
+/* start of movie card hover - overlay rules attempt 2 */
+/* This class can be replaced using options */
+/* .hover-in{
+	transition: .3s ease-out;
+}
+.hover-out{
+	transition: .3s ease-in;
+} */
 
 .project {
   width: 100%;
@@ -314,3 +339,13 @@ button {
     background-color: rgba(var(--dark-rgb), 0.6);
   }
 }
+
+/* @keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  } */
+/* } */

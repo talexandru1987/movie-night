@@ -4,7 +4,7 @@ const apiKey = "638741ded1msh07bc6f796714e78p1d32e2jsnea59f0e47a93";
 const baseURL = "https://online-movie-database.p.rapidapi.com/title/find?q=";
 const searchButton = $("#search-button");
 
-let mockData = true;
+let mockData = false;
 
 //create an empty object
 const options = {
@@ -54,16 +54,20 @@ const processMovieSearch = async (event) => {
 
 const renderMovieCards = (movies) => {
   const movieCards = movies
-    .slice(0, 5)
-    .map((movie, i) => {
-      console.log(i);
+    .slice(0, 8)
+    .map((movie) => {
+      const extraDetails = movie.runningTimeInMinutes
+        ? `Run time: ${movie.runningTimeInMinutes}`
+        : "";
       const movieCard = `<div class="column is-one-quarter is-clickable project">
         <img class="movie-card-image project__image"
-          src="${movie[i].image.url}" alt="${movie[i].title}
+          src="${movie.image.url}" alt="${movie.title ? movie.title : movie.legacyNameText}
         />
         <div class="project__detail">
-          <h3 class="project__title">${movie[i].title} (${movie[i].year})</h3>
-          <h4 class="project__category">${movie[i].runningTimeInMinutes}</h4>
+          <h3 class="project__title">${movie.title ? movie.title : movie.legacyNameText} (${
+        movie.year ? movie.year : movie.knownFor[0].year
+      })</h3>
+          <h4 class="project__category">${extraDetails}</h4>
         </div>
       </div>`;
 
