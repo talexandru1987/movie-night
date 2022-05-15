@@ -81,26 +81,40 @@
                 
                             
                 <div class="buttons are-large is-spaced is-responsive column is-full" >
-                    <button class="button is-spaced is-halfwidth trailer-button" id="movie-page-hero-btn" >View Trailer</button>
+                    <!-- <button class="button is-spaced is-halfwidth trailer-button" id="movie-page-hero-btn" >View Trailer</button> -->
                     
+                    <!-- Trailer modal button - Triggers a popup - code for this can be found in index.js -->
+                    <button class="js-modal-trigger button is-spaced is-halfwidth trailer-button" id="movie-page-hero-btn" data-target="modal-js-example">
+                        View Trailer
+                    </button>
 
 
                     <button class="button is-spaced is-halfwidth" id="movie-page-hero-btn">Add to Schedule</button>
+
                 </div>
 
-                <div class="modal">
+                <!-- Modal - hidden by default - shows youtube trailer in a popup when clicked -->
+                <!-- need to hook up the youtube api to this  -->
+                <div id="modal-js-example" class="modal">
                     <div class="modal-background"></div>
+                  
                     <div class="modal-content">
-                      <p class="image is-4by3">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
-                      </p>
+                      <div>
+                        <p>Movie trailer from the youtube API needs to render here</p>
+                        <!-- Your content -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Nt9L1jCKGnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
                     </div>
+                  
                     <button class="modal-close is-large" aria-label="close"></button>
                   </div>
-            </div>
             
-        </div>
+            
+            </div>
+         
     </section>
+
+
 
 
         <section class="section is-medium">
