@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- bulma framework -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
     <!-- link to google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -58,129 +55,66 @@
       </nav>
     </header>
     <main class="main">
-      <div class="wrapper-main">
-        <!-- movie searching section -->
-        <section class="movie-searching-section"></section>
-        <!-- recent movies section -->
-        <section class="recent-movie-section"></section>
-      </div>
-
-
       <!-- Movie Search results section - Can be removed once this is being rendered in JavaScript - but leave for now until styling is finalised -->
+      <div class="top">
+        <div class="columns">
+          <div class="column is-full featured_wrapper p-0">
+            <!-- <img src="https://image.tmdb.org/t/p/original/jHq5wxRwAhHiRfLH0yadNRU3jCQ.jpg" class="featured"> -->
+            <!-- <img src="https://image.tmdb.org/t/p/original/pLR2O3dmA9xkCiPA26U7ErCUYSi.jpg" class="featured"> -->
+            <!-- <img src="https://image.tmdb.org/t/p/original/ai2FicMUxLCurVkjtYdSvVDWRmS.jpg" class="featured"> -->
+            <img
+              src="https://image.tmdb.org/t/p/original/eete5ZAaagldSXxDetN62V3WXcg.jpg"
+              class="featured movie-card-image"
+            />
+            <div class="title_wrapper">
+              <!-- <span class="has-text-white">MOVIE NIGHT</span> -->
+              <h1 class="title is-1 has-text-white">MOVIE NIGHT</h1>
 
+              <form>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Enter movie" id="search-field" />
+                </div>
+                <div class="control">
+                  <button id="search-button" class="button is-medium" type="submit">Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="search-results-container" class="columns is-multiline p-0 pt-6 last">
+          <div class="column is-full">
+            <p class="title is-1 has-text-white">Search Results:</p>
+          </div>
 
-<div class="top">
-	<div class="columns">
-		<div class="column is-full featured_wrapper p-0">
-			<!-- <img src="https://image.tmdb.org/t/p/original/jHq5wxRwAhHiRfLH0yadNRU3jCQ.jpg" class="featured"> -->
-			<!-- <img src="https://image.tmdb.org/t/p/original/pLR2O3dmA9xkCiPA26U7ErCUYSi.jpg" class="featured"> -->
-			<!-- <img src="https://image.tmdb.org/t/p/original/ai2FicMUxLCurVkjtYdSvVDWRmS.jpg" class="featured"> -->
-			<img src="https://image.tmdb.org/t/p/original/eete5ZAaagldSXxDetN62V3WXcg.jpg" class="featured">
-			<div class="title_wrapper">
-				<!-- <span class="has-text-white">MOVIE NIGHT</span> -->
-				<h1 class="title is-1 has-text-white">MOVIE NIGHT</h1>
-        <h1 class="title is-1 has-text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, dignissimos!</h1>
+          <!-- Movie card 1 -->
+          <!-- <div class="column is-one-quarter is-clickable project">
+            <img
+              class="movie-card-image project__image"
+              src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg"
+            />
 
-				<button class="button is-medium">Search</button>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="container">
-	<div class="columns is-multiline p-0 pt-6 last">
-		<div class="column is-full">
-			<p class="has-text-white">Search Results option 1 (Latest Action Movies</p>
-		</div>
-		<div class="column is-one-quarter">
-			<img src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg">
-		</div>
-		<div class="column is-one-quarter">
-			<img src="https://www.themoviedb.org/t/p/w1280/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg">
-		</div>
-		<div class="column is-one-quarter">
-			<img src="https://www.themoviedb.org/t/p/w1280/eosjzGm6cIBCMsUGo28szuYtmyP.jpg">
-		</div>
-		<div class="column is-one-quarter">
-			<img src="https://www.themoviedb.org/t/p/w1280/74xTEgt7R36Fpooo50r9T25onhq.jpg">
-		</div>
-	</div>
+            <div class="project__detail">
+              <h3 class="project__title">Spiderman: Far From Home (2021)</h3>
+              <h4 class="project__category">2h 45m</h4>
+            </div>
+          </div> -->
 
+          <!-- Movie card 2 -->
+          <!-- <div class="column is-one-quarter is-clickable project">
+            <img
+              class="movie-card-image project__image"
+              src="https://www.themoviedb.org/t/p/w1280/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg"
+            />
 
-
-<!-- Start of movie detail page HTML -->
-<section>
-
-
-  <div class="movie-card">
-  
-    <div class="container">
-      
-      <a href="#"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_cover.jpg" alt="cover" class="cover" /></a>
-          
-      <div class="hero">
-              
-        <div class="details">
-        
-          <div class="title1">The Hobbit <span>PG-13</span></div>
-  
-          <div class="title2">The Battle of the Five Armies</div>    
-          
-          <fieldset class="rating">
-      <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-      <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-      <input type="radio" id="star4" name="rating" value="4" checked /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-      <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-      <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-      <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-      <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-      <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-      <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-      <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-    </fieldset>
-          
-          <span class="likes">109 likes</span>
-          
-        </div> <!-- end details -->
-        
-      </div> <!-- end hero -->
-      
-      <div class="description">
-        
-        <div class="column1">
-          <span class="tag">action</span>
-          <span class="tag">fantasy</span>
-          <span class="tag">adventure</span>
-        </div> <!-- end column1 -->
-        
-        <div class="column2">
-          
-          <p>Bilbo Baggins is swept into a quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug. Approached out of the blue by the wizard Gandalf the Grey, Bilbo finds himself joining a company of thirteen dwarves led by the legendary warrior, Thorin Oakenshield. Their journey will take them into the Wild; through... <a href="#">read more</a></p>
-          
-          <div class="avatars">
-            <a href="#" data-tooltip="Person 1" data-placement="top">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar1.png" alt="avatar1" />
-            </a>
-            
-            <a href="#" data-tooltip="Person 2" data-placement="top">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar2.png" alt="avatar2" />
-            </a>
-            
-            
-            <a href="#" data-tooltip="Person 3" data-placement="top">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar3.png" alt="avatar3" />
-            </a>
-            
-          </div> <!-- end avatars -->
-          
-          
-          
-        </div> <!-- end column2 -->
-      </div> <!-- end description -->
-      
-     
-    </div> <!-- end container -->
-  </div> <!-- end movie-card -->
-</section>
+            <div class="project__detail">
+              <h3 class="project__title">The Bad Guys (2022)</h3>
+              <h4 class="project__category">2h 45m</h4>
+            </div>
+          </div> -->
+        </div>
+      </div>
     </main>
 
     <!-- link to jquery library-->
