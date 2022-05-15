@@ -169,61 +169,28 @@ button {
   padding-top: 20px;
 }
 
-$box-background-color
-
-
-/* Start of styling for movie detail page (will probably be deleted once i'm done testing layouts - Faisal
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
-
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
-*, *:before, *:after {
-  position: absolute;
-  width: 100%;
-  left: 2rem;
-  bottom: 2rem;
-  padding: 20px 40px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+#writers,
+#director,
+#stars{
+  width:auto;
 }
 
-.title_wrapper h1 {
-  width: 70%;
-}
 
-button {
-  background: #f40612 !important;
-  color: #fff !important;
-  font-size: 18px;
-  padding: 0.5rem 3rem;
-  outline: none;
-  border: 0 !important;
-}
 
-/* DO NOT DELETE THE COMMENTED OUT CODE BELOW - Breaks the card layout - not sure why, will debug later - Faisal */
+/* DO NOT DELETE THE COMMENTED OUT CODE BELOW - removing the transform: scale(1.2) line breaks the card layout - not sure why, will debug later - Faisal */
 /* .movie-card-image:hover {
   cursor: pointer;
    /* look into easein-out-in instead to fix the animation */
-/* transform: scale(1.2); */
+transform: scale(1.2);
 /* look into the syntax for scaling animations */
 /* animation: grow 0.5s ease-out; */
 /* } */
 
-/* .movie-card-image:hover .movie-info {
-  display: block;
-  animation: fadeOut 0.5s ease; */
-/* } */
 
-/* end of movie card hover - overlay rules attempt 1 */
 
-/* start of movie card hover - overlay rules attempt 2 */
-/* This class can be replaced using options */
-/* .hover-in{
-	transition: .3s ease-out;
-}
-.hover-out{
-	transition: .3s ease-in;
-} */
+
+/* start of movie search results card hover overlay styling rules */
+
 
 .project {
   width: 100%;
@@ -248,80 +215,7 @@ button {
   }
 }
 
- /* star rating stuff via: https://codepen.io/jamesbarnett/pen/vlpkh/  */
 
-fieldset, label { margin: 0; padding: 0; }
-
-/****** Style Star Rating Widget *****/
-/* 
-.rating { 
-  border: none;
-  float: left;
-}
-
-.rating > input { display: none; } 
-.rating > label:before { 
-  margin: 5px;
-  margin-top: 0;
-  font-size: 1em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
-}
-
-.rating > .half:before { 
-  content: "\f089";
-  position: absolute;
-}
-
-.rating > label { 
-  color: #ddd; 
- float: right; 
-} */
-
-/***** CSS Magic to Highlight Stars on Hover *****/
-/***** 
-.rating > input:checked ~ label, /* show gold star when clicked */
-/* .rating:not(:checked) > label:hover, hover current star */
-/* .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } hover previous stars in list */
-
-/* .rating > input:checked + label:hover, hover current star when changing rating */
-/* .rating > input:checked ~ label:hover, */
-/* .rating > label:hover ~ input:checked ~ label, lighten current selection */
-/* .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }  */
-
-/* //tooltip stuff via: https://codepen.io/peiche/pen/JaftA
-
-a[data-tooltip] {
-  position: relative;
-}
-a[data-tooltip]::before,
-a[data-tooltip]::after {
-  position: absolute;
-  display: none;
-  opacity: 0.85;
-}
-a[data-tooltip]::before { */
-  /*
-   * using data-tooltip instead of title so we 
-   * don't have the real tooltip overlapping
-   */
-  /* content: attr(data-tooltip);
-  background: #000;
-  color: #fff;
-  font-size: 13px;
-  padding: 5px;
-  border-radius: 5px; */
-  /* we don't want the text to wrap */
-  /* white-space: nowrap;
-  text-decoration: none; */
-/* }
-a[data-tooltip]::after {
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  content: '';
-}
 .project__image {
   display: block;
   position: relative;
@@ -409,7 +303,8 @@ a[data-tooltip]::after {
 }
 
 .project__title {
-  margin: 0 0 10px;
+  margin-top:1.5em;
+  /* margin: 0 0 10px; */
   font-size: 36px;
   font-weight: 700;
   transition: 0.4s ease;
@@ -482,7 +377,9 @@ a[data-tooltip]::after {
   }
 }
 
-/* @keyframes grow {
+/* the below keyframes aren't being used anywhere at the moment, can be removed before go live if desired */
+
+@keyframes grow {
   0% {
     transform: scale(1);
   }
@@ -490,4 +387,4 @@ a[data-tooltip]::after {
   100% {
     transform: scale(1.2);
   } */
-/* } */
+}

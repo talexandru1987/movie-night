@@ -1,304 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- bulma framework -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <!-- link to google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
-      rel="stylesheet"
-    />
-    <!-- link to the author css file -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Movie Planner | Home</title>
-  </head>
-  <body>
-    <header class="header">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <!-- <img
-              src="https://bulma.io/images/bulma-logo.png"
-              width="112"
-              height="28"
-            /> -->
-            <div class="logo">Movie<span> Night</span></div>
-          </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- bulma framework -->
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+        />
+        <!-- link to google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+        rel="stylesheet"
+        />
+        <!-- link to the author css file -->
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <title>Movie Planner | Home</title>
+    </head>
 
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item"> Home </a>
-            <a class="navbar-item"> Movies </a>
-            <a class="navbar-item"> Calendar </a>
-            <a class="navbar-item"> Invite Friends </a>
-            <a class="navbar-item"> Booking </a>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-   
-    <main class="main">
-        <section class="section">
-        <div class="columns">
-           
-            <!-- Movie poster image -->
-                <div class="column">
-                    <img src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg">
+    <body>
+        <header class="header">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                <a class="navbar-item" href="https://bulma.io">
+                    <!-- <img
+                    src="https://bulma.io/images/bulma-logo.png"
+                    width="112"
+                    height="28"
+                    /> -->
+                    <div class="logo">Movie<span> Night</span></div>
+                </a>
+        
+                <a
+                    role="button"
+                    class="navbar-burger"
+                    aria-label="menu"
+                    aria-expanded="false"
+                    data-target="navbarBasicExample"
+                >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
                 </div>
-
-            <!-- Movie Title and Synopisis -->
-            <div class="column is-two-thirds is-spaced message-header">
-                
-                <div>
-                    <h1 id="movie-title" class="title is-1 has-text-white is-spaced">Spiderman: No Way Home</h1>
-                    <h1 id="movie-synopsis" class="subtitle is-3 has-text-white">With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.</h1>
+        
+                <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="index.html" class="navbar-item"> Home </a>
+                    <!-- <a class="navbar-item"> Movies </a> -->
+                    <a href="favourites.html" class="navbar-item"> Favorites </a>
+                    <a href="about.html" class="navbar-item">About</a>
+                    <!-- <a class="navbar-item"> Booking </a> -->
                 </div>
-                
-
-                <!-- Buttons -->
-                
-                            
-                <div class="buttons are-large is-spaced is-responsive column is-full" >
-                    <!-- <button class="button is-spaced is-halfwidth trailer-button" id="movie-page-hero-btn" >View Trailer</button> -->
-                    
-                    <!-- Trailer modal button - Triggers a popup - code for this can be found in index.js -->
-                    <button class="js-modal-trigger button is-spaced is-halfwidth trailer-button" id="movie-page-hero-btn" data-target="modal-js-example">
-                        View Trailer
-                    </button>
-
-
-                    <button class="button is-spaced is-halfwidth" id="movie-page-hero-btn">Add to Schedule</button>
-
                 </div>
+            </nav>
+        </header>
 
-                <!-- Modal - hidden by default - shows youtube trailer in a popup when clicked -->
-                <!-- need to hook up the youtube api to this  -->
-                <div id="modal-js-example" class="modal">
-                    <div class="modal-background"></div>
-                  
-                    <div class="modal-content">
-                      <div>
-                        <p>Movie trailer from the youtube API needs to render here</p>
-                        <!-- Your content -->
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Nt9L1jCKGnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                      </div>
+            <!-- Users movie selection from search results gets rendered here -->
+        <main>
+            <section>
+                <div class="columns">
+            
+                <!-- Movie poster image - to be pulled from the imdb api-->
+                
+                    <div class="column is-spaced">
+                        <img class="main" src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg">
                     </div>
-                  
-                    <button class="modal-close is-large" aria-label="close"></button>
-                  </div>
+
+                <!-- Movie Title and Synopisis - to be pulled from the imdb api-->
+                <div class="column is-two-thirds is-spaced message-header">
+                    
+                    <div>
+                        <h1 id="movie-title" class="title is-1 has-text-white is-spaced">Spiderman: No Way Home</h1>
+                        <h1 id="movie-synopsis" class="subtitle is-3 has-text-white">With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.</h1>
+                    </div>
+                    
+
+                    <!-- Buttons -->
+                    
+                    <div class="buttons are-large is-spaced is-responsive column is-full" >
+                        
+                        <!-- Trailer modal button - Triggers a popup - code for this can be found in index.js -->
+                        <!-- Create new ID's if required for JavaScript / youtube API -->
+                        <button class="js-modal-trigger button is-spaced is-halfwidth trailer-button" id="movie-page-hero-btn" data-target="modal-js-example">
+                            View Trailer
+                        </button>
+
+                        <!-- Add to schedule button - to be hooked up to the calendar once its complete -->
+                        <button class="button is-spaced is-halfwidth" id="movie-page-hero-btn">Add to Schedule</button>
+
+                        <!-- Add to favourites button - to be hooked up to the favourites page -->
+                        <button class="button is-spaced is-halfwidth" id="movie-page-hero-btn">Add to Favourites</button>
+
+                    </div>
+
+                    <!-- Modal - hidden by default - shows youtube trailer in a popup when clicked -->
+                    <!-- need to hook up the youtube api to this  -->
+                    <div id="modal-js-example" class="modal">
+                        <div class="modal-background"></div>
+                    
+                        <div class="modal-content">
+                        <div>
+                            <p>Movie trailer from the youtube API needs to render here</p>
+                            <!-- Your content - Youtube trailer pulled from the youtube API goes below here - Iframe used as an example-->
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Nt9L1jCKGnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        </div>
+                    
+                        <!-- close modal popup button -->
+                        <button class="modal-close is-large" aria-label="close"></button>
+                    </div>  
+                </div>
             
-            
-            </div>
-         
-    </section>
+            </section>
 
 
 
 
-        <section class="section is-medium">
-            <h1 class="title is-1 has-text-white is-spaced">Section</h1>
-            <h2 class="subtitle is-3 has-text-white">
-              A simple container to divide your page into sections, like the one you're currently reading.
-            </h2>
+            <section class="section">
+                <!-- <h1 class="title is-1 has-text-white is-spaced">Section</h1>
+                <h2 class="subtitle is-3 has-text-white">
+                A simple container to divide your page into sections, like the one you're currently reading.
+                </h2>
+                -->
 
-            <div class="tabs is-toggle is-fullwidth is-large">
-                <ul>
-                  <li class="is-active">
-                    <a>
-                      <span class="icon"><i class="fas fa-image" aria-hidden="true"></i></span>
-                      <span>Pictures</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <span class="icon"><i class="fas fa-music" aria-hidden="true"></i></span>
-                      <span>Music</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <span class="icon"><i class="fas fa-film" aria-hidden="true"></i></span>
-                      <span>Videos</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <span class="icon"><i class="far fa-file-alt" aria-hidden="true"></i></span>
-                      <span>Documents</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                <!-- use a <HR> tag for styled line breaks on the this page to divide each section of content -->
+                <hr>
+
+                <!-- I have used the tag feature from the bulma framework here for the below section -->
+                <!-- If we have time, we can do something fancy like make all of the actor/writer/director names clickable which will take the user to their IMDB page  -->
+                <!-- If we don't have time, it will still look nice and be easy to read at a glance for the user -->
+
+                <!-- Director information section -->
+                <div class="columns is-full tags">
+                    <h1 class="column title is-3 has-text-white">Director:</h1>
+
+                <!-- Below is what we want to populate with director info pulled from the imdb API -->
+                    <p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
+                    id="director">Jon Watts</p>
+                </div>  
 
 
-              
-          </section>
+                <!-- Writer information section -->
+                <div class="columns is-full is-spaced tags">
+                    <h1 class="column title is-3 has-text-white">Writers:</h1>
 
-          <section class="section is-medium">
-
-            <div class="tabs is-centered is-boxed is-medium">
-                <ul>
-                  <li class="is-active">
-                    <a>
-                      <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
-                      <span>Pictures</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
-                      <span>Music</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
-                      <span>Videos</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
-                      <span>Documents</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-          </section>
+                <!-- This one is what we want to populate with writer info pulled from the imdb API -->
+                    <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced" 
+                    id="writers">Chris McKenna</p>
+                    <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced" 
+                    id="writers">Erik Sommers</p>
+                    <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced" 
+                    id="writers">Stan Lee</p>
+                </div>  
 
 
-    </main>
+                <!-- Film actors information section -->
+                <div class="columns is-full is-spaced tags">
+                    <h1 class="column title is-3 has-text-white">Stars:</h1>
 
-      <!-- Movie Search results section - Can be removed once this is being rendered in JavaScript - but leave for now until styling is finalised -->
+                <!-- Below is what we want to populate with actor info pulled from the imdb API -->
+                    <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced" 
+                    id="stars">Tom Holland</p>
 
+                    <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced" 
+                    id="stars">Zendaya</p>
 
-<!-- <div class="top">
-	<div class="columns">
-		<div class="column is-full featured_wrapper p-0">
-			 <img src="https://image.tmdb.org/t/p/original/jHq5wxRwAhHiRfLH0yadNRU3jCQ.jpg" class="featured"> -->
-			<!-- <img src="https://image.tmdb.org/t/p/original/pLR2O3dmA9xkCiPA26U7ErCUYSi.jpg" class="featured"> -->
-			<!-- <img src="https://image.tmdb.org/t/p/original/ai2FicMUxLCurVkjtYdSvVDWRmS.jpg" class="featured"> -->
-			<!-- <img src="https://image.tmdb.org/t/p/original/eete5ZAaagldSXxDetN62V3WXcg.jpg" class="featured">
-			<div class="title_wrapper"> -->
-				<!-- <span class="has-text-white">MOVIE NIGHT</span> -->
+                    <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced" 
+                    id="stars">Benedict Cumberbatch</p>
 
+                </div> 
+                <hr>
 
-				<!-- <button class="button is-medium">Search</button>
-			</div>
-		</div>
-	</div>
-</div>  -->
+            </section>
 
 
-
-
-<!-- Start of movie detail page HTML -->
-<!-- <section>
-
-
-  <div class="movie-card">
-  
-    <div class="container">
-      
-      <a href="#"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_cover.jpg" alt="cover" class="cover" /></a>
-          
-      <div class="hero">
-              
-        <div class="details">
         
-          <div class="title1">The Hobbit <span>PG-13</span></div>
-  
-          <div class="title2">The Battle of the Five Armies</div>    
-          
-          <fieldset class="rating">
-      <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-      <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-      <input type="radio" id="star4" name="rating" value="4" checked /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-      <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-      <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-      <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-      <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-      <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-      <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-      <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-    </fieldset>
-          
-          <span class="likes">109 likes</span>
-          
-        </div> end details
+
+                
+            
+
         
-      </div> end hero
-      
-      <div class="description">
-        
-        <div class="column1">
-          <span class="tag">action</span>
-          <span class="tag">fantasy</span>
-          <span class="tag">adventure</span> -->
-        <!-- </div> end column1 -->
-        
-        <!-- <div class="column2">
-          
-          <p>Bilbo Baggins is swept into a quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug. Approached out of the blue by the wizard Gandalf the Grey, Bilbo finds himself joining a company of thirteen dwarves led by the legendary warrior, Thorin Oakenshield. Their journey will take them into the Wild; through... <a href="#">read more</a></p>
-          
-          <div class="avatars">
-            <a href="#" data-tooltip="Person 1" data-placement="top">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar1.png" alt="avatar1" />
-            </a>
-            
-            <a href="#" data-tooltip="Person 2" data-placement="top">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar2.png" alt="avatar2" />
-            </a>
-            
-            
-            <a href="#" data-tooltip="Person 3" data-placement="top">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar3.png" alt="avatar3" />
-            </a> -->
-            
-          </div> <!-- end avatars -->
-          
-          
-          
-        </div> <!-- end column2 -->
-      </div> <!-- end description -->
-      
-     
-    </div> <!-- end container -->
-  </div> <!-- end movie-card -->
-</section>
+
+
+        </main>
+
     
 
-    <!-- link to jquery library-->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- link to the js file-->
-    <script src="./assets/js/index.js"></script>
-  </body>
+        <!-- link to jquery library-->
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+        </script>
+        
+        <!-- link to the js file-->
+        <script src="./assets/js/index.js"></script>
+    </body>
 </html>
