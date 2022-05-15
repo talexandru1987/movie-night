@@ -27,6 +27,10 @@ main {
   padding: 100px;
 }
 
+.block:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
 /* navbar style - start here */
 
 .banner {
@@ -158,6 +162,13 @@ button {
 #movie-synopsis{
   padding-left: 0.5rem;
 }
+
+#movie-page-hero-btn{
+  margin-top:20px;
+  padding-top: 20px;
+}
+
+$box-background-color
 
 
 /* Start of styling for movie detail page (will probably be deleted once i'm done testing layouts - Faisal

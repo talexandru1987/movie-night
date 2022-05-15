@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- bulma framework -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <!-- link to google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
       rel="stylesheet"
     />
+    <!-- font awesome library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
     <!-- link to the author css file -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Movie Planner | Home</title>
@@ -45,11 +54,11 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-end">
-            <a class="navbar-item"> Home </a>
-            <a class="navbar-item"> Movies </a>
-            <a class="navbar-item"> Calendar </a>
-            <a class="navbar-item"> Invite Friends </a>
-            <a class="navbar-item"> Booking </a>
+            <a href="index.html" class="navbar-item"> Home </a>
+            <!-- <a class="navbar-item"> Movies </a> -->
+            <a href="favourites.html" class="navbar-item"> Favorites </a>
+            <a href="about.html" class="navbar-item">About</a>
+            <!-- <a class="navbar-item"> Booking </a> -->
           </div>
         </div>
       </nav>
@@ -71,11 +80,22 @@
               <h1 class="title is-1 has-text-white">MOVIE NIGHT</h1>
 
               <form>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Enter movie" id="search-field" />
+                <div class="control column is-4">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Enter movie"
+                    id="search-field"
+                  />
                 </div>
                 <div class="control">
-                  <button id="search-button" class="button is-medium" type="submit">Search</button>
+                  <button
+                    id="search-button"
+                    class="button is-medium"
+                    type="submit"
+                  >
+                    Search
+                  </button>
                 </div>
               </form>
             </div>
@@ -83,7 +103,10 @@
         </div>
       </div>
       <div class="container">
-        <div id="search-results-container" class="columns is-multiline p-0 pt-6 last">
+        <div
+          id="search-results-container"
+          class="columns is-multiline p-0 pt-6 last"
+        >
           <div class="column is-full">
             <p class="title is-1 has-text-white">Search Results:</p>
           </div>
@@ -113,6 +136,9 @@
               <h4 class="project__category">2h 45m</h4>
             </div>
           </div> -->
+          <div class="heart-icon">
+            <i class="fa-solid fa-heart" id="heart-icon"></i>
+          </div>
         </div>
       </div>
     </main>
@@ -126,5 +152,6 @@
     ></script>
     <!-- link to the js file-->
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/favourites.js"></script>
   </body>
 </html>
