@@ -63,7 +63,7 @@ const renderMovieCards = (movies) => {
         ? `Run time: ${movie.runningTimeInMinutes}`
         : "";
       const movieCard = `<div class="column is-one-quarter is-clickable project">
-        <img class="movie-card-image project__image"
+        <img data-movieCard = "${movie.id}" class="movie-card-image project__image"
           src="${movie.image.url}" alt="${movie.title ? movie.title : movie.legacyNameText}
         />
         <div class="project__detail">
@@ -101,6 +101,13 @@ const handleNavBarToggle = () => {
   navBurgerBtn.click(toggleNavBar);
 };
 
+//process the selected movie card
+const checkMovieCard = (event) => {
+  //target the target id
+  const getMovieCardId = event.target.getAttribute("data-movieCard");
+  console.log(getMovieCardId);
+};
+
 //will create an event listener for a search button
 // const generateEventListener = (varID, triggerFunction) => {
 //   //target the search
@@ -111,8 +118,12 @@ const handleNavBarToggle = () => {
 
 //code to execute when ready
 const onReady = () => {
+  //target the search button
   searchButton.on("click", processMovieSearch);
+  //handle the navbar
   handleNavBarToggle();
+  //add an event listener to the movie cards container
+  $("#search-results-container").on("click", checkMovieCard);
 };
 
 //check if document is ready
