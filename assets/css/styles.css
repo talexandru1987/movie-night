@@ -136,45 +136,17 @@ button {
 
 .footer-container {
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   background-color: var(--black);
   border-top: solid 3px var(--amaranth-red);
-}
-
-.footer-row {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.footer-ul li {
-  list-style: none;
-}
-
-.footer-col {
-  width: 35%;
-  padding: 0 10px;
-}
-
-.footer-col h4 {
-  font-size: 20px;
-  color: var(--platinum);
-  margin-bottom: 10px;
-  font-weight: 500;
-  position: relative;
-}
-
-.footer-col ul li a {
-  font-size: 16px;
-  color: var(--platinum);
-  text-decoration: none;
-  font-weight: 300;
-  color: var(--platinum);
-  display: block;
-}
-
-.footer-col ul li a:hover {
-  color: var(--amaranth-red);
-  transition: 0.3s;
+.columns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
