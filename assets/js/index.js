@@ -67,10 +67,10 @@ const renderMovieCards = (movies) => {
           src="${movie.image.url}" alt="${movie.title ? movie.title : movie.legacyNameText}
         />
         <div class="project__detail">
-          <h3 class="project__title">${movie.title ? movie.title : movie.legacyNameText} (${
+          <h3 class="project__title has-text-white">${movie.title ? movie.title : movie.legacyNameText} (${
         movie.year ? movie.year : movie.knownFor[0].year
       })</h3>
-          <h4 class="project__category">${extraDetails}</h4>
+          <h4 class="project__category has-text-white">${extraDetails}</h4>
         </div>
       </div>`;
 
