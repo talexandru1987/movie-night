@@ -3,8 +3,6 @@ const apiKey = "638741ded1msh07bc6f796714e78p1d32e2jsnea59f0e47a93";
 //basic search url
 const baseURL = "https://online-movie-database.p.rapidapi.com/title/find?q=";
 const searchButton = $("#search-button");
-//the currently selected favorite movie
-let getMovieCardId;
 
 let mockData = false;
 
@@ -72,8 +70,10 @@ const processMovieSearch = async (event) => {
 
   //call the api
   const movies = await fetchData(url, options);
+  const filteredMovies = movies.results.filter((movie) => movie.id.includes("title"));
+  console.log(filteredMovies);
 
-  renderMovieCards(movies.results);
+  renderMovieCards(filteredMovies);
 };
 
 const renderMovieCards = (movies) => {
@@ -132,15 +132,11 @@ const handleNavBarToggle = () => {
 //process the selected movie card
 const checkMovieCard = (event) => {
   //target the target id
-  getMovieCardId = event.target.getAttribute("data-movieCard");
-  //read from local storage
-  const favoriteMoviesArray = readFromLocalStorage("favoriteMovie", []);
-  //push to the array
-  favoriteMoviesArray.push(getMovieCardId);
+  const getMovieCardId = $(event.target).attr("data-movieCard").split("/")[2];
   //write to local storage
-  writeToLocalStorage("favoriteMovie", favoriteMoviesArray);
+  //writeToLocalStorage("favoriteMovie", getMovieCardId);
   //load the details page
-  window.location.replace("./movie.html");
+  window.location.replace(`./movie.html?id=${getMovieCardId}`);
 };
 
 //will create an event listener for a search button
