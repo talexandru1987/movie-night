@@ -9,6 +9,11 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
         />
+         <!-- font awesome  -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+   />
         <!-- link to google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -102,7 +107,14 @@
                         <button class="button is-spaced is-halfwidth" id="movie-page-hero-btn">Add to Schedule</button>
 
                         <!-- Add to favourites button - to be hooked up to the favourites page -->
-                        <button class="button is-spaced is-halfwidth" id="movie-page-hero-btn">Add to Favourites</button>
+                        <form>
+                            <div class="control">      
+                               <button id="favourites" class="button is-medium" type="submit"><i class="fa-regular fa-heart"></i></button>
+                       
+                           
+                      
+                            </div>
+                          </form>
 
                     </div>
 
@@ -240,8 +252,8 @@
                                         <img src="https://picsum.photos/640/480/?random" alt="Description">
                                     </figure>
                                 </article>
-                            </div> -->
-                        </div>
+                            </div>
+                        </div> -->
                         <!-- <div class="tile is-parent is-shady">
                             <article class="tile is-child notification message-header">
                                 <p class="title">Wide column</p>
@@ -331,6 +343,6 @@
         </script>
         
         <!-- link to the js file-->
-        <script src="./assets/js/movie.js"></script>
+        <script src="./assets/js/favourites.js"></script>
     </body>
 </html>

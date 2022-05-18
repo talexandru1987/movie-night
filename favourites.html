@@ -11,6 +11,7 @@
     />
     <!-- link to google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
@@ -18,20 +19,14 @@
     />
     <!-- link to the author css file -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>My Favorites | Favorites</title>
+    <link rel="stylesheet" href="./assets/css/favourites.css" />
+
+    <title>My Favorites</title>
   </head>
   <body>
     <header class="header">
       <nav class="navbar is-flex-direction-row" role="navigation" aria-label="main navigation">
-       
-          <!-- <a class="navbar-item" href="./index.html"> -->
-            <!-- <img
-              src="https://bulma.io/images/bulma-logo.png"
-              width="112"
-              height="28"
-            /> -->
-            <!-- <div class="logo">Movie<span> Night</span></div>
-          </a> -->
+      
 
           <div class="logo navbar-item">
             <a href="./index.html">
@@ -62,7 +57,7 @@
           </div>
         </div>
       </nav>
-    </header>
+      <!-- /main container which holds everything and will be appended -->
     <main class="main">
       <!-- Movie Search results section - Can be removed once this is being rendered in JavaScript - but leave for now until styling is finalised -->
       <div class="top">
@@ -78,26 +73,7 @@
             <div class="title_wrapper">
               <!-- <span class="has-text-white">MOVIE NIGHT</span> -->
               <h1 class="title is-1 has-text-white">My Favorites</h1>
-
-              <!-- <form>
-                <div class="control">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Enter movie"
-                    id="search-field"
-                  />
-                </div>
-                <div class="control">
-                  <button
-                    id="search-button"
-                    class="button is-medium"
-                    type="submit"
-                  >
-                    Search
-                  </button>
-                </div>
-              </form> -->
+              
             </div>
           </div>
         </div>
@@ -108,7 +84,26 @@
           class="columns is-multiline p-0 pt-6 last"
         >
           <div class="column is-full">
-              <p>This is where the favorites will be rendered</p>
+            <div class="column is-one-quarter is-clickable project">
+              <img
+                class="movie-card-image project__image"
+                src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg"
+              />
+  
+              <div class="project__detail">
+                <h3 class="project__title">Spiderman: Far From Home (2021)</h3>
+                <h4 class="project__category">2h 45m</h4>
+              </div>
+            </div> 
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="search-results-container" class="columns is-multiline p-0 pt-6 last">
+  
+          
           </div>
        </div>
       </div>
@@ -121,7 +116,9 @@
   ></script>
   <!-- link to the js file-->
   <script src="./assets/js/index.js"></script>
-</body>
-</html>
+  <script src="./assets/js/movie.js"></script>
+  <script src="./assets/js/favourites.js"></script>
+  </body>
+  </html>
   </body>
 </html>
