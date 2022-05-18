@@ -23,45 +23,51 @@
 
     <body>
         <header class="header">
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                <a class="navbar-item" href="https://bulma.io">
-                    <!-- <img
+            <nav class="navbar is-flex-direction-row" role="navigation" aria-label="main navigation">
+             
+                <!-- <a class="navbar-item" href="./index.html"> -->
+                  <!-- <img
                     src="https://bulma.io/images/bulma-logo.png"
                     width="112"
                     height="28"
-                    /> -->
-                    <div class="logo">Movie<span> Night</span></div>
-                </a>
-        
+                  /> -->
+                  <!-- <div class="logo">Movie<span> Night</span></div>
+                </a> -->
+      
+                <div class="logo navbar-item">
+                  <a href="./index.html">
+                    Movie<span> Night</span>
+                  </a>
+                  </div>
+      
                 <a
-                    role="button"
-                    class="navbar-burger"
-                    aria-label="menu"
-                    aria-expanded="false"
-                    data-target="navbarBasicExample"
+                  role="button"
+                  class="navbar-burger"
+                  aria-label="menu"
+                  aria-expanded="false"
+                  data-target="navbarBasicExample"
                 >
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
                 </a>
-                </div>
-        
-                <div id="navbarBasicExample" class="navbar-menu">
+             
+      
+              <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="index.html" class="navbar-item"> Home </a>
-                    <!-- <a class="navbar-item"> Movies </a> -->
-                    <a href="favourites.html" class="navbar-item"> Favorites </a>
-                    <a href="about.html" class="navbar-item">About</a>
-                    <!-- <a class="navbar-item"> Booking </a> -->
+                  <a href="index.html" class="navbar-item"> Home </a>
+                  <!-- <a class="navbar-item"> Movies </a> -->
+                  <a href="favourites.html" class="navbar-item"> Favorites </a>
+                  <a href="about.html" class="navbar-item">About</a>
+                  <!-- <a class="navbar-item"> Booking </a> -->
                 </div>
-                </div>
+              </div>
             </nav>
-        </header>
+          </header>
 
             <!-- Users movie selection from search results gets rendered here -->
-        <main>
-            <section>
+        <main class="main container">
+            <section class="main">
                 <div class="columns">
             
                 <!-- Movie poster image - to be pulled from the imdb api-->

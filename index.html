@@ -25,16 +25,22 @@
   </head>
   <body>
     <header class="header">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="./index.html">
+      <nav class="navbar is-flex-direction-row" role="navigation" aria-label="main navigation">
+       
+          <!-- <a class="navbar-item" href="./index.html"> -->
             <!-- <img
               src="https://bulma.io/images/bulma-logo.png"
               width="112"
               height="28"
             /> -->
-            <div class="logo">Movie<span> Night</span></div>
-          </a>
+            <!-- <div class="logo">Movie<span> Night</span></div>
+          </a> -->
+
+          <div class="logo navbar-item">
+            <a href="./index.html">
+              Movie<span> Night</span>
+            </a>
+            </div>
 
           <a
             role="button"
@@ -47,7 +53,7 @@
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
-        </div>
+       
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-end">
@@ -60,7 +66,7 @@
         </div>
       </nav>
     </header>
-    <main class="main">
+    <main class="main is-mobile">
       <!-- Movie Search results section - Can be removed once this is being rendered in JavaScript - but leave for now until styling is finalised -->
       <div class="top">
         <div class="columns">
@@ -105,10 +111,10 @@
               <h3 class="project__title">Spiderman: Far From Home (2021)</h3>
               <h4 class="project__category">2h 45m</h4>
             </div>
-          </div> -->
+          </div> --> 
 
           <!-- Movie card 2 -->
-          <!-- <div class="column is-one-quarter is-clickable project">
+          <!-- <div class="column is-one-quarter is-clickable project is-mobile">
             <img
               class="movie-card-image project__image"
               src="https://www.themoviedb.org/t/p/w1280/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg"
@@ -121,12 +127,12 @@
           </div> -->
           <!-- <div class="heart-icon">
             <i class="fa-solid fa-heart has-text-white" id="heart-icon"></i>
-          </div> -->
+          </div>
         </div>
       </div>
-    </main>
+    </main> -->
 
-    <!-- link to jquery library-->
+    <!-- link to jquery library -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
