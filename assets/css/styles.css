@@ -135,6 +135,13 @@ html {
   width:80%;
 }
 
+.movie-page-container {
+  margin-left: 5rem;
+	padding-bottom: 3rem;
+  width:80%;
+  justify-content:center;
+  
+}
 
 .last {
   margin-top: 6.5rem;
@@ -198,6 +205,13 @@ button {
   width:auto;
 }
 
+.movie-image {
+  min-width: 100%;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  height:100%
+} 
 
 
 /* DO NOT DELETE THE COMMENTED OUT CODE BELOW - removing the transform: scale(1.2) line breaks the card layout - not sure why, will debug later - Faisal */
