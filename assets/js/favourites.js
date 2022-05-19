@@ -14,12 +14,32 @@ function handleFavClick() => {
     } else {
       return defaultValue;
     }
+
   };
 
   //function to render the favourite cards onto the favourites page
   renderFavCards () => {
-    //render the favecard movie div & delete button
-    const faveMovieCard =  ``
+    //render the faveCard movie div & delete button
+    const faveMovieCard =  `    <div
+    id="search-results-container"
+    class="columns is-multiline p-0 pt-6 last"
+  >
+    <div class="column is-full">
+      <div class="column is-one-quarter is-clickable project">
+        <img data-movieCard = "${movie.id}"
+          class="movie-card-image project__image"
+          src="${movie?.image?.url}" alt="${movie.title? movie.title : movie.legacyNameText}"
+        />
+
+        <div class="project__detail">
+          <h3 class="project__title">${movie.title ? movie.title : movie.legacyNameText}</h3>
+          <h4 class="project__category">${extraDetails}</h4>
+          <button type="onclick" id="btn"><i class="fa-solid fa-circle-minus">Delete</i></button>
+        </div>
+      </div> 
+      
+    </div>
+  </div>`;
 
       //append to container
       $("#fave-container").append(faveMovieCard);

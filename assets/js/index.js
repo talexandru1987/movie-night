@@ -41,7 +41,10 @@ const options = {
 const fetchData = async (url, options = {}) => {
   try {
     if (mockData) {
-      const response = await fetch("./assets/data/dataReponseYear.json", options);
+      const response = await fetch(
+        "./assets/data/dataResponseYear.json",
+        options
+      );
       const data = await response.json();
       return data;
     } else {
@@ -70,7 +73,9 @@ const processMovieSearch = async (event) => {
 
   //call the api
   const movies = await fetchData(url, options);
-  const filteredMovies = movies.results.filter((movie) => movie.id.includes("title"));
+  const filteredMovies = movies.results.filter((movie) =>
+    movie.id.includes("title")
+  );
   console.log(filteredMovies);
 
   renderMovieCards(filteredMovies);
@@ -93,13 +98,17 @@ const renderMovieCards = (movies) => {
         ? `Run time: ${movie.runningTimeInMinutes}`
         : "";
       const movieCard = `<div class="column is-one-quarter is-clickable project">
-        <img data-movieCard = "${movie.id}" class="movie-card-image project__image"
-          src="${movie?.image?.url}" alt="${movie.title ? movie.title : movie.legacyNameText}
+        <img data-movieCard = "${
+          movie.id
+        }" class="movie-card-image project__image"
+          src="${movie?.image?.url}" alt="${
+        movie.title ? movie.title : movie.legacyNameText
+      }
         />
         <div class="project__detail">
-          <h3 class="project__title">${movie.title ? movie.title : movie.legacyNameText} (${
-        movie.year ? movie.year : movie?.knownFor[0].year
-      })</h3>
+          <h3 class="project__title">${
+            movie.title ? movie.title : movie.legacyNameText
+          } (${movie.year ? movie.year : movie?.knownFor[0].year})</h3>
           <h4 class="project__category">${extraDetails}</h4>
         </div>
       </div>`;
@@ -164,43 +173,47 @@ $(document).ready(onReady);
 //   handleNavBarToggle();
 // });
 
-
 // JS for the trailer modal on movie package
 
 // const trailerButton = $(".trailer-button");
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Functions to open and close a modal
   function openModal($el) {
-    $el.classList.add('is-active');
+    $el.classList.add("is-active");
   }
   function closeModal($el) {
-    $el.classList.remove('is-active');
+    $el.classList.remove("is-active");
   }
   function closeAllModals() {
-    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+    (document.querySelectorAll(".modal") || []).forEach(($modal) => {
       closeModal($modal);
     });
   }
   // Add a click event on buttons to open a specific modal
-  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+  (document.querySelectorAll(".js-modal-trigger") || []).forEach(($trigger) => {
     const modal = $trigger.dataset.target;
     const $target = document.getElementById(modal);
-    $trigger.addEventListener('click', () => {
+    $trigger.addEventListener("click", () => {
       openModal($target);
     });
   });
   // Add a click event on various child elements to close the parent modal
-  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-    const $target = $close.closest('.modal');
-    $close.addEventListener('click', () => {
+  (
+    document.querySelectorAll(
+      ".modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button"
+    ) || []
+  ).forEach(($close) => {
+    const $target = $close.closest(".modal");
+    $close.addEventListener("click", () => {
       closeModal($target);
     });
   });
   // Add a keyboard event to close all modals
-  document.addEventListener('keydown', (event) => {
+  document.addEventListener("keydown", (event) => {
     const e = event || window.event;
-    if (e.keyCode === 27) { // Escape key
+    if (e.keyCode === 27) {
+      // Escape key
       closeAllModals();
     }
   });
