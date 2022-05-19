@@ -7,7 +7,6 @@
 }
 .about-us {
   padding-top: 100px;
-  height: 100vh;
 }
 .description {
   display: inline-block;
@@ -17,7 +16,7 @@
   padding: 0 30px;
   width: 300px;
   justify-content: center;
-  height: 600px;
+  height: 400px;
   background-color: var(--black);
 }
 .description h3 {

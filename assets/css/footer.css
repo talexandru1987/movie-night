@@ -1,0 +1,41 @@
+:root {
+  /* --variable-name: variableValue; */
+  /* background-color: var(--oxford-blue) */
+
+  --black: #000000ff;
+  --oxford-blue: #14213dff;
+  --orange-web: #fca311ff;
+  --platinum: #e5e5e5ff;
+  --white: #ffffffff;
+  --imperial-red: #ef233cff;
+  --amaranth-red: #d90429ff;
+}
+
+/* footer section */
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--black);
+  padding: 1rem;
+  border-top: 3px solid var(--amaranth-red);
+}
+
+.footer-container {
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.contact,
+.footer-text {
+  padding: 5px;
+  color: var(--platinum);
+}
+
+.contact:hover {
+  color: var(--amaranth-red);
+}
