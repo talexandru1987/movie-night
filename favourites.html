@@ -58,7 +58,7 @@
         </div>
       </nav>
       <!-- /main container which holds everything and will be appended -->
-    <main class="main">
+    <main class="container">
       <!-- Movie Search results section - Can be removed once this is being rendered in JavaScript - but leave for now until styling is finalised -->
       <div class="top">
         <div class="columns">
@@ -78,7 +78,7 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container"  id="fave-container">
         <div
           id="search-results-container"
           class="columns is-multiline p-0 pt-6 last"
@@ -93,6 +93,7 @@
               <div class="project__detail">
                 <h3 class="project__title">Spiderman: Far From Home (2021)</h3>
                 <h4 class="project__category">2h 45m</h4>
+                <button type="onclick" id="btn"><i class="fa-solid fa-circle-minus">Delete</i></button>
               </div>
             </div> 
             
