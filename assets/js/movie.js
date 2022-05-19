@@ -1,5 +1,5 @@
 //variable to store the API key
-const apiKey = "638741ded1msh07bc6f796714e78p1d32e2jsnea59f0e47a93";
+const apiKey = "ab8ecba8f8msh3f5afdafcf2d348p1b6b52jsne7b90c6a16b4";
 //basic search url
 const baseURL = "https://online-movie-database.p.rapidapi.com/title/find?q=";
 
@@ -239,18 +239,14 @@ const renderMovieInfo = (movie) => {
 const favoriteToLocalStorage = () => {
   console.log("test");
   //read from local storage
-  const localStorageValue = readFromLocalStorage("favorites", []);
-  //if the favorite is already saved dont add to local storage
-  let duplicate = false;
-  //iterate through local storage
-  for (let i = 0; i < localStorageValue.length; i += 1) {
-    if (localStorageValue[i].imdbID === movie.imdbID) {
-      duplicate = true;
-    }
-  }
+  const favorites = readFromLocalStorage("favorites", []);
+  const isDuplicate = !!favorites.find((favorite) => {
+    return favorite.imdbID === movie.imdbID;
+  });
+  console.log(isDuplicate);
 
   //if it's not a duplicate then add to local storage
-  if (!duplicate) {
+  if (!isDuplicate) {
     //create the object
     const favoriteValue = {};
     //add the key and value to the object
@@ -259,11 +255,11 @@ const favoriteToLocalStorage = () => {
     favoriteValue["runtime"] = movie.Runtime;
     favoriteValue["imdbID"] = movie.imdbID;
     //push to the array
-    localStorageValue.push(favoriteValue);
+    favorites.push(favoriteValue);
     //add to local storage
-    writeToLocalStorage("favorites", localStorageValue);
+    writeToLocalStorage("favorites", favorites);
 
-    console.log(localStorageValue);
+    console.log(favorites);
   }
 };
 

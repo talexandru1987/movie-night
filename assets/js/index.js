@@ -1,5 +1,5 @@
 //variable to store the API key
-const apiKey = "638741ded1msh07bc6f796714e78p1d32e2jsnea59f0e47a93";
+const apiKey = "ab8ecba8f8msh3f5afdafcf2d348p1b6b52jsne7b90c6a16b4";
 //basic search url
 const baseURL = "https://online-movie-database.p.rapidapi.com/title/find?q=";
 const searchButton = $("#search-button");
@@ -41,10 +41,7 @@ const options = {
 const fetchData = async (url, options = {}) => {
   try {
     if (mockData) {
-      const response = await fetch(
-        "./assets/data/dataReponseYear.json",
-        options
-      );
+      const response = await fetch("./assets/data/dataReponseYear.json", options);
       const data = await response.json();
       return data;
     } else {
@@ -73,9 +70,7 @@ const processMovieSearch = async (event) => {
 
   //call the api
   const movies = await fetchData(url, options);
-  const filteredMovies = movies.results.filter((movie) =>
-    movie.id.includes("title")
-  );
+  const filteredMovies = movies.results.filter((movie) => movie.id.includes("title"));
   console.log(filteredMovies);
 
   renderMovieCards(filteredMovies);
@@ -98,17 +93,13 @@ const renderMovieCards = (movies) => {
         ? `Run time: ${movie.runningTimeInMinutes}`
         : "";
       const movieCard = `<div class="column is-one-quarter is-clickable project">
-        <img data-movieCard = "${
-          movie.id
-        }" class="movie-card-image project__image"
-          src="${movie?.image?.url}" alt="${
-        movie?.title ? movie?.title : movie?.legacyNameText
-      }"
+        <img data-movieCard = "${movie.id}" class="movie-card-image project__image"
+          src="${movie?.image?.url}" alt="${movie?.title ? movie?.title : movie?.legacyNameText}"
         />
         <div class="project__detail">
-          <h3 class="project__title">${
-            movie.title ? movie.title : movie.legacyNameText
-          } (${movie.year ? movie.year : movie?.knownFor[0].year})</h3>
+          <h3 class="project__title">${movie.title ? movie.title : movie.legacyNameText} (${
+        movie.year ? movie.year : movie?.knownFor[0].year
+      })</h3>
           <h4 class="project__category">${extraDetails}</h4>
         </div>
       </div>`;
