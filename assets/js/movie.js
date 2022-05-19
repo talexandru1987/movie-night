@@ -100,12 +100,63 @@ const renderMovieInfo = (movie) => {
         </div>
 
         <!-- Buttons -->
-      </div>
+        <div class="buttons are-large is-spaced is-responsive column is-full" >
+                        
+            <!-- Trailer modal button - Triggers a popup - code for this can be found in index.js -->
+            <!-- Create new ID's if required for JavaScript / youtube API -->
+            <button class="js-modal-trigger button is-spaced is-halfwidth trailer-button" id="movie-page-hero-btn" data-target="modal-js-example">
+                View Trailer
+            </button>
+
+            <!-- Add to schedule button - to be hooked up to the calendar once its complete -->
+            <button class="button is-spaced is-halfwidth" id="movie-page-hero-btn">Add to Schedule</button>
+
+            <!-- Add to favourites button - to be hooked up to the favourites page -->
+            <button class="button is-spaced is-halfwidth" id="movie-page-hero-btn">Add to Favourites</button>
+
+        </div>
+  
 
       <!-- Modal - hidden by default - shows youtube trailer in a popup when clicked -->
       <!-- need to hook up the youtube api to this  -->
-    </div>
-  </section>`;
+          </div>
+          <div id="modal-js-example" class="modal">
+          <div class="modal-background"></div>
+
+          <div class="modal-content">
+          <div>
+              <p>Movie trailer from the youtube API needs to render here</p>
+              <!-- Your content - Youtube trailer pulled from the youtube API goes below here - Iframe used as an example-->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Nt9L1jCKGnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          </div>
+
+          <!-- close modal popup button -->
+          <button class="modal-close is-large" aria-label="close"></button>
+      </div>  
+   
+  </section>
+  
+  <section class="section container m-auto">
+  <hr>
+
+  <!-- Film actors information section -->
+  <div class="columns is-full is-spaced tags mt-5 is-flex-wrap-wrap">
+      <h1 class="column title is-3 has-text-white">Cast:</h1>
+
+  <!-- Below is what we want to populate with actor info pulled from the imdb API -->
+      <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced is-clickable" 
+      id="stars">${movie.Actors}</p>
+
+      <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced is-clickable" 
+      id="stars">Zendaya</p>
+
+      <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced is-clickable" 
+      id="stars">Benedict Cumberbatch</p>
+
+  </div> 
+  <hr>
+  `;
 
   $("#main-container").append(movieContainer);
 };
@@ -128,6 +179,8 @@ const onReady = async () => {
 
 //check if document is ready
 $(document).ready(onReady);
+
+
 
 // JS for the trailer modal on movie package
 
