@@ -65,6 +65,15 @@ const writeToLocalStorage = (key, value) => {
   localStorage.setItem(key, stringifiedValue);
 };
 
+
+const getArrayFromString = (string) => {
+  // work on this to split actor names into separate tags
+  // split the string by comma
+  // return an array
+  // ["Kyle Chandler", "Vera Farmiga", "Millie Bobby Brown"];
+};
+
+
 const renderMovieInfo = (movie) => {
   const movieContainer = `<section class="is-flex">
     <div
@@ -140,6 +149,34 @@ const renderMovieInfo = (movie) => {
   <section class="section container m-auto">
   <hr>
 
+  <!-- Country info goes here -->
+  <div class="columns is-full tags">
+      <h1 class="column title is-3 has-text-white">Country:</h1>
+
+  <!-- Below is what we want to populate with director info pulled from the imdb API -->
+      <p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
+      id="director">${movie.Country}</p>
+  </div>  
+
+  <!-- Genre information section -->
+  <div class="columns is-full tags">
+      <h1 class="column title is-3 has-text-white">Genre:</h1>
+
+  <!-- Below is what we want to populate with director info pulled from the imdb API -->
+      <p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
+      id="director">${movie.Genre}</p>
+  </div>  
+
+  <!-- Director information section -->
+  <div class="columns is-full tags">
+      <h1 class="column title is-3 has-text-white">Director:</h1>
+
+  <!-- Below is what we want to populate with director info pulled from the imdb API -->
+      <p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
+      id="director">${movie.Director}</p>
+  </div>  
+
+
   <!-- Film actors information section -->
   <div class="columns is-full is-spaced tags mt-5 is-flex-wrap-wrap">
       <h1 class="column title is-3 has-text-white">Cast:</h1>
@@ -156,6 +193,37 @@ const renderMovieInfo = (movie) => {
 
   </div> 
   <hr>
+  </section>
+
+  <!-- Tiles section starts here -->
+  <section>
+
+      <div class="sandbox container">
+          <div class="tile is-ancestor ">
+              <div class="tile is-parent is-shady">
+                  <article class="tile is-child notification message-header">
+                      <p class="title">Hello World</p>
+                      <p class="subtitle">What is up?</p>
+                  </article>
+              </div>
+              <div class="tile is-parent is-shady">
+                  <article class="tile is-child notification message-header">
+                      <p class="title">Foo</p>
+                      <p class="subtitle">Bar</p>
+                  </article>
+              </div>
+              <div class="tile is-parent is-shady">
+                  <article class="tile is-child notification message-header">
+                      <p class="title">Third column</p>
+                      <p class="subtitle">With some content</p>
+                      <div class="content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                      </div>
+                  </article>
+              </div>
+          </div>
+
+          <hr>
   `;
 
   $("#main-container").append(movieContainer);
