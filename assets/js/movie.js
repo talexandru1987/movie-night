@@ -105,7 +105,7 @@ const renderMovieInfo = (movie) => {
         <!-- <div class="column"> -->
         <img
           class="movie-image"
-          src="${movie.Poster}"
+          src="${movie?.Poster}"
         />
       </div>
 

@@ -208,7 +208,7 @@ button {
 /* .movie-card-image:hover {
   cursor: pointer;
    /* look into easein-out-in instead to fix the animation */
-/* transform: scale(1.2); */
+transform: scale(1.2);
 /* look into the syntax for scaling animations */
 /* animation: grow 0.5s ease-out; */
 /* } */
@@ -219,6 +219,7 @@ button {
   width: 100%;
   width: 45%;
   float: left;
+  margin-right: 5%;
 }
 
 .avatars {
