@@ -66,20 +66,20 @@ const writeToLocalStorage = (key, value) => {
 };
 
 const getArrayFromString = (string) => {
-  const stringArray = string.split(",") 
-  console.log(stringArray)
-  const tags = stringArray.map(tag => `<p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
-  id="director">${tag.trim()}</p>`)
-  return tags.join ("");
-  
+  const stringArray = string.split(",");
+  console.log(stringArray);
+  const tags = stringArray.map(
+    (
+      tag
+    ) => `<p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
+  id="director">${tag.trim()}</p>`
+  );
+  return tags.join("");
 
-
-  
   // work on this to split actor names into separate tags
   // split the string by comma
   // return an array
   // ["Kyle Chandler", "Vera Farmiga", "Millie Bobby Brown"];
-
 };
 
 const renderMovieInfo = (movie) => {
@@ -95,7 +95,7 @@ const renderMovieInfo = (movie) => {
         <!-- <div class="column"> -->
         <img
           class="movie-image"
-          src="${movie.Poster}"
+          src="${movie?.Poster}"
         />
       </div>
 
@@ -222,21 +222,27 @@ const renderMovieInfo = (movie) => {
         <div class="tile is-parent is-shady">
             <article class="tile is-child notification message-header">
                 <p class="icon-text message-header is-spaced"><img src="./assets/images/IMDB_Logo_2016.svg" alt="imdb-logo image is-64x64"></p>
-                <p class="title is-1 has-text-white is-spaced has-text-centered is-flex is-align-content-center is-justify-content-center" id="movie-rating">${movie.Ratings[0].Value}</p>
+                <p class="title is-1 has-text-white is-spaced has-text-centered is-flex is-align-content-center is-justify-content-center" id="movie-rating">${
+                  movie.Ratings[0].Value
+                }</p>
             </article>
         </div>
 
         <div class="tile is-parent is-shady">
           <article class="tile is-child notification message-header">
             <p class="icon-text message-header pt-5 is-spaced"><img src="./assets/images/Rotten_Tomatoes_logo.svg" alt="rotten-tomatoes-logo image is-64x64"></p>
-            <p class="title is-1 has-text-white is-spaced has-text-centered is-flex is-align-content-center is-justify-content-center" id="movie-rating">${movie.Ratings[1].Value}</p>
+            <p class="title is-1 has-text-white is-spaced has-text-centered is-flex is-align-content-center is-justify-content-center" id="movie-rating">${
+              movie.Ratings[1].Value
+            }</p>
           </article>
         </div>
                           
         <div class="tile is-parent is-shady">
         <article class="tile is-child notification message-header">
           <p class="icon-text message-header pt-5 is-spaced"><img src="./assets/images/Metacritic_logo.svg" alt="metacritic-logo image is-64x64"></p>
-          <p class="title is-1 has-text-white is-spaced has-text-centered is-flex is-align-content-center is-justify-content-center" id="movie-rating">${movie.Ratings[1].Value}</p>
+          <p class="title is-1 has-text-white is-spaced has-text-centered is-flex is-align-content-center is-justify-content-center" id="movie-rating">${
+            movie.Ratings[1].Value
+          }</p>
         </article>
       </div>
                 
@@ -261,7 +267,7 @@ const onReady = async () => {
   //call the api
   const movie = await fetchData(url, options);
   console.log(movie);
-  getArrayFromString(movie.Actors)
+  getArrayFromString(movie.Actors);
   renderMovieInfo(movie);
 };
 
