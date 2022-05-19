@@ -190,6 +190,12 @@ button {
   padding-bottom: 3rem;
 }
 
+#movie-rating{
+  padding-left: 0.5rem;
+  /* padding-bottom: 3rem; */
+  align-items: center;
+}
+
 #movie-synopsis{
   padding-left: 0.5rem;
 }

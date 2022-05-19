@@ -65,14 +65,12 @@ const writeToLocalStorage = (key, value) => {
   localStorage.setItem(key, stringifiedValue);
 };
 
-
 const getArrayFromString = (string) => {
   // work on this to split actor names into separate tags
   // split the string by comma
   // return an array
   // ["Kyle Chandler", "Vera Farmiga", "Millie Bobby Brown"];
 };
-
 
 const renderMovieInfo = (movie) => {
   const movieContainer = `<section class="is-flex">
@@ -197,30 +195,33 @@ const renderMovieInfo = (movie) => {
 
   <!-- Tiles section starts here -->
   <section>
-
+  <h1 id="movie-title" class="title is-1 has-text-white is-spaced has-text-centered"> RATINGS</h1>
       <div class="sandbox container">
           <div class="tile is-ancestor ">
-              <div class="tile is-parent is-shady">
-                  <article class="tile is-child notification message-header">
-                      <p class="title">Hello World</p>
-                      <p class="subtitle">What is up?</p>
-                  </article>
-              </div>
-              <div class="tile is-parent is-shady">
-                  <article class="tile is-child notification message-header">
-                      <p class="title">Foo</p>
-                      <p class="subtitle">Bar</p>
-                  </article>
-              </div>
-              <div class="tile is-parent is-shady">
-                  <article class="tile is-child notification message-header">
-                      <p class="title">Third column</p>
-                      <p class="subtitle">With some content</p>
-                      <div class="content">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                      </div>
-                  </article>
-              </div>
+         
+    
+        <div class="tile is-parent is-shady">
+            <article class="tile is-child notification message-header">
+                <p class="icon-text message-header is-spaced"><img src="./assets/images/IMDB_Logo_2016.svg" alt="imdb-logo image is-64x64"></p>
+                <p class="title is-1 has-text-white is-spaced has-text-centered is-flex is-align-content-center is-justify-content-center" id="movie-rating">${movie.Ratings[0].Value}</p>
+            </article>
+        </div>
+
+        <div class="tile is-parent is-shady">
+          <article class="tile is-child notification message-header">
+            <p class="icon-text message-header pt-5 is-spaced"><img src="./assets/images/Rotten_Tomatoes_logo.svg" alt="rotten-tomatoes-logo image is-64x64"></p>
+            <p class="title is-1 has-text-white is-spaced has-text-centered is-flex is-align-content-center is-justify-content-center" id="movie-rating">${movie.Ratings[1].Value}</p>
+          </article>
+        </div>
+                          
+        <div class="tile is-parent is-shady">
+        <article class="tile is-child notification message-header">
+          <p class="icon-text message-header pt-5 is-spaced"><img src="./assets/images/Metacritic_logo.svg" alt="metacritic-logo image is-64x64"></p>
+          <p class="title is-1 has-text-white is-spaced has-text-centered is-flex is-align-content-center is-justify-content-center" id="movie-rating">${movie.Ratings[1].Value}</p>
+        </article>
+      </div>
+                 w273 x h77
+           
           </div>
 
           <hr>
@@ -247,8 +248,6 @@ const onReady = async () => {
 
 //check if document is ready
 $(document).ready(onReady);
-
-
 
 // JS for the trailer modal on movie package
 
