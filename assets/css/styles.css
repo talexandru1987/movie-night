@@ -185,7 +185,8 @@ button {
   padding-left: 0.5rem;
 }
 
-#movie-page-hero-btn {
+#movie-page-hero-btn,
+#favorite-btn {
   margin-top: 20px;
   padding-top: 20px;
 }
