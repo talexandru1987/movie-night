@@ -11,41 +11,47 @@
     />
     <!-- link to google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
       rel="stylesheet"
     />
+    <!-- link to font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- link to the author css file -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    
+    <link rel="stylesheet" href="./assets/css/favourites.css" />
 
-    <title>My Favorites</title>
+    <title>Movie Night | Favourites</title>
   </head>
   <body>
     <header class="header">
-      <nav class="navbar is-flex-direction-row" role="navigation" aria-label="main navigation">
-      
+      <nav
+        class="navbar is-flex-direction-row"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div class="logo navbar-item">
+          <a href="./index.html"> Movie<span> Night</span> </a>
+        </div>
 
-          <div class="logo navbar-item">
-            <a href="./index.html">
-              Movie<span> Night</span>
-            </a>
-            </div>
-
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-       
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-end">
@@ -57,69 +63,91 @@
           </div>
         </div>
       </nav>
-      <!-- /main container which holds everything and will be appended -->
+    </header>
     <main class="container">
-      <!-- Movie Search results section - Can be removed once this is being rendered in JavaScript - but leave for now until styling is finalised -->
+      <!-- confirmation modal -->
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <h4>
+                    Are you sure you want to delete this movie from your
+                    favourites?
+                  </h4>
+                </div>
+                <div class="field is-grouped">
+                  <p class="control">
+                    <button class="button is-normal">Cancel</button>
+                  </p>
+                  <p class="control">
+                    <button class="button is-danger">Delete</button>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+
+      <!-- Banner -->
       <div class="top">
         <div class="columns">
           <div class="column is-full featured_wrapper p-0">
-            <!-- <img src="https://image.tmdb.org/t/p/original/jHq5wxRwAhHiRfLH0yadNRU3jCQ.jpg" class="featured"> -->
-            <!-- <img src="https://image.tmdb.org/t/p/original/pLR2O3dmA9xkCiPA26U7ErCUYSi.jpg" class="featured"> -->
-            <!-- <img src="https://image.tmdb.org/t/p/original/ai2FicMUxLCurVkjtYdSvVDWRmS.jpg" class="featured"> -->
             <img
               src="./assets/images/popcorn.png"
               class="featured movie-card-image"
             />
             <div class="title_wrapper">
-              <!-- <span class="has-text-white">MOVIE NIGHT</span> -->
-              <h1 class="title is-1 has-text-white">My Favorites</h1>
-              
+              <h1 class="title is-1 has-text-white">My Favourites</h1>
             </div>
           </div>
         </div>
       </div>
-      <div class="container"  id="fave-container">
-        <div
-          id="search-results-container"
-          class="columns is-multiline p-0 pt-6 last"
-        >
-          <div class="column is-full">
-            <div class="column is-one-quarter is-clickable project">
-              <img
-            
-                src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg"
-              />
-  
-              <div>
-                <h3>Spiderman: Far From Home (2021)</h3>
-                <h4>2h 45m</h4>
-                <button class="button is-danger">Danger</button>
-              </div>
-            </div> 
-            
+
+      <!-- movie cards container -->
+      <div class="favourites-container" id="favourites-container">
+        <!-- alert for no movies -->
+        <div class="notification is-warning">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum
+          dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat
+          ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla.
+          Nullam gravida purus diam, et dictum
+          <a href="./index.html">Search Movies</a> efficitur.
+        </div>
+
+        <!-- single movie card -->
+        <div class="favourite-movie-card">
+          <!-- card image div -->
+          <div class="card-img-container">
+            <img
+              src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg"
+            />
+          </div>
+
+          <!-- card info div -->
+          <div class="favourite-movie-info">
+            <h3 class="p-2">Spiderman: Far From Home (2021)</h3>
+            <h4 class="p-2"><i class="fa-solid fa-hourglass"></i> 90mins</h4>
+            <div class="my-3">
+              <button class="is-fullwidth button is-danger">Delete</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div id="search-results-container" class="columns is-multiline p-0 pt-6 last">
-  
-          
-          </div>
-       </div>
-      </div>
     </main>
+
     <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <!-- link to the js file-->
-  <script src="./assets/js/index.js"></script>
-  <script src="./assets/js/movie.js"></script>
-  <script src="./assets/js/favourites.js"></script>
-  </body>
-  </html>
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- link to the js file-->
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/favourites.js"></script>
   </body>
 </html>
