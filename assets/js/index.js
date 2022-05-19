@@ -42,7 +42,7 @@ const fetchData = async (url, options = {}) => {
   try {
     if (mockData) {
       const response = await fetch(
-        "./assets/data/dataResponseYear.json",
+        "./assets/data/dataReponseYear.json",
         options
       );
       const data = await response.json();
@@ -102,8 +102,8 @@ const renderMovieCards = (movies) => {
           movie.id
         }" class="movie-card-image project__image"
           src="${movie?.image?.url}" alt="${
-        movie.title ? movie.title : movie.legacyNameText
-      }
+        movie?.title ? movie?.title : movie?.legacyNameText
+      }"
         />
         <div class="project__detail">
           <h3 class="project__title">${
