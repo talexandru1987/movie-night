@@ -3,6 +3,7 @@ const apiKey = "638741ded1msh07bc6f796714e78p1d32e2jsnea59f0e47a93";
 //basic search url
 const baseURL = "https://online-movie-database.p.rapidapi.com/title/find?q=";
 
+let movie;
 let mockData = false;
 
 //read from local storage
@@ -18,6 +19,15 @@ const readFromLocalStorage = (key, defaultValue) => {
   } else {
     return defaultValue;
   }
+};
+
+//write to local storage
+const writeToLocalStorage = (key, value) => {
+  // convert value to string
+  const stringifiedValue = JSON.stringify(value);
+
+  // set stringified value to LS for key name
+  localStorage.setItem(key, stringifiedValue);
 };
 
 //create the options for the fetch request
@@ -53,15 +63,6 @@ const fetchData = async (url, options = {}) => {
   }
 };
 
-//write to local storage
-const writeToLocalStorage = (key, value) => {
-  // convert value to string
-  const stringifiedValue = JSON.stringify(value);
-
-  // set stringified value to LS for key name
-  localStorage.setItem(key, stringifiedValue);
-};
-
 const getArrayFromString = (string) => {
   //split into separate tags
   const stringArray = string.split(",");
@@ -78,8 +79,6 @@ const getArrayFromString = (string) => {
 //render the rating cards
 const renderMovieRatings = (string) => {
   //create the p tags for each element in the map
-  console.log(string);
-  console.log(string[0]);
   const tags = string.map(
     (tag) => ` <div class="tile is-parent is-shady">
     <article class="tile is-child notification message-header">
@@ -135,11 +134,8 @@ const renderMovieInfo = (movie) => {
                 View Trailer
             </button>
 
-            <!-- Add to schedule button - to be hooked up to the calendar once its complete -->
-            <button class="button is-spaced is-halfwidth" id="movie-page-hero-btn">Add to Schedule</button>
-
             <!-- Add to favourites button - to be hooked up to the favourites page -->
-            <button class="button is-spaced is-halfwidth" id="movie-page-hero-btn">Add to Favourites</button>
+            <button class="button is-spaced is-halfwidth" id="favorite-btn">Add to Favourites</button>
 
         </div>
   
@@ -239,6 +235,38 @@ const renderMovieInfo = (movie) => {
   $("#main-container").append(movieContainer);
 };
 
+//add the favorite movie to local storage
+const favoriteToLocalStorage = () => {
+  console.log("test");
+  //read from local storage
+  const localStorageValue = readFromLocalStorage("favorites", []);
+  //if the favorite is already saved dont add to local storage
+  let duplicate = false;
+  //iterate through local storage
+  for (let i = 0; i < localStorageValue.length; i += 1) {
+    if (localStorageValue[i].imdbID === movie.imdbID) {
+      duplicate = true;
+    }
+  }
+
+  //if it's not a duplicate then add to local storage
+  if (!duplicate) {
+    //create the object
+    const favoriteValue = {};
+    //add the key and value to the object
+    favoriteValue["title"] = movie.Title;
+    favoriteValue["yearRelease"] = movie.Year;
+    favoriteValue["runtime"] = movie.Runtime;
+    favoriteValue["imdbID"] = movie.imdbID;
+    //push to the array
+    localStorageValue.push(favoriteValue);
+    //add to local storage
+    writeToLocalStorage("favorites", localStorageValue);
+
+    console.log(localStorageValue);
+  }
+};
+
 //code to execute when ready
 const onReady = async () => {
   const queryString = window.location.search;
@@ -249,10 +277,12 @@ const onReady = async () => {
   let url = `https://www.omdbapi.com/?i=${id}&plot=full&apikey=ae0076fc`;
 
   //call the api
-  const movie = await fetchData(url, options);
+  movie = await fetchData(url, options);
   console.log(movie);
   getArrayFromString(movie.Actors);
   renderMovieInfo(movie);
+
+  $("#favorite-btn").on("click", favoriteToLocalStorage);
 };
 
 //check if document is ready
