@@ -66,10 +66,20 @@ const writeToLocalStorage = (key, value) => {
 };
 
 const getArrayFromString = (string) => {
+  const stringArray = string.split(",") 
+  console.log(stringArray)
+  const tags = stringArray.map(tag => `<p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
+  id="director">${tag.trim()}</p>`)
+  return tags.join ("");
+  
+
+
+  
   // work on this to split actor names into separate tags
   // split the string by comma
   // return an array
   // ["Kyle Chandler", "Vera Farmiga", "Millie Bobby Brown"];
+
 };
 
 const renderMovieInfo = (movie) => {
@@ -151,18 +161,32 @@ const renderMovieInfo = (movie) => {
   <div class="columns is-full tags">
       <h1 class="column title is-3 has-text-white">Country:</h1>
 
-  <!-- Below is what we want to populate with director info pulled from the imdb API -->
-      <p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
-      id="director">${movie.Country}</p>
+      ${getArrayFromString(movie.Country)}
+      
   </div>  
+
+  <!-- Release date information section -->
+  <div class="columns is-full is-spaced tags mt-5 is-flex-wrap-wrap">
+      <h1 class="column title is-3 has-text-white">Release Date:</h1>
+      <p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
+      id="director">${movie.Released}</p>
+      </div>
+
+      <!-- Release date information section -->
+      <div class="columns is-full is-spaced tags mt-5 is-flex-wrap-wrap">
+          <h1 class="column title is-3 has-text-white">Duration:</h1>
+          <p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
+          id="director">${movie.Runtime}</p>
+          </div>
+
 
   <!-- Genre information section -->
   <div class="columns is-full tags">
       <h1 class="column title is-3 has-text-white">Genre:</h1>
 
   <!-- Below is what we want to populate with director info pulled from the imdb API -->
-      <p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
-      id="director">${movie.Genre}</p>
+  
+       ${getArrayFromString(movie.Genre)}
   </div>  
 
   <!-- Director information section -->
@@ -170,8 +194,8 @@ const renderMovieInfo = (movie) => {
       <h1 class="column title is-3 has-text-white">Director:</h1>
 
   <!-- Below is what we want to populate with director info pulled from the imdb API -->
-      <p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
-      id="director">${movie.Director}</p>
+
+      ${getArrayFromString(movie.Director)}
   </div>  
 
 
@@ -180,14 +204,9 @@ const renderMovieInfo = (movie) => {
       <h1 class="column title is-3 has-text-white">Cast:</h1>
 
   <!-- Below is what we want to populate with actor info pulled from the imdb API -->
-      <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced is-clickable" 
-      id="stars">${movie.Actors}</p>
-
-      <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced is-clickable" 
-      id="stars">Zendaya</p>
-
-      <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced is-clickable" 
-      id="stars">Benedict Cumberbatch</p>
+     
+      ${getArrayFromString(movie.Actors)}
+    
 
   </div> 
   <hr>
@@ -220,7 +239,7 @@ const renderMovieInfo = (movie) => {
           <p class="title is-1 has-text-white is-spaced has-text-centered is-flex is-align-content-center is-justify-content-center" id="movie-rating">${movie.Ratings[1].Value}</p>
         </article>
       </div>
-                 w273 x h77
+                
            
           </div>
 
@@ -242,7 +261,7 @@ const onReady = async () => {
   //call the api
   const movie = await fetchData(url, options);
   console.log(movie);
-
+  getArrayFromString(movie.Actors)
   renderMovieInfo(movie);
 };
 
