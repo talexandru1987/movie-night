@@ -159,22 +159,14 @@ html {
   width: 70%;
 }
 
-<<<<<<< HEAD
 /* button {
-=======
-button {
->>>>>>> e6a092c23fea6f86d52c2d8f56d42fcdb2dbcfcf
   background: #f40612 !important;
   color: #fff !important;
   font-size: 18px;
   padding: 0.5rem 3rem;
   outline: none;
   border: 0 !important;
-<<<<<<< HEAD
 } */
-=======
-}
->>>>>>> e6a092c23fea6f86d52c2d8f56d42fcdb2dbcfcf
 
 /* Start of styling for movie detail page */
 
@@ -183,26 +175,18 @@ button {
   padding-bottom: 3rem;
 }
 
-<<<<<<< HEAD
-#movie-synopsis {
-=======
 #movie-rating {
->>>>>>> e6a092c23fea6f86d52c2d8f56d42fcdb2dbcfcf
   padding-left: 0.5rem;
   /* padding-bottom: 3rem; */
   align-items: center;
 }
 
-<<<<<<< HEAD
-#movie-page-hero-btn {
-=======
 #movie-synopsis {
   padding-left: 0.5rem;
 }
 
 #movie-page-hero-btn,
 #favorite-btn {
->>>>>>> e6a092c23fea6f86d52c2d8f56d42fcdb2dbcfcf
   margin-top: 20px;
   padding-top: 20px;
 }
@@ -383,7 +367,6 @@ a:hover {
 
   .project:hover .project__image:after {
     opacity: 1;
-<<<<<<< HEAD
   }
 
   .project:hover .project__detail {
@@ -399,34 +382,13 @@ a:hover {
     opacity: 1;
   }
 
-=======
-  }
-
-  .project:hover .project__detail {
-    border-width: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  }
-
-  .project:hover .project__title,
-  .project:hover .project__category {
-    -webkit-transform: translateY(0) scale(1);
-    -ms-transform: translateY(0) scale(1);
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-
->>>>>>> e6a092c23fea6f86d52c2d8f56d42fcdb2dbcfcf
   img:hover {
     opacity: 0.6;
   }
 
   .movie-card-image {
-<<<<<<< HEAD
     -webkit-box-reflect: below 5px
       linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
-=======
-    -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
->>>>>>> e6a092c23fea6f86d52c2d8f56d42fcdb2dbcfcf
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -578,12 +540,6 @@ a:hover {
     /* padding-bottom: 40px; */
   }
 }
-<<<<<<< HEAD
-#btn {
-  font-size: 18px;
-}
-=======
->>>>>>> e6a092c23fea6f86d52c2d8f56d42fcdb2dbcfcf
 
 @media (max-width: 480px) {
   /* * {
@@ -647,10 +603,7 @@ a:hover {
 
   .project {
     pointer-events: none;
-<<<<<<< HEAD
-=======
     width: 100%;
->>>>>>> e6a092c23fea6f86d52c2d8f56d42fcdb2dbcfcf
   }
 }
 

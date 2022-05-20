@@ -43,7 +43,10 @@ const options = {
 const fetchData = async (url, options = {}) => {
   try {
     if (mockData) {
-      const response = await fetch("./assets/data/dataReponseYear.json", options);
+      const response = await fetch(
+        "./assets/data/dataReponseYear.json",
+        options
+      );
       const data = await response.json();
       return data;
     } else {
