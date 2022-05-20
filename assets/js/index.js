@@ -1,5 +1,5 @@
 //variable to store the API key
-const apiKey = "638741ded1msh07bc6f796714e78p1d32e2jsnea59f0e47a93";
+const apiKey = "ab8ecba8f8msh3f5afdafcf2d348p1b6b52jsne7b90c6a16b4";
 //basic search url
 const baseURL = "https://online-movie-database.p.rapidapi.com/title/find?q=";
 const searchButton = $("#search-button");
