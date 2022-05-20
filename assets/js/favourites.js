@@ -27,59 +27,79 @@ const renderNotification = () => {
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>`;
-  $("#favourites-container").append(notification);
+  // $("#favourites-container").append(notification);
 
-  const movie = `<div class="favourite-movie-card">
- <!-- card image div -->
- <div class="card-img-container">
-   <img
-     src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg"
-   />
- </div>
-
- <!-- card info div -->
- <div class="favourite-movie-info">
-   <h3 class="p-2">Spiderman: Far From Home (2021)</h3>
-   <h4 class="p-2"><i class="fa-solid fa-hourglass"></i> 90mins</h4>
-   <div class="my-3">
-     <button class="is-fullwidth button is-danger">Delete</button>
-   </div>
- </div>
-</div>`;
-  $("#favourites-container").append(movie);
+  // $("#favourites-container").append(moviesCards);
   // paste the HTML code and append to favouritesContainer
+};
+
+const renderEmptyMoviesAlert = () => {
+  const alertEmptyMovies = `<div class="notification is-warning">
+    Are you sure you want to
+    <strong> delete </strong> this movie from your favourites?
+
+    <a href="./index.html">Search Movies</a>.
+  </div>`;
+  favouritesContainer.append(alertEmptyMovies);
 };
 
 const renderFavouriteMovies = (movies) => {
   console.log(movies);
-  // map through movies and construct a movie cards array
-  const newMovies = newMovies.map((movies) => {
-    return newMovies;
-  });
+  favouritesContainer.empty();
+  if (movies.length === 0) {
+    // renderNotification();
+    renderEmptyMoviesAlert();
+  } else {
+    // map through movies and construct a movie cards array
+    const movieFavouritesCards = movies.map((movie) => {
+      return `<div class="favourite-movie-card">
+          <!-- card image div -->
 
-  // convert array to string
-  newMovies.toString();
+          <div class="card-img-container">
+            <img
+              src="https://www.themoviedb.org/t/p/w1280/7SAp9DBEJNA3gXuQtum3u2SffQa.jpg"
+            />
+          </div>
 
-  // append to the parent
-  $("#favourites-container").append(newMovies);
+          <!-- card info div -->
+          <div class="favourite-movie-info">
+            <h3 class="p-2">${movie.title} (${movie.yearRelease})</h3>
+            <h4 class="p-2"><i class="fa-solid fa-hourglass"></i> ${movie.runtime}</h4>
+            <div class="my-3">
+              <button data-movieId="${movie.imdbID}" class="is-fullwidth button is-danger">Delete</button>
+            </div>
+          </div>
+        </div>`;
+    });
+
+    // append to the parent
+    favouritesContainer.append(movieFavouritesCards.join(""));
+    favouritesContainer.click(deleteFavouriteMovie);
+  }
+};
+
+const deleteFavouriteMovie = (event) => {
+  const currentTarget = $(event.target);
+  if (currentTarget.prop("tagName") === "BUTTON") {
+    console.log(event);
+    console.log(currentTarget.attr("data-movieId"));
+    const imdbID = currentTarget.attr("data-movieId");
+    // Get all movies from LS (movies)
+    const movies = readFromLocalStorage("favorites", []);
+    const filteredMovies = movies.filter((movie) => movie.imdbID !== imdbID);
+    console.log(filteredMovies);
+    writeToLocalStorage("favorites", filteredMovies);
+    renderFavouriteMovies(filteredMovies);
+  }
 };
 
 //code to execute when ready
 const onFavouritesReady = () => {
   handleNavBarToggle();
   // Get all movies from LS (movies)
-  const movies = readFromLocalStorage("favouriteMovies", []);
+  const movies = readFromLocalStorage("favorites", []);
   console.log(movies);
-  // if movies is an empty array render alert
-  if (movies.length === 0) {
-    renderNotification();
-  } else {
-    renderFavouriteMovies(movies);
-  }
-  // if movies is not empty then call renderFavouriteMovies(movies)
-  if (movies.length > 0) {
-    renderFavouriteMovies(movies);
-  }
+  renderFavouriteMovies(movies);
 };
 
 //check if document is ready
