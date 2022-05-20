@@ -3,7 +3,6 @@ const apiKey = "638741ded1msh07bc6f796714e78p1d32e2jsnea59f0e47a93";
 //basic search url
 const baseURL = "https://online-movie-database.p.rapidapi.com/title/find?q=";
 const searchButton = $("#search-button");
-
 let mockData = false;
 
 const readFromLocalStorage = (key, defaultValue) => {
