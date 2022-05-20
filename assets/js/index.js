@@ -40,10 +40,7 @@ const options = {
 const fetchData = async (url, options = {}) => {
   try {
     if (mockData) {
-      const response = await fetch(
-        "./assets/data/dataReponseYear.json",
-        options
-      );
+      const response = await fetch("./assets/data/dataReponseYear.json", options);
       const data = await response.json();
       return data;
     } else {
@@ -72,9 +69,7 @@ const processMovieSearch = async (event) => {
 
   //call the api
   const movies = await fetchData(url, options);
-  const filteredMovies = movies.results.filter((movie) =>
-    movie.id.includes("title")
-  );
+  const filteredMovies = movies.results.filter((movie) => movie.id.includes("title"));
   console.log(filteredMovies);
 
   renderMovieCards(filteredMovies);
@@ -97,17 +92,13 @@ const renderMovieCards = (movies) => {
         ? `Run time: ${movie.runningTimeInMinutes}`
         : "";
       const movieCard = `<div class="column is-one-quarter is-clickable project">
-        <img data-movieCard = "${
-          movie.id
-        }" class="movie-card-image project__image"
-          src="${movie?.image?.url}" alt="${
-        movie?.title ? movie?.title : movie?.legacyNameText
-      }"
+        <img data-movieCard = "${movie.id}" class="movie-card-image project__image"
+          src="${movie?.image?.url}" alt="${movie?.title ? movie?.title : movie?.legacyNameText}"
         />
         <div class="project__detail">
-          <h3 class="project__title">${
-            movie.title ? movie.title : movie.legacyNameText
-          } (${movie.year ? movie.year : movie?.knownFor[0].year})</h3>
+          <h3 class="project__title">${movie.title ? movie.title : movie.legacyNameText} (${
+        movie.year ? movie.year : movie?.knownFor[0].year
+      })</h3>
           <h4 class="project__category">${extraDetails}</h4>
         </div>
       </div>`;

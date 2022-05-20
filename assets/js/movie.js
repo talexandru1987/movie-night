@@ -242,18 +242,14 @@ const renderMovieInfo = (movie) => {
 const favoriteToLocalStorage = () => {
   console.log("test");
   //read from local storage
-  const localStorageValue = readFromLocalStorage("favorites", []);
-  //if the favorite is already saved dont add to local storage
-  let duplicate = false;
-  //iterate through local storage
-  for (let i = 0; i < localStorageValue.length; i += 1) {
-    if (localStorageValue[i].imdbID === movie.imdbID) {
-      duplicate = true;
-    }
-  }
+  const favorites = readFromLocalStorage("favorites", []);
+  const isDuplicate = !!favorites.find((favorite) => {
+    return favorite.imdbID === movie.imdbID;
+  });
+  console.log(isDuplicate);
 
   //if it's not a duplicate then add to local storage
-  if (!duplicate) {
+  if (!isDuplicate) {
     //create the object
     const favoriteValue = {};
     //add the key and value to the object
@@ -262,11 +258,11 @@ const favoriteToLocalStorage = () => {
     favoriteValue["runtime"] = movie.Runtime;
     favoriteValue["imdbID"] = movie.imdbID;
     //push to the array
-    localStorageValue.push(favoriteValue);
+    favorites.push(favoriteValue);
     //add to local storage
-    writeToLocalStorage("favorites", localStorageValue);
+    writeToLocalStorage("favorites", favorites);
 
-    console.log(localStorageValue);
+    console.log(favorites);
   }
 };
 
