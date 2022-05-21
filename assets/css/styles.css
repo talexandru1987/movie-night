@@ -23,7 +23,6 @@ body {
 
 .main {
   background-color: var(--black);
-  /* height: 100vh; */
   padding: 100px;
 }
 
@@ -111,12 +110,14 @@ html {
   background: #000000;
   padding: 0;
   margin: 0;
-  padding-bottom: 6rem;
+  /*padding-bottom: 6rem;*/
   font-family: "Montserrat", sans-serif;
   width: 100%;
 }
 
 .container {
+  display: flex;
+  flex-direction: row;
   padding-bottom: 3rem;
   width: 80%;
 }
@@ -415,7 +416,7 @@ a:hover {
 
 .main {
   background-color: var(--black);
-  height: 100vh;
+  /*height: 100vh;*/
   padding: 10px;
   /* margin:10px; */
   padding-top: 10px;
@@ -463,7 +464,7 @@ a:hover {
 
   .main {
     background-color: var(--black);
-    height: 100vh;
+    /*height: 100vh;*/
     padding: 10px;
     /* margin:10px; */
     padding-top: 10px;
@@ -564,7 +565,7 @@ a:hover {
 
   .main {
     background-color: var(--black);
-    height: 100vh;
+    /*height: 100vh;*/
     padding: 10px;
   }
 
