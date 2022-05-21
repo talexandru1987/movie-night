@@ -1,300 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- bulma framework -->
-        <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-        />
-         <!-- font awesome  -->
-     <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-   />
-        <!-- link to google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
-        rel="stylesheet"
-        />
-        <!-- link to the author css file -->
-        <link rel="stylesheet" href="./assets/css/styles.css" />
-        <title>Movie Planner | Home</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bulma framework -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link to the author css file -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Movie Planner | Home</title>
+  </head>
 
-    <body>
-        <header class="header">
-            <nav class="navbar is-flex-direction-row" role="navigation" aria-label="main navigation">
-             
-                <!-- <a class="navbar-item" href="./index.html"> -->
-                  <!-- <img
-                    src="https://bulma.io/images/bulma-logo.png"
-                    width="112"
-                    height="28"
-                  /> -->
-                  <!-- <div class="logo">Movie<span> Night</span></div>
-                </a> -->
-      
-                <div class="logo navbar-item">
-                  <a href="./index.html">
-                    Movie<span> Night</span>
-                  </a>
-                  </div>
-      
-                <a
-                  role="button"
-                  class="navbar-burger"
-                  aria-label="menu"
-                  aria-expanded="false"
-                  data-target="navbarBasicExample"
-                >
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                </a>
-             
-      
-              <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-end">
-                  <a href="index.html" class="navbar-item"> Home </a>
-                  <!-- <a class="navbar-item"> Movies </a> -->
-                  <a href="favourites.html" class="navbar-item"> Favourites </a>
-                  <a href="about.html" class="navbar-item">About</a>
-                  <!-- <a class="navbar-item"> Booking </a> -->
-                </div>
-              </div>
-            </nav>
-          </header>
+  <body>
+    <header class="header">
+      <nav
+        class="navbar is-flex-direction-row"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div class="logo navbar-item">
+          <a href="./index.html"> Movie<span> Night</span> </a>
+        </div>
 
-            <!-- Users movie selection from search results gets rendered here -->
-        <main class="main container" id="main-container">
-        
-               
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
 
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <a href="index.html" class="navbar-item"> Home </a>
+            <a href="favourites.html" class="navbar-item"> Favorites </a>
+            <a href="about.html" class="navbar-item">About</a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
+    <!-- Users movie selection from search results gets rendered here -->
+    <main class="main container" id="main-container">
+      <section class="section container m-auto"></section>
+    </main>
 
-
-            <section class="section container m-auto">
-                <!-- <h1 class="title is-1 has-text-white is-spaced">Section</h1>
-                <h2 class="subtitle is-3 has-text-white">
-                A simple container to divide your page into sections, like the one you're currently reading.
-                </h2>
-                -->
-
-                <!-- use a <HR> tag for styled line breaks on the this page to divide each section of content -->
-                <!-- <hr> -->
-
-                <!-- I have used the tag feature from the bulma framework here for the below section -->
-                <!-- If we have time, we can do something fancy like make all of the actor/writer/director names clickable which will take the user to their IMDB page  -->
-                <!-- If we don't have time, it will still look nice and be easy to read at a glance for the user -->
-
-                <!-- Director information section -->
-                <!-- <div class="columns is-full tags">
-                    <h1 class="column title is-3 has-text-white">Director:</h1> -->
-
-                <!-- Below is what we want to populate with director info pulled from the imdb API -->
-                    <!-- <p class="tag is-dark is-large is-info column is-two-thirds title is-3 has-text-white" 
-                    id="director">Jon Watts</p>
-                </div>   -->
-
-
-                <!-- Writer information section -->
-                <!-- <div class="columns is-full is-spaced tags">
-                    <h1 class="column title is-3 has-text-white">Writers:</h1> -->
-
-                <!-- This one is what we want to populate with writer info pulled from the imdb API -->
-                    <!-- <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced" 
-                    id="writers">Chris McKenna</p>
-                    <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced" 
-                    id="writers">Erik Sommers</p>
-                    <p class="tag is-dark is-large is-info column is-four-fifths title is-3 has-text-white is-spaced" 
-                    id="writers">Stan Lee</p>
-                </div>   -->
-
-
-         
-
-            </section>
-
-
-
-        <!-- Tiles section starts here -->
-        <section>
-
-            <!-- <div class="sandbox container">
-                <div class="tile is-ancestor ">
-                    <div class="tile is-parent is-shady">
-                        <article class="tile is-child notification message-header">
-                            <p class="title">Hello World</p>
-                            <p class="subtitle">What is up?</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent is-shady">
-                        <article class="tile is-child notification message-header">
-                            <p class="title">Foo</p>
-                            <p class="subtitle">Bar</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent is-shady">
-                        <article class="tile is-child notification message-header">
-                            <p class="title">Third column</p>
-                            <p class="subtitle">With some content</p>
-                            <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <hr> -->
-
-
-                <!-- <div class="tile is-ancestor">
-                    <div class="tile is-vertical is-8">
-                        <div class="tile">
-                            <div class="tile is-parent is-vertical">
-                                <article class="tile is-child notification message-header">
-                                    <p class="title">Vertical tiles</p>
-                                    <p class="subtitle">Top box</p>
-                                </article>
-                                <article class="tile is-child notification message-header">
-                                    <p class="title">Vertical tiles</p>
-                                    <p class="subtitle">Bottom box</p>
-                                </article>
-                            </div> -->
-                            <!-- <div class="tile is-parent">
-                                <article class="tile is-child notification message-header">
-                                    <p class="title">Middle box</p>
-                                    <p class="subtitle">With an image</p>
-                                    <figure class="image is-4by3">
-                                        <img src="https://picsum.photos/640/480/?random" alt="Description">
-                                    </figure>
-                                </article>
-                            </div> -->
-                        <!-- </div> -->
-                        <!-- <div class="tile is-parent is-shady">
-                            <article class="tile is-child notification message-header">
-                                <p class="title">Wide column</p>
-                                <p class="subtitle">Aligned with the right column</p>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div> -->
-                    <!-- <div class="tile is-parent is-shady">
-                        <article class="tile is-child notification message-header">
-                            <div class="content">
-                                <p class="title">Tall column</p>
-                                <p class="subtitle">With even more content</p>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula
-                                    eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-                                    <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet
-                                    felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
-                                    <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam
-                                    ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div> -->
-                <!-- <div class="tile is-ancestor">
-                    <div class="tile is-parent is-shady">
-                        <article class="tile is-child notification message-header">
-                            <p class="title">Side column</p>
-                            <p class="subtitle">With some content</p>
-                            <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="tile is-parent is-8 is-shady">
-                        <article class="tile is-child notification message-header">
-                            <p class="title">Main column</p>
-                            <p class="subtitle">With some content</p>
-                            <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="tile is-ancestor">
-                    <div class="tile is-parent is-8 is-shady">
-                        <article class="tile is-child notification message-header">
-                            <p class="title">Murphy's law</p>
-                            <p class="subtitle">Anything that can go wrong will go wrong</p>
-                            <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="tile is-parent is-shady">
-                        <article class="tile is-child notification message-header">
-                            <p class="title">Main column</p>
-                            <p class="subtitle">With some content</p>
-                            <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div> -->
-            </div>
-        </section>
-        
-                
-        
-        
-<!-- <img src="./assets/images/imdb-seeklogo.com.svg" alt="imdb-logo"> -->
-<!-- <img src=".assets/images/Rotten_Tomatoes_logo.svg" alt="rotten-tomatoes-logo"> -->
-<!-- <img src=".assets/images/metacritic-vector-logo.svg" alt="metacritic-logo"> -->
-
-
-
-      
-
-        </main>
-
-        <!-- BACKUP of JS RATINGS SECTION -->
-<!--
-        <h1 id="movie-title" class="title is-1 has-text-white is-spaced has-text-centered"> RATINGS</h1>
-        <div class="sandbox container">
-            <div class="tile is-ancestor ">
-                <div class="tile is-parent is-shady">
-                    <article class="tile is-child notification message-header">
-                        <p class="title"><img src="./assets/images/imdb-seeklogo.com.svg" alt="imdb-logo">${movie.Ratings[0].Source}</p>
-                        <p class="subtitle">${movie.Ratings[0].Value}</p>
-                    </article>
-                </div>
-                <div class="tile is-parent is-shady">
-                    <article class="tile is-child notification message-header">
-                        <p class="title"><img src="./assets/images/Rotten_Tomatoes_logo.svg" alt="rotten-tomatoes-logo">${movie.Ratings[1].Source}</p>
-                        <p class="subtitle">${movie.Ratings[1].Value}</p>
-                    </article>
-                </div>
-                <div class="tile is-parent is-shady">
-                    <article class="tile is-child notification message-header">
-                        <p class="title"><img src="./assets/images/Metacritic_logo.svg" fill="white" alt="metacritic-logo">${movie.Ratings[2].Source}</p>
-                        <p class="subtitle">${movie.Ratings[2].Value}</p>
-                        <div class="content">
-                        </article>
-                </div>
-            -->
-
-        <!-- link to jquery library-->
-        <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer">
-        </script>
-        
-        <!-- link to the js file-->
-        <!-- <script src="./assets/js/index.js"></script> -->
-        <script src="./assets/js/movie.js"></script>
-    </body>
+    <!-- link to jquery library-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- link to the js file-->
+    <!-- <script src="./assets/js/index.js"></script> -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="./assets/js/youtube.js"></script>
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/localStorage.js"></script>
+    <script src="./assets/js/movie.js"></script>
+  </body>
 </html>
