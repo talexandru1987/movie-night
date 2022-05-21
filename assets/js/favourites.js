@@ -63,7 +63,7 @@ const renderFavouriteMovies = (movies) => {
 
           <!-- card info div -->
           <div class="favourite-movie-info">
-            <h3 class="p-2">${movie.title} (${movie.yearRelease})</h3>
+            <h3 class="p-2 movie-title">${movie.title} (${movie.yearRelease})</h3>
             <h4 class="p-2"><i class="fa-solid fa-hourglass"></i> ${movie.runtime}</h4>
             <div class="my-3">
               <button data-movieId="${movie.imdbID}" class="is-fullwidth button is-danger">Delete</button>

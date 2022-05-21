@@ -36,3 +36,8 @@ body {
   color: var(--platinum);
   letter-spacing: 2px;
 }
+
+.movie-title {
+  min-height: 80px;
+  margin-top: 10px;
+}
