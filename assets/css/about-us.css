@@ -10,7 +10,9 @@
   --imperial-red: #ef233cff;
   --amaranth-red: #d90429ff;
 }
-
+.main{
+  height:100%;
+}
 /* footer section */
 
 .main-footer {
