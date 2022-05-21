@@ -117,7 +117,7 @@ html {
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-bottom: 3rem;
   width: 80%;
 }
