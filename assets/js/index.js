@@ -6,28 +6,6 @@ const searchButton = $("#search-button");
 
 let mockData = false;
 
-const readFromLocalStorage = (key, defaultValue) => {
-  // get from LS using key name
-  const dataFromLS = localStorage.getItem(key);
-
-  // parse data from LS
-  const parsedData = JSON.parse(dataFromLS);
-
-  if (parsedData) {
-    return parsedData;
-  } else {
-    return defaultValue;
-  }
-};
-
-const writeToLocalStorage = (key, value) => {
-  // convert value to string
-  const stringifiedValue = JSON.stringify(value);
-
-  // set stringified value to LS for key name
-  localStorage.setItem(key, stringifiedValue);
-};
-
 //create the options for the fetch request
 const options = {
   method: "GET",
@@ -41,7 +19,10 @@ const options = {
 const fetchData = async (url, options = {}) => {
   try {
     if (mockData) {
-      const response = await fetch("./assets/data/dataReponseYear.json", options);
+      const response = await fetch(
+        "./assets/data/dataReponseYear.json",
+        options
+      );
       const data = await response.json();
       return data;
     } else {
@@ -70,7 +51,9 @@ const processMovieSearch = async (event) => {
 
   //call the api
   const movies = await fetchData(url, options);
-  const filteredMovies = movies.results.filter((movie) => movie.id.includes("title"));
+  const filteredMovies = movies.results.filter((movie) =>
+    movie.id.includes("title")
+  );
   console.log(filteredMovies);
 
   renderMovieCards(filteredMovies);
@@ -93,13 +76,17 @@ const renderMovieCards = (movies) => {
         ? `Run time: ${movie.runningTimeInMinutes}`
         : "";
       const movieCard = `<div class="column is-one-quarter is-clickable project">
-        <img data-movieCard = "${movie.id}" class="movie-card-image project__image"
-          src="${movie?.image?.url}" alt="${movie?.title ? movie?.title : movie?.legacyNameText}"
+        <img data-movieCard = "${
+          movie.id
+        }" class="movie-card-image project__image"
+          src="${movie?.image?.url}" alt="${
+        movie?.title ? movie?.title : movie?.legacyNameText
+      }"
         />
         <div class="project__detail">
-          <h3 class="project__title">${movie.title ? movie.title : movie.legacyNameText} (${
-        movie.year ? movie.year : movie?.knownFor[0].year
-      })</h3>
+          <h3 class="project__title">${
+            movie.title ? movie.title : movie.legacyNameText
+          } (${movie.year ? movie.year : movie?.knownFor[0].year})</h3>
           <h4 class="project__category">${extraDetails}</h4>
         </div>
       </div>`;
@@ -109,24 +96,6 @@ const renderMovieCards = (movies) => {
     .join("");
 
   $("#search-results-container").append(movieCards);
-};
-
-const handleNavBarToggle = () => {
-  const navBurgerBtn = $(".navbar-burger");
-
-  const toggleNavBar = () => {
-    // get the nav container id (the div to show and hide)
-    const navContainerId = navBurgerBtn.attr("data-target");
-    const navContainer = $(`#${navContainerId}`);
-
-    // toggle the class for hamburger button to show/hide
-    navBurgerBtn.toggleClass("is-active");
-
-    // toggle the class for nav container to show/hide
-    navContainer.toggleClass("is-active");
-  };
-
-  navBurgerBtn.click(toggleNavBar);
 };
 
 //process the selected movie card

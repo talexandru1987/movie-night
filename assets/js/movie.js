@@ -6,30 +6,6 @@ const baseURL = "https://online-movie-database.p.rapidapi.com/title/find?q=";
 let movie;
 let mockData = false;
 
-//read from local storage
-const readFromLocalStorage = (key, defaultValue) => {
-  // get from LS using key name
-  const dataFromLS = localStorage.getItem(key);
-
-  // parse data from LS
-  const parsedData = JSON.parse(dataFromLS);
-
-  if (parsedData) {
-    return parsedData;
-  } else {
-    return defaultValue;
-  }
-};
-
-//write to local storage
-const writeToLocalStorage = (key, value) => {
-  // convert value to string
-  const stringifiedValue = JSON.stringify(value);
-
-  // set stringified value to LS for key name
-  localStorage.setItem(key, stringifiedValue);
-};
-
 //create the options for the fetch request
 const options = {
   method: "GET",
@@ -43,7 +19,10 @@ const options = {
 const fetchData = async (url, options = {}) => {
   try {
     if (mockData) {
-      const response = await fetch("./assets/data/dataReponseYear.json", options);
+      const response = await fetch(
+        "./assets/data/dataReponseYear.json",
+        options
+      );
       const data = await response.json();
       return data;
     } else {
@@ -89,6 +68,14 @@ const renderMovieRatings = (string) => {
   );
 
   return tags.join("");
+};
+
+const renderYoutubeTrailer = async () => {
+  const searchTerm = `${movie.Title} ${movie.Year} trailer`;
+
+  const data = await execute(searchTerm);
+
+  console.log(data);
 };
 
 const renderMovieInfo = (movie) => {
@@ -233,6 +220,7 @@ const renderMovieInfo = (movie) => {
   `;
 
   $("#main-container").append(movieContainer);
+  $("#movie-page-hero-btn").click(renderYoutubeTrailer);
 };
 
 //add the favorite movie to local storage
@@ -262,110 +250,23 @@ const favoriteToLocalStorage = () => {
   }
 };
 
-
-// YOUTUBE API STUFF Below
-
-
-const authenticate = () => {
-  return gapi.auth2.getAuthInstance()
-      .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
-      .then(function() { console.log("Sign-in successful"); },
-            function(err) { console.error("Error signing in", err); });
-}
-const loadClient = () => {
-  gapi.client.setApiKey("AIzaSyBcVW-CC-eHAlYhHT6nXpyG9c3uguqXYw4");
-  return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-      .then(function() { console.log("GAPI client loaded for API"); },
-            function(err) { console.error("Error loading GAPI client for API", err); });
-}
-// Make sure the client is loaded and sign-in is complete before calling this method.
-const execute = () => {
-  return gapi.client.youtube.search.list({
-    "part": [
-      "snippet"
-    ],
-    "q": "batman 2022 trailer"
-  })
-      .then(function(response) {
-              // Handle the results here (response.result has the parsed body).
-              console.log("Response", response);
-            },
-            function(err) { console.error("Execute error", err); });
-}
-gapi.load("client:auth2", function() {
-  gapi.auth2.init({client_id: "390573415718-1fk200pp5697nnofmq6k4p3nu25eia6o.apps.googleusercontent.com"});
-});
-
-// END OF YOUTUBE STUFF
-
-
-
 //code to execute when ready
 const onReady = async () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const id = urlParams.get("id");
 
-  //create the url
-  let url = `https://www.omdbapi.com/?i=${id}&plot=full&apikey=ae0076fc`;
+  const url = `https://www.omdbapi.com/?i=${id}&plot=full&apikey=ae0076fc`;
 
-  //call the api
   movie = await fetchData(url, options);
-  console.log(movie);
-  getArrayFromString(movie.Actors);
-  renderMovieInfo(movie);
-  // authenticate().then(loadCLient);
-  loadClient();
 
+  renderMovieInfo(movie);
 
   $("#favorite-btn").on("click", favoriteToLocalStorage);
+
+  await authenticate();
+  await loadClient();
 };
 
 //check if document is ready
 $(document).ready(onReady);
-
-// JS for the trailer modal on movie package
-
-// const trailerButton = $(".trailer-button");
-
-document.addEventListener("DOMContentLoaded", () => {
-  // Functions to open and close a modal
-  function openModal($el) {
-    $el.classList.add("is-active");
-  }
-  function closeModal($el) {
-    $el.classList.remove("is-active");
-  }
-  function closeAllModals() {
-    (document.querySelectorAll(".modal") || []).forEach(($modal) => {
-      closeModal($modal);
-    });
-  }
-  // Add a click event on buttons to open a specific modal
-  (document.querySelectorAll(".js-modal-trigger") || []).forEach(($trigger) => {
-    const modal = $trigger.dataset.target;
-    const $target = document.getElementById(modal);
-    $trigger.addEventListener("click", () => {
-      openModal($target);
-    });
-  });
-  // Add a click event on various child elements to close the parent modal
-  (
-    document.querySelectorAll(
-      ".modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button"
-    ) || []
-  ).forEach(($close) => {
-    const $target = $close.closest(".modal");
-    $close.addEventListener("click", () => {
-      closeModal($target);
-    });
-  });
-  // Add a keyboard event to close all modals
-  document.addEventListener("keydown", (event) => {
-    const e = event || window.event;
-    if (e.keyCode === 27) {
-      // Escape key
-      closeAllModals();
-    }
-  });
-});
