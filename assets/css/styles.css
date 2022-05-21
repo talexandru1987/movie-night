@@ -23,7 +23,7 @@ body {
 
 .main {
   background-color: var(--black);
-  height: 100vh;
+  /* height: 100vh; */
   padding: 100px;
 }
 
