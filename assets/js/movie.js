@@ -262,6 +262,44 @@ const favoriteToLocalStorage = () => {
   }
 };
 
+
+// YOUTUBE API STUFF Below
+
+
+const authenticate = () => {
+  return gapi.auth2.getAuthInstance()
+      .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
+      .then(function() { console.log("Sign-in successful"); },
+            function(err) { console.error("Error signing in", err); });
+}
+const loadClient = () => {
+  gapi.client.setApiKey("AIzaSyBcVW-CC-eHAlYhHT6nXpyG9c3uguqXYw4");
+  return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+      .then(function() { console.log("GAPI client loaded for API"); },
+            function(err) { console.error("Error loading GAPI client for API", err); });
+}
+// Make sure the client is loaded and sign-in is complete before calling this method.
+const execute = () => {
+  return gapi.client.youtube.search.list({
+    "part": [
+      "snippet"
+    ],
+    "q": "batman 2022 trailer"
+  })
+      .then(function(response) {
+              // Handle the results here (response.result has the parsed body).
+              console.log("Response", response);
+            },
+            function(err) { console.error("Execute error", err); });
+}
+gapi.load("client:auth2", function() {
+  gapi.auth2.init({client_id: "390573415718-1fk200pp5697nnofmq6k4p3nu25eia6o.apps.googleusercontent.com"});
+});
+
+// END OF YOUTUBE STUFF
+
+
+
 //code to execute when ready
 const onReady = async () => {
   const queryString = window.location.search;
@@ -276,6 +314,9 @@ const onReady = async () => {
   console.log(movie);
   getArrayFromString(movie.Actors);
   renderMovieInfo(movie);
+  // authenticate().then(loadCLient);
+  loadClient();
+
 
   $("#favorite-btn").on("click", favoriteToLocalStorage);
 };
