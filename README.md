@@ -18,6 +18,8 @@ A notification is rendered as a safety measure to give the user some notice with
 
 If the user chooses the delete button the movie is removed from their favourites page.If the user clicks cancel, the notification is removed. When the user has no favourites stores their is an alert box which states that the user does not have any favourites saved.
 
+We have included an About us Page which contains a small description of ourselfves along with links to our GitHub pages.
+
 # Languages Libraries Used
 
 We have used HTML ,CSS, JavaScript along with the Bulma framework, Unicon library for icons and the JQuery library to add event listeners and render our pages dynamically.
@@ -27,12 +29,20 @@ We have used HTML ,CSS, JavaScript along with the Bulma framework, Unicon librar
 # Screenshots
 
 ![desktop image](./assets/images/screenshots/homepage.png)
-![desktop image]()
+
+<!-- ![desktop image]()  this will be the movie page -->
+
 ![desktop image](./assets/images/screenshots/results%20page.png)
-![desktop image]()
+
+<!-- ![desktop image]() this will be the empty faves page with the amber alert box saying no fave movies -->
+<!-- ![desktop image]() this will be the add to favourites page
+![desktop image]() this will be the delte button with notification-->
+
+![desktop image](./assets/images/screenshots/aboutus.png)
 
 # Mini Demo
 
 Watch the demo to see the user journey.
 
 ![Movie night demo]()
+s
