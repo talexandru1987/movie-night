@@ -41,5 +41,5 @@ Click on the link to visit the website
 
 # Mini Demo
 
-Watch the demo to see the user journey.
-[Movi Night Demo](https://drive.google.com/file/d/1Pe3my6cmiuIXoFwEPB1b0v_PkAwflp2O/view)
+Watch the demo to see the website being used
+[Movie Night Demo](https://drive.google.com/file/d/1Pe3my6cmiuIXoFwEPB1b0v_PkAwflp2O/view)
