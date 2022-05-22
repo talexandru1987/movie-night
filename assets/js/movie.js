@@ -2,8 +2,13 @@
 const apiKey = "ab8ecba8f8msh3f5afdafcf2d348p1b6b52jsne7b90c6a16b4";
 //basic search url
 const baseURL = "https://online-movie-database.p.rapidapi.com/title/find?q=";
-
+//movie object from api variable
 let movie;
+// the movie trailer variable
+let player;
+//when to stop the video
+var done = false;
+
 let mockData = false;
 
 //create the options for the fetch request
@@ -19,10 +24,7 @@ const options = {
 const fetchData = async (url, options = {}) => {
   try {
     if (mockData) {
-      const response = await fetch(
-        "./assets/data/dataReponseYear.json",
-        options
-      );
+      const response = await fetch("./assets/data/dataReponseYear.json", options);
       const data = await response.json();
       return data;
     } else {
@@ -30,7 +32,6 @@ const fetchData = async (url, options = {}) => {
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
 
         return data;
       } else {
@@ -70,14 +71,6 @@ const renderMovieRatings = (string) => {
   return tags.join("");
 };
 
-// const renderYoutubeTrailer = async () => {
-//   const searchTerm = `${movie.Title} ${movie.Year} trailer`;
-
-//   const data = await execute(searchTerm);
-
-//   console.log(data);
-// };
-
 const renderMovieInfo = (movie) => {
   const movieContainer = `<section class="is-flex">
     <div
@@ -115,13 +108,6 @@ const renderMovieInfo = (movie) => {
         <!-- Buttons -->
         <div class="buttons are-large is-spaced is-responsive column is-full" >
                         
-
-            <button class="button is-spaced is-halfwidth " id="trailer-button" data-target="modal-js-example">
-                View Trailer 
-            </button>
-
-            
-
             <!-- Add to favourites button - to be hooked up to the favourites page -->
             <button class="button is-spaced is-halfwidth" id="favorite-btn">Add to Favourites</button>
 
@@ -133,6 +119,7 @@ const renderMovieInfo = (movie) => {
   </section>
   
   <section class="section container m-auto">
+  <div id="player"></div>
   <hr>
 
   <!-- Country info goes here -->
@@ -208,15 +195,22 @@ const renderMovieInfo = (movie) => {
   // $("#movie-page-hero-btn").click(renderYoutubeTrailer);
 };
 
+// // The function loads the IFrame Player
+const renderIframePlayer = () => {
+  var tag = document.createElement("script");
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName("script")[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+};
+
 //add the favorite movie to local storage
 const favoriteToLocalStorage = () => {
-  console.log("test");
   //read from local storage
   const favorites = readFromLocalStorage("favorites", []);
   const isDuplicate = !!favorites.find((favorite) => {
     return favorite.imdbID === movie.imdbID;
   });
-  console.log(isDuplicate);
 
   //if it's not a duplicate then add to local storage
   if (!isDuplicate) {
@@ -235,6 +229,40 @@ const favoriteToLocalStorage = () => {
   }
 };
 
+// Function to get the movie trailer
+async function onYouTubeIframeAPIReady() {
+  player = new YT.Player("player", {
+    height: "390",
+    width: "940",
+    videoId: await execute(`${movie.Title} ${movie.Year} HD trailer`),
+    playerVars: {
+      playsinline: 1,
+    },
+    events: {
+      onReady: onPlayerReady,
+      onStateChange: onPlayerStateChange,
+    },
+  });
+}
+
+// Function to play the video when it's ready
+const onPlayerReady = (event) => {
+  event.target.playVideo();
+};
+
+//the player should play for six seconds and then stop.
+const onPlayerStateChange = (event) => {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(stopVideo, 6000);
+    done = true;
+  }
+};
+
+//function to stop the video
+const stopVideo = () => {
+  player.stopVideo();
+};
+
 //code to execute when ready
 const onReady = async () => {
   const queryString = window.location.search;
@@ -244,17 +272,16 @@ const onReady = async () => {
   const url = `https://www.omdbapi.com/?i=${id}&plot=full&apikey=ae0076fc`;
 
   movie = await fetchData(url, options);
-
+  //create the movie html elements
   renderMovieInfo(movie);
 
   $("#favorite-btn").on("click", favoriteToLocalStorage);
 
-  // Event listener for the trailer button
-$("#trailer-button").click(console.log("trailer button clicked"));
-
   // Youtube API functions
   await loadClient();
-  await execute(`${movie.Title} ${movie.Year} HD trailer`)
+
+  //add the youtube video player section
+  renderIframePlayer();
 };
 
 //check if document is ready

@@ -160,15 +160,6 @@ html {
   width: 70%;
 }
 
-/* button {
-  background: #f40612 !important;
-  color: #fff !important;
-  font-size: 18px;
-  padding: 0.5rem 3rem;
-  outline: none;
-  border: 0 !important;
-} */
-
 /* Start of styling for movie detail page */
 
 #movie-title {
@@ -206,15 +197,6 @@ html {
   position: relative;
   height: 100%;
 }
-
-/* DO NOT DELETE THE COMMENTED OUT CODE BELOW - removing the transform: scale(1.2) line breaks the card layout - not sure why, will debug later - Faisal */
-/* .movie-card-image:hover {
-  cursor: pointer;
-   /* look into easein-out-in instead to fix the animation */
-/* transform: scale(1.2); */
-/* look into the syntax for scaling animations */
-/* animation: grow 0.5s ease-out; */
-/* } */
 
 /* start of movie search results card hover overlay styling rules */
 
@@ -389,8 +371,7 @@ a:hover {
   }
 
   .movie-card-image {
-    -webkit-box-reflect: below 5px
-      linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+    -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -637,15 +618,3 @@ a:hover {
     background-color: rgba(var(--dark-rgb), 0.6);
   }
 }
-
-/* the below keyframes aren't being used anywhere at the moment, can be removed before go live if desired */
-
-/* @keyframes grow {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.2);
-  } 
-} */

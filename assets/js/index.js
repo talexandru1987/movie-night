@@ -19,10 +19,7 @@ const options = {
 const fetchData = async (url, options = {}) => {
   try {
     if (mockData) {
-      const response = await fetch(
-        "./assets/data/dataReponseYear.json",
-        options
-      );
+      const response = await fetch("./assets/data/dataReponseYear.json", options);
       const data = await response.json();
       return data;
     } else {
@@ -51,10 +48,7 @@ const processMovieSearch = async (event) => {
 
   //call the api
   const movies = await fetchData(url, options);
-  const filteredMovies = movies.results.filter((movie) =>
-    movie.id.includes("title")
-  );
-  console.log(filteredMovies);
+  const filteredMovies = movies.results.filter((movie) => movie.id.includes("title"));
 
   renderMovieCards(filteredMovies);
 };
@@ -76,17 +70,13 @@ const renderMovieCards = (movies) => {
         ? `Run time: ${movie.runningTimeInMinutes}`
         : "";
       const movieCard = `<div class="column is-one-quarter is-clickable project">
-        <img data-movieCard = "${
-          movie.id
-        }" class="movie-card-image project__image"
-          src="${movie?.image?.url}" alt="${
-        movie?.title ? movie?.title : movie?.legacyNameText
-      }"
+        <img data-movieCard = "${movie.id}" class="movie-card-image project__image"
+          src="${movie?.image?.url}" alt="${movie?.title ? movie?.title : movie?.legacyNameText}"
         />
         <div class="project__detail">
-          <h3 class="project__title">${
-            movie.title ? movie.title : movie.legacyNameText
-          } (${movie.year ? movie.year : movie?.knownFor[0].year})</h3>
+          <h3 class="project__title">${movie.title ? movie.title : movie.legacyNameText} (${
+        movie.year ? movie.year : movie?.knownFor[0].year
+      })</h3>
           <h4 class="project__category">${extraDetails}</h4>
         </div>
       </div>`;
@@ -102,19 +92,10 @@ const renderMovieCards = (movies) => {
 const checkMovieCard = (event) => {
   //target the target id
   const getMovieCardId = $(event.target).attr("data-movieCard").split("/")[2];
-  //write to local storage
-  //writeToLocalStorage("favoriteMovie", getMovieCardId);
+
   //load the details page
   window.location.replace(`./movie.html?id=${getMovieCardId}`);
 };
-
-//will create an event listener for a search button
-// const generateEventListener = (varID, triggerFunction) => {
-//   //target the search
-//   const searchButton = $(`${varID}`);
-//   // add the event listener
-//   searchButton.on("click", triggerFunction);
-// };
 
 //code to execute when ready
 const onReady = () => {
@@ -128,14 +109,6 @@ const onReady = () => {
 
 //check if document is ready
 $(document).ready(onReady);
-
-// $(document).ready(() => {
-//   handleNavBarToggle();
-// });
-
-// JS for the trailer modal on movie package
-
-// const trailerButton = $(".trailer-button");
 
 document.addEventListener("DOMContentLoaded", () => {
   // Functions to open and close a modal
