@@ -18,7 +18,7 @@ A notification is rendered as a safety measure to give the user some notice with
 
 # Languages Libraries Used
 
-We have used HTML ,CSS, JavaScript along with the Bulma framework, Unicon library for icons and the JQuery library.
+We have used HTML ,CSS, JavaScript along with the Bulma framework, Unicon library for icons and the JQuery library to add event listeners and render our pages dynamically.
 
 # Link to URL
 
