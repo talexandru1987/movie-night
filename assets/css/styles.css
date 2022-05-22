@@ -187,7 +187,8 @@ html {
 }
 
 #movie-page-hero-btn,
-#favorite-btn {
+#favorite-btn,
+#trailer-button {
   margin-top: 20px;
   padding-top: 20px;
 }

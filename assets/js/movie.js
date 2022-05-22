@@ -70,13 +70,13 @@ const renderMovieRatings = (string) => {
   return tags.join("");
 };
 
-const renderYoutubeTrailer = async () => {
-  const searchTerm = `${movie.Title} ${movie.Year} trailer`;
+// const renderYoutubeTrailer = async () => {
+//   const searchTerm = `${movie.Title} ${movie.Year} trailer`;
 
-  const data = await execute(searchTerm);
+//   const data = await execute(searchTerm);
 
-  console.log(data);
-};
+//   console.log(data);
+// };
 
 const renderMovieInfo = (movie) => {
   const movieContainer = `<section class="is-flex">
@@ -115,11 +115,12 @@ const renderMovieInfo = (movie) => {
         <!-- Buttons -->
         <div class="buttons are-large is-spaced is-responsive column is-full" >
                         
-            <!-- Trailer modal button - Triggers a popup - code for this can be found in index.js -->
-            <!-- Create new ID's if required for JavaScript / youtube API -->
-            <button class="js-modal-trigger button is-spaced is-halfwidth trailer-button" id="movie-page-hero-btn" data-target="modal-js-example">
-                View Trailer
+
+            <button class="button is-spaced is-halfwidth " id="trailer-button" data-target="modal-js-example">
+                View Trailer 
             </button>
+
+            
 
             <!-- Add to favourites button - to be hooked up to the favourites page -->
             <button class="button is-spaced is-halfwidth" id="favorite-btn">Add to Favourites</button>
@@ -127,23 +128,7 @@ const renderMovieInfo = (movie) => {
         </div>
   
 
-      <!-- Modal - hidden by default - shows youtube trailer in a popup when clicked -->
-      <!-- need to hook up the youtube api to this  -->
-          </div>
-          <div id="modal-js-example" class="modal">
-          <div class="modal-background"></div>
-
-          <div class="modal-content">
-          <div>
-              <p>Movie trailer from the youtube API needs to render here</p>
-              <!-- Your content - Youtube trailer pulled from the youtube API goes below here - Iframe used as an example-->
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/Nt9L1jCKGnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          </div>
-
-          <!-- close modal popup button -->
-          <button class="modal-close is-large" aria-label="close"></button>
-      </div>  
+    
    
   </section>
   
@@ -220,7 +205,7 @@ const renderMovieInfo = (movie) => {
   `;
 
   $("#main-container").append(movieContainer);
-  $("#movie-page-hero-btn").click(renderYoutubeTrailer);
+  // $("#movie-page-hero-btn").click(renderYoutubeTrailer);
 };
 
 //add the favorite movie to local storage
@@ -264,8 +249,12 @@ const onReady = async () => {
 
   $("#favorite-btn").on("click", favoriteToLocalStorage);
 
-  await authenticate();
+  // Event listener for the trailer button
+$("#trailer-button").click(console.log("trailer button clicked"));
+
+  // Youtube API functions
   await loadClient();
+  await execute(`${movie.Title} ${movie.Year} HD trailer`)
 };
 
 //check if document is ready
