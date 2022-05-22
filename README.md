@@ -25,3 +25,14 @@ We have used HTML ,CSS, JavaScript along with the Bulma framework, Unicon librar
 # Link to URL
 
 # Screenshots
+
+![desktop image](./assets/images/screenshots/homepage.png)
+![desktop image]()
+![desktop image](./assets/images/screenshots/results%20page.png)
+![desktop image]()
+
+# Mini Demo
+
+Watch the demo to see the user journey.
+
+![Movie night demo]()
