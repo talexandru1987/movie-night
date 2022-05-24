@@ -67,9 +67,9 @@ const renderMovieCards = (movies) => {
     .slice(0, 8)
     .map((movie) => {
       const extraDetails = movie.runningTimeInMinutes
-        ? `Run time: ${movie.runningTimeInMinutes}`
+        ? `Run time: ${movie.runningTimeInMinutes} mins`
         : "";
-      const movieCard = `<div class="column is-one-quarter is-clickable project">
+      const movieCard = `<div class="column is-one-quarter is-clickable project is-full-mobile">
         <img data-movieCard = "${movie.id}" class="movie-card-image project__image"
           src="${movie?.image?.url}" alt="${movie?.title ? movie?.title : movie?.legacyNameText}"
         />
