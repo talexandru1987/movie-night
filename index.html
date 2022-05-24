@@ -4,81 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- bulma framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+
     <!-- unicons link -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
     <!-- link to google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
+
     <!-- font awesome library -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
     <!-- link to the author css file -->
     <link rel="stylesheet" href="./assets/css/about-us.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    
 
     <title>Movie Night | Home</title>
   </head>
+
   <body>
     <header class="header">
       <nav class="navbar is-flex-direction-row" role="navigation" aria-label="main navigation">
        
-          <div class="logo navbar-item">
-            <a href="./index.html">
-              Movie<span> Night</span>
-            </a>
-            </div>
-
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+        <div class="logo navbar-item">
+          <a href="./index.html">
+            Movie<span> Night</span>
           </a>
+          </div>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
        
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-end">
             <a href="index.html" class="navbar-item"> Home </a>
-            <!-- <a class="navbar-item"> Movies </a> -->
+
             <a href="favourites.html" class="navbar-item"> Favourites </a>
+
             <a href="about.html" class="navbar-item">About</a>
-            <!-- <a class="navbar-item"> Booking </a> -->
           </div>
         </div>
       </nav>
     </header>
+
+
     <main class="main">
-      <!-- Movie Search results section - Can be removed once this is being rendered in JavaScript - but leave for now until styling is finalised -->
       <div class="top">
         <div class="columns">
           <div class="column is-full featured_wrapper p-0">
             <img
               src="https://image.tmdb.org/t/p/original/eete5ZAaagldSXxDetN62V3WXcg.jpg"
-              class="featured movie-card-image"
-            />
+              class="featured movie-card-image" />
+
             <div class="title_wrapper">
-              <!-- <span class="has-text-white">MOVIE NIGHT</span> -->
               <h1 class="title is-1 has-text-white">MOVIE NIGHT</h1>
 
               <form>
                 <div class="control column is-4">
                   <input class="input" type="text" placeholder="Enter movie" id="search-field" />
                 </div>
+                
                 <div class="control">
                   <button id="search-button" class="button is-medium" type="submit">Search</button>
                 </div>
@@ -87,11 +90,13 @@
           </div>
         </div>
       </div>
+
       <div class="container">
         <div id="search-results-container" class="columns is-multiline p-0 pt-6 last">
     </main> 
 
-    <!-- Faooter Section -->
+
+    <!-- Footer Section -->
     <footer class="main-footer" id="main-footer">
       <div class="footer-container">
         <div class="footer-textbox">
@@ -104,6 +109,7 @@
             <i class="uil uil-github-alt"></i>
             Kate
           </a>
+
           <a
             class="contact"
             id="gh-profile"
@@ -113,6 +119,7 @@
             <i class="uil uil-github-alt"></i>
             Rukhsana
           </a>
+
           <a
             class="contact"
             id="gh-profile"
@@ -122,6 +129,7 @@
             <i class="uil uil-github-alt"></i>
             Alexandru
           </a>
+
           <a
             class="contact"
             id="gh-profile"
@@ -132,6 +140,7 @@
             Faisal
           </a>
         </div>
+
         <div class="footer-text">&copy;2022 - Team 4</div>
       </div>
     </footer>
@@ -141,9 +150,10 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- link to the js file-->
+      referrerpolicy="no-referrer">
+    </script>
+
+    <!-- links to js files -->
     <script src="./assets/js/navbar.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
